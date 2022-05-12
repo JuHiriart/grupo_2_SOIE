@@ -1,2 +1,6 @@
-<score>\relative c' { c( b~ c b c b c b c~ c)}</score>
+# Projecto integrador
+
+## Grupo #2
+
+> ### Nombre de projecto: SOIE 
 

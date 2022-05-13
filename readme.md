@@ -1,4 +1,4 @@
-# Projecto integrador
+# Projecto integrador ![Digital House](https://badgen.net/badge/icon/DigitalHouse?icon=terminal&color=red&label)
 
 ## Grupo #2
 

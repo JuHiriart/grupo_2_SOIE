@@ -11,5 +11,12 @@
 | Ignacio Geoghegan             | ignaciog00@gmail.com   | [nachog00](https://github.com/nachog00)        |
 | Roberto Gonzalez              | puntano@gmail.com      | [Rgonzalez1974](https://github.com/Rgonzalez1974)   |
 
-// probando subir// edicion
+// referentes del mercado
+
+https://vpmedicinaestetica.com/
+https://www.catasbeauty.com/
+https://www.ruthazofra.es/
+https://leticiamartinezberg.com.ar
+https://zelayabeauty.com/about
+https://blauceldona.com/
 

@@ -18,7 +18,7 @@ somos un espacio que prioriza el sentirse bien para verse bien. Ofrecemos atenci
 #### Target
 
 * Primario:
-  * Mujeres de 25 a 55 anos que les gusta cuidar su imagen y necesitan darse un tiempo de placer para ellas alejándose de la rutina.
+  * Mujeres de 25 a 55 años que les gusta cuidar su imagen y necesitan darse un tiempo de placer para ellas alejándose de la rutina.
 
 * Secundario:
   * Hombres 25 a 50 años interesados en la estética.

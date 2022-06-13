@@ -1,4 +1,4 @@
-# Projecto integrador ![Digital House](https://badgen.net/badge/icon/DigitalHouse?icon=terminal&color=red&label)
+# Projecto integrador ![Digital Hogit use](https://badgen.net/badge/icon/DigitalHouse?icon=terminal&color=red&label)
 ## Grupo #2
 ---
 ## Proyecto:
@@ -19,7 +19,7 @@
             align-items:start">
                 <p>
                 Soie es una empresa que se dedica a
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae cumque iste iure, aliquam quasi eius adipisci, suscipit autem nesciunt natus aspernatur eveniet id recusandae impedit reiciendis officia sit non dicta!
+                Al cuidado de 
                 </p>    
             </td>          
         </tr>

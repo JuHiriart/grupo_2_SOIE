@@ -1,0 +1,33 @@
+:root {
+
+    /* paleta de colores */
+    --marron    : #B4AA9B;
+    --azul      : #00a8b5;
+    --celeste   : #cae7e2;
+    --verde     : #bcdfb7;
+
+    /* fuentes de texto */
+    --fuente-1:'Merriweather', serif;
+}
+
+
+/* test */
+
+body {
+    background-color: white;
+    padding : 2px;
+}
+
+body section {
+    border: 3px solid var(--azul);
+    margin: 5px;
+    text-align: center;
+    background-color: var(--celeste);
+    color: black;
+}
+
+#main {
+    height: 75vh;
+    background-color: var(--verde);
+}
+

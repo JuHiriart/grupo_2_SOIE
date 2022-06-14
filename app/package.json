@@ -1,0 +1,15 @@
+{
+  "name": "soie-webpage",
+  "version": "1.0.0",
+  "description": "Proyecto integrador del curso Full Stack en Digital House. Grupo #2.",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "author": "Grupo #2",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
+  }
+}

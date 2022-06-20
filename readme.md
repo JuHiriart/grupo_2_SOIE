@@ -58,7 +58,11 @@ MARCA Soie
 
 * Higiene Facial.
 
-* 
+* Peeling.
+
+* Productos cuidado de la piel.
+
+* Radiofrecuencia.
 
 #### Posicionamiento/ Estrategia de marca:
 

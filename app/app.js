@@ -16,3 +16,9 @@ app.get("/", function (req, res) {
     let dir = path.resolve(__dirname, "./src/index.html");
     res.sendFile(dir)
 })
+
+app.get("/header", function (req, res) {
+    let dir = path.resolve(__dirname, "./src/views/header.html");
+    res.sendFile(dir)
+})
+

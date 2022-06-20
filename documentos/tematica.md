@@ -2,14 +2,17 @@
 
 MARCA Soie
 
-#### Productos:
+#### Productos / Servicios:
 
-* Servicios de cosmetología.
-* Tratamientos faciales.
-* Estilismo de cejas y pestañas.
-* Asesoramiento de imagen.
-* Maquillaje.
-* Cursos de automaquillaje e imagen personal.
+* Servicios de cosmeatría.
+
+* Higiene Facial.
+
+* Peeling.
+
+* Productos cuidado de la piel.
+
+* Radiofrecuencia.
 
 #### Posicionamiento/ Estrategia de marca:
 

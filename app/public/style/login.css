@@ -1,0 +1,106 @@
+main {
+    text-align: center;
+    width: 80vw;
+    background-color: rgb(221, 219, 219);
+    padding: 10px 40px;
+    margin: 75px auto 0 auto;
+    border-radius: 2.5em;
+    box-shadow: 0px 0px 10px #666;
+}
+
+label {
+    display: block;
+    text-align: left;
+    height: 20px;
+    margin: 0px;
+    font-weight: bold;
+}
+
+.bold {
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    margin-top: 5px;
+   
+}
+
+
+
+.checkbox {
+    margin-top: 0;
+    width: auto;
+    display: inline-block;
+}
+
+.radio {
+    margin-top: 0;
+    width: auto;
+    display: inline-block;
+}
+
+.file {
+    background-color: white;
+    border-radius: 0;
+    padding: 0;
+    height: 1.5em;
+    margin-bottom: 15px;
+    margin-top: -5px;
+    width: 100%;
+}
+
+main div {
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    justify-content: flex-start;
+    gap: 15px;
+    align-content: center;
+}
+
+blockquote {
+    min-height: 100vh;
+}
+
+div label {
+    display: block;
+}
+
+div input {
+    display: block;
+    height: auto;
+}
+
+.titular {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 2em;
+}
+
+
+.botones {
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+    margin: 15px;
+    padding-top: 15px;
+    border-top: 2px solid #666;
+}
+
+.ingreso{
+    width: auto;
+    margin: 10px;
+    width: 90%;
+}
+
+
+
+.iniciar {
+    font-weight: bold;
+    background-color: #1259c3;
+}
+
+.iniciar:hover {
+    background-color: #0022AA;
+    color: white;
+}

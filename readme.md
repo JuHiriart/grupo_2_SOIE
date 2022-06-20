@@ -18,8 +18,9 @@
             <td style="display:flex;justify-items:start;
             align-items:start">
                 <p>
-                Soie es una empresa que se dedica a
-                Al cuidado de 
+                Soie es una emprendimiento que se dedica al 
+                Tratamiento Facial.  
+                Realizamos prevencion o cuidado, tambien ayudando a pacientes con tratamientos especificos.
                 </p>    
             </td>          
         </tr>
@@ -29,24 +30,35 @@
 ### Referentes del mercado
 
 * https://vpmedicinaestetica.com/
+
+    
 * https://www.catasbeauty.com/
+
+
 * https://www.ruthazofra.es/
+
+
 * https://leticiamartinezberg.com.ar
+
+
 * https://zelayabeauty.com/about
+
+
 * https://blauceldona.com/
+
+
 
 ### Temática del Market Place
 
 MARCA Soie
 
-#### Productos:
+#### Productos / Servicios:
 
-* Servicios de cosmetología.
-* Tratamientos faciales.
-* Estilismo de cejas y pestañas.
-* Asesoramiento de imagen.
-* Maquillaje.
-* Cursos de automaquillaje e imagen personal.
+* Servicios de cosmeatría.
+
+* Higiene Facial.
+
+* 
 
 #### Posicionamiento/ Estrategia de marca:
 

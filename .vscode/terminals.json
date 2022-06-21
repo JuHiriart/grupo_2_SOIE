@@ -1,0 +1,22 @@
+{
+  "autorun": false,
+  "terminals": [
+    {
+      "name": "server",
+      "description": "Terminal para correr automaticamente el server con nodemon",
+      "focus": false,
+      "command": "npm run server",
+      "execute": true,
+      "icon": "server",
+      "color": "terminal.ansiBlue",
+      "cwd" : "app/"
+    },
+    {
+      "name": "git",
+      "focus": true ,
+      "command": "git status",
+      "execute": true,
+      "icon":"github-inverted"
+    }
+  ]
+}

@@ -1,18 +1,21 @@
-const fs = require('fs');
-const path = require('path');
 const express = require('express');
-
+const path = require('path');
 const app = express();
+const public = path.join(__dirname, '../public')
+const viewsPath = path.join(__dirname, './views');
 
-const publicPath = path.join(__dirname, 'public/')
-app.use(express.static(publicPath));
-
-const server = app.listen(2000, () => {
-    console.log("server is running")
-})
+app.set('puerto', process.env.PORT || 2000);
 
 
-app.get("/", function (req, res) {
-    let dir = path.resolve(__dirname, "./src/index.html");
-    res.sendFile(dir)
-})
+app.listen(app.get('puerto'), ()=>{console.log(`Abriendo Servidor puerto ${app.get('puerto')}` )});
+app.use(express.static(public));
+
+app.get('/', (req,res) => res.sendFile(path.join(viewsPath, 'home.html')))
+app.get('/productos', (req,res) => res.sendFile(path.join(viewsPath, 'productos.html')))
+app.get('/shopping', (req,res) => res.sendFile(path.join(viewsPath, 'shopping.html')))
+app.get('/login', (req,res) => res.sendFile(path.join(viewsPath, 'login.html')))
+app.get('/registrarse', (req,res) => res.sendFile(path.join(viewsPath, 'registrarse.html')))
+
+
+
+

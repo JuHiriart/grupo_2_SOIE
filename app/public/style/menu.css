@@ -60,7 +60,7 @@ li a.active, li a:hover {
 }
 
 section {
-    background: url(assets/images/logoSOIEredes.png) no-repeat;
+    background: url(assets/images/logoSOIEredes.jpg) no-repeat;
     background-size: cover;
     background-position: center center;
     height: calc(100vh - 80px);

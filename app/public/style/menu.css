@@ -13,8 +13,8 @@ nav {
 }
 
 .enlace {
-    position: absolute;
-    padding: 20px 50px;
+    position: relative; 
+    padding: 20px 50px ;
 }
 
 .logo {
@@ -41,7 +41,7 @@ nav ul {
         }
 
 li a.active, li a:hover {
-    background: #9e8967;
+    background: #816d4c;
     transition: .5s;
 }
 

@@ -1,0 +1,61 @@
+/* MOBILE */
+
+header {
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding : 1rem 2.5vw 0;
+}
+
+li {
+    list-style: none;
+    margin: 0 1rem 0;
+}
+
+
+div.logo {
+    width: 30%;
+    height: max-content;
+}
+
+#logo {
+    width: 100%;
+}
+
+nav.header {
+    display: none;
+}
+
+
+
+
+
+
+
+
+/* TABLET */
+
+@media screen and (min-width: 400px) {
+
+    div.logo {
+        max-width: 200px;
+    }
+    
+    nav.header {
+        display: block;
+        width: -webkit-fill-available;
+        max-width: 550px;
+    }
+
+    nav.header ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+
+}

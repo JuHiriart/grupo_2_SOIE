@@ -1,3 +1,6 @@
+@import url('header.css');
+
+
 :root {
 
     /* paleta de colores */
@@ -8,14 +11,21 @@
 
     /* fuentes de texto */
     --fuente-1:'Merriweather', serif;
+
+    /* limites del MQ */
+    --tablet    : 600px
 }
 
 
 /* test */
+* {
+    box-sizing: border-box;
+}
 
 body {
+    width: 100vw;
+    margin: 0;
     background-color: white;
-    padding : 2px;
 }
 
 body section {

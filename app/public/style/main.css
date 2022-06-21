@@ -1,12 +1,14 @@
 @import url('header.css');
+@import url('footer.css');
 
 
 :root {
 
     /* paleta de colores */
     --marron            : #B4AA9B;
-    --azul              : rgb(0 168 181 / 100%);
-    --azul-suave        : rgb(0 168 181 / 54%);
+    --marron-suave      : hsla(37, 14%, 66%, 0.393);
+    --azul              : rgb(4, 103, 110);
+    --azul-suave        : rgba(4, 104, 111, 0.7);
     --celeste           : #cde5e1;
     --celeste-suave     : #d4e9e6fe;
     --verde             : rgb(92 136 79 / 100%);
@@ -14,7 +16,8 @@
     --texto-1           : rgba(0, 57, 60, 0.815);
 
     /* fuentes de texto */
-    --fuente-1:'Merriweather', serif;
+    --fuente-1:'Monserrat';
+    --fuente-2:'Robot','serif';
 
     /* limites del MQ */
     --tablet    : 600px

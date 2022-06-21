@@ -46,16 +46,17 @@ nav.header {
     nav.header {
         display: block;
         width: -webkit-fill-available;
-        max-width: 550px;
+        /* max-width: 550px; */
+        justify-content: center;
     }
 
     nav.header ul {
+        /* max-width: 550px; */
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: space-evenly;
         align-items: center;
     }
-
 
 }

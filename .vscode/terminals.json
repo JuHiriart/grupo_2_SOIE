@@ -5,10 +5,11 @@
       "name": "server",
       "description": "Terminal para correr automaticamente el server con nodemon",
       "focus": false,
-      "command": "cd app && npm run server",
+      "command": "npm run server",
       "execute": true,
       "icon": "server",
-      "color": "terminal.ansiBlue"
+      "color": "terminal.ansiBlue",
+      "cwd" : "app/"
     },
     {
       "name": "git",

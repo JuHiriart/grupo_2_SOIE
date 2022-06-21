@@ -63,10 +63,9 @@ li a.active, li a:hover {
 section {
     background: url(assets/images/logoSoie.png) no-repeat;
     background-size: cover;
-    background-position: center 47%;
+    background-position: 50% 50%;
     height: calc(100vh - 60px);
-    width: calc(100vw - 15px);
-}
+   
 
 @media (max-width: 952px) {
     .enlace {

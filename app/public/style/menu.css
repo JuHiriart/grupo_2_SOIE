@@ -7,7 +7,7 @@
 }
 
 nav {
-    background: #2fcdcd;
+    background: #00a8b5;
     height: 80px;
     width: 100%;
 }
@@ -33,7 +33,7 @@ nav ul {
     }
 
         nav ul li a {
-            color: #fff;
+            color:  #B4AA9B;
             font-size: 18px;
             padding: 7px 13px;
             border-radius: 3px;
@@ -47,7 +47,7 @@ li a.active, li a:hover {
 
 .checkbtn {
     font-size: 30px;
-    color: #fff;
+    color:#cae7e2;
     float: right;
     line-height: 80px;
     margin-right: 40px;

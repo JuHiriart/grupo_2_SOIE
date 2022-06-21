@@ -7,18 +7,18 @@
 }
 
 nav {
-    background: #e2fbfd;
+    background: #bafaff;
     height: 80px;
     width: 100%;
 }
 
 .enlace {
-    position: relative; 
+    position: center;
     padding: 20px 50px ;
 }
 
 .logo {
-    height: 40px;
+    height: 70px;
 }
 
 nav ul {
@@ -33,21 +33,21 @@ nav ul {
     }
 
         nav ul li a {
-            color: #49497a ;
-            font-size: 18px;
+            color: #4d4dfa ;
+            font-size: 16px;
             padding: 7px 13px;
             border-radius: 3px;
             text-transform: uppercase;
         }
 
 li a.active, li a:hover {
-    background: #816d4c;
+    background: #65ebdf;
     transition: .5s;
 }
 
 .checkbtn {
     font-size: 30px;
-    color:#97f5e5;
+    color:#35ecce;
     float: right;
     line-height: 80px;
     margin-right: 40px;
@@ -62,8 +62,8 @@ li a.active, li a:hover {
 section {
     background: url(assets/images/logoSOIEredes.jpg) no-repeat;
     background-size: cover;
-    background-position: center center;
-    height: calc(100vh - 80px);
+    background-position: 50% 67%;
+    height: calc(100vh - 60px);
 }
 
 @media (max-width: 952px) {
@@ -104,7 +104,7 @@ section {
 
     li a:hover, li a.active {
         background: none;
-        color: rgb(159, 99, 238);
+        color: rgb(219, 125, 231);
     }
 
     #check:checked ~ ul {

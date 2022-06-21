@@ -8,8 +8,7 @@
       "command": "npm run server",
       "execute": true,
       "icon": "server",
-      "color": "terminal.ansiBlue",
-      "cwd" : "app/"
+      "color": "terminal.ansiBlue"
     },
     {
       "name": "git",

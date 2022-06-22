@@ -64,10 +64,16 @@ main{
     margin: 15px;
 }
 
+.button{
+    font-size: xx-large;
+}
+
 .produtButtons{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 10vw;
     margin: 10px;
+    border: 1px solid black;
 }
 
 .buttonFav{
@@ -76,21 +82,41 @@ main{
 
 .fav{
     color: red;
-    font-size: x-large;
     position: absolute;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
+}
+
+.custom-checkbox {
+    margin-left: 2em;
+    position: relative;
+    cursor: pointer;
 }
 
 .custom-checkbox:hover .fav{
     opacity: 0.5;
 }
 
+.custom-checkbox input[type="checkbox"]:checked ~ .fav{
+    opacity: 1;
+ }
+
 .noFav{
     color: gray;
-    font-size: x-large;
     position: absolute;
 }
+
+label input[type="checkbox"] {
+    display: none;
+}
+
+label input[type="button"] {
+    display: none;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .fav{
+    opacity: 1;
+ }
 /*<h2 style="color: #D0C5AF"> #D0C5AF </h2>
 <h2 style="color: #00A8B5"> #00A8B5 </h2>
 <h2 style="color: #BCDFB7"> #BCDFB7 </h2>

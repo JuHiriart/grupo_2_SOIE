@@ -1,33 +1,51 @@
+@import url('header.css');
+@import url('footer.css');
+
+
 :root {
 
     /* paleta de colores */
-    --marron    : #B4AA9B;
-    --azul      : #00a8b5;
-    --celeste   : #cae7e2;
-    --verde     : #bcdfb7;
+    --marron            : #B4AA9B;
+    --marron-suave      : hsla(37, 14%, 66%, 0.393);
+    --azul              : rgb(4, 103, 110);
+    --azul-suave        : rgba(4, 104, 111, 0.7);
+    --celeste           : #cde5e1;
+    --celeste-suave     : #d4e9e6fe;
+    --verde             : rgb(92 136 79 / 100%);
+    --verde-suave       : rgb(188 223 183 / 100%);
+    --texto-1           : rgba(0, 57, 60, 0.815);
 
     /* fuentes de texto */
-    --fuente-1:'Merriweather', serif;
+    --fuente-1:'Monserrat';
+    --fuente-2:'Robot','serif';
+
+    /* limites del MQ */
+    --tablet    : 600px
 }
 
 
 /* test */
+* {
+    box-sizing: border-box;
+    font-family: var(--fuente-1);
+}
 
 body {
-    background-color: white;
-    padding : 2px;
+    width: 100vw;
+    margin: 0;
+    background-color: var(--celeste-suave);
 }
 
 body section {
-    border: 3px solid var(--azul);
+    border: 1px solid var(--azul);
     margin: 5px;
     text-align: center;
     background-color: var(--celeste);
     color: black;
+    height: 200vh;
 }
 
 #main {
-    height: 75vh;
-    background-color: var(--verde);
+    background-color: transparent;
 }
 

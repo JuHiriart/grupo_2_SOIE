@@ -1,0 +1,176 @@
+/* MOBILE */
+
+header {
+    width: 100%;
+    background-color: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding : 1rem 2.5vw 0.3rem;
+
+    position: fixed;
+    top: 0;
+
+}
+
+div.content {
+    margin-top: 60px;
+}
+
+nav.header li {
+    list-style: none;
+    margin: 0 0 0;
+}
+
+
+div.logo {
+    width: 40%;
+    /* min-width: 100px; */
+    height: max-content;
+    padding-right: 1%;
+}
+
+#logo {
+    width: 100%;
+    min-width: 65px;
+}
+
+div.busqueda {
+    width: -webkit-fill-available;
+    padding: 0 1%;
+}
+
+div.busqueda > form {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.3rem 0.25rem 0.2rem ;
+    border: solid var(--celeste) 1px;
+    border-radius: 0.5rem;
+    background-color: whitesmoke;
+}
+
+div.busqueda > form > input {
+    border: none;
+    background-color: inherit;
+}
+
+header > div.busqueda > form > input {
+    width: 100%;
+    height: 2em;
+    padding: 0 0.5em;
+}
+
+header > div.busqueda > form > i {
+    color:var(--celeste)
+}
+
+header > div.busqueda > form > input:focus{
+    outline:none
+}
+
+
+nav.header {
+    display: none;
+}
+
+header > div.buttons {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+header > div.buttons button {
+
+    width: 2em;
+    height: 2em;
+    border-style: none;
+    border-color: var(--celeste);
+    border-radius: 0.5em;
+    font-size: 1.1em;
+    margin: 0 0.2em;
+    color: white;
+    background-color: var(--azul-suave);
+}
+
+header > div.buttons button.cart > div{
+    background-color: green;
+    color: white;
+    position: absolute;
+    bottom: 8%;
+    right: 18%;
+    border-radius: 50%;
+    width: 35%;
+    height: 35%;
+    font-size: 0.6em;
+    display: flex;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+/* TABLET */
+
+@media screen and (min-width: 400px) {
+
+    div.logo {
+        max-width: 140px;
+    }
+
+    div.content {
+        margin-top: 83px;
+    }
+    
+    
+}
+
+
+/* Desktop */
+
+@media screen and (min-width: 800px) {
+    
+    div.logo {
+        max-width: 150px;
+    }
+
+    div.content {
+        margin-top: 100px;
+    }
+
+    button.menu-ham {
+        display: none;
+    }
+    
+    nav.header {
+        display: block;
+        width: -webkit-fill-available;
+        /* max-width: 550px; */
+        justify-content: center;
+    }
+
+    nav.header ul {
+        /* max-width: 550px; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-inline-start: 0;
+    }
+
+    nav.header ul a {
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--texto-1);
+    }
+
+
+
+}

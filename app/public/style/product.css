@@ -1,0 +1,97 @@
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.product{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+.productImg{
+    width: 90%;
+    height: 25vw;
+    object-fit: cover;
+    margin-top: 50px;
+    object-position: 0px -150px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.detailRight{
+    position: absolute;
+    background-color: #BCDFB7;
+    top: 57px;
+    right: 65px;
+    width: 39vw;
+    height: 24vw;
+    border: 2px solid #CAE7E2;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.detailLeft{
+    position: absolute;
+    background-color: #BCDFB7;
+    top: 57px;
+    left: 65px;
+    width: 39vw;
+    height: 24vw;
+    border: 2px solid #CAE7E2;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#productName{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: large;
+}
+
+#productDescription{
+    font-family: 'Roboto Serif', serif;
+    text-align: justify;
+    margin: 15px;
+}
+
+.produtButtons{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.buttonFav{
+    position: relative;
+}
+
+.fav{
+    color: red;
+    font-size: x-large;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.custom-checkbox:hover .fav{
+    opacity: 0.5;
+}
+
+.noFav{
+    color: gray;
+    font-size: x-large;
+    position: absolute;
+}
+/*<h2 style="color: #D0C5AF"> #D0C5AF </h2>
+<h2 style="color: #00A8B5"> #00A8B5 </h2>
+<h2 style="color: #BCDFB7"> #BCDFB7 </h2>
+<h2 style="color: #CAE7E2"> #CAE7E2 </h2>*/

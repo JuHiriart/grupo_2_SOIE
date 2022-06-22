@@ -4,12 +4,13 @@
 <head>
     <!-- metadata -->
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- stylesheets -->
 
-    <link rel="stylesheet" type="text/css" href="style/menu.css">
+
+    <link rel="stylesheet" type="text/css" href="style/bodycarrito.css">
     <!-- fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,121 +34,183 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 
     <title>SOIE</title>
+    
+    
+
+
 </head>
 
+    
 <body>
     <header>
         <section id="header">
-            <nav>
-                <input type="checkbox" id="check">
-                <label for="check" class="checkbtn">
-                    <i class="fas fa-bars"></i>
-                </label>
-                <a href="#" class="enlace">
-                    <img src="assets/images/logo-mariposa.png" alt="" class="logo">
-                </a>
-                <ul>
-                    <li><a class="active" href="#">Inicio</a></li>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Productos</a></li>
-                    <li><a href="#">Shoping</a></li>
-                    <li><a href="#">login</a></li>
-                    <li><a href="#">Registro</a></li>
-                </ul>
-            </nav>
         </section>
     </header>
 
     <section id="main">
 
-        <table>
-            <caption>Productos y Servicios</caption>
-            <thead>
-                <!-- Encabezado de la tabla -->
-            <tbody>
-                <tr>
-                    <th>Producto</th>
-                    <th>Cantidad</th>
-                    <th>Precio</th>
-                    <th>Total</th>
-                </tr>
-                <tr>
-                    <td>AAAA</td>
-                    <td>2</td>
-                    <td>500</td>
-                    <td>1000</td>
-                </tr>
-                <tr>
-                    <td>bbbbb</td>
-                    <td>1</td>
-                    <td>800</td>
-                    <td>800</td>
-                </tr>
-                <tr>
-                    <td>ccccc</td>
-                    <td>4</td>
-                    <td>300</td>
-                    <td>1200</td>
-                </tr>
-                <tr>
-                    <td>dddd</td>
-                    <td>2</td>
-                    <td>500</td>
-                    <td>1000</td>
-                </tr>
-                <tr>
-                    <td>eeeeeee</td>
-                    <td>3</td>
-                    <td>600</td>
-                    <td>1800</td>
-                </tr>
 
-            </tbody>
-            </thead>
-        </table>
+        <form action=""></form>
+        <div class="parent">
 
-    </section>
+            <div class="box_uno">
+                <table class="principal">
+                    <caption class="cap-prin">Productos y Servicios</caption>
+                    <colgroup>
 
-    <section>
+                    </colgroup>
 
-        <table>
-            <caption>Resumen</caption>
-            <thead>
-                    <!-- Encabezado de la tabla -->
-                <tbody>
-                    <tr>
-                        <th>Producto</th>
-                        <th>Impuestos</th>
-                        <th>Total</th>
+                    <thead>
+                        <!-- Encabezado de la tabla -->
 
-                    </tr>
-                    <tr>
-                        <td>AAAA</td>
-                        <td>10</td>
-                        <td>1010</td>
-                    </tr>
-                    <tr>
-                        <td>bbbbb</td>
-                        <td>8</td>
-                        <td>808</td>
+                        <tr id=" titulos">
+                            <th>Id</th>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio</th>
+                            <th>Total</th>
+                            <th>Comprar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="detalle">1</a></td>
+                            <td>Producto 1</td>
+                            <td>2</td>
+                            <td>500</td>
+                            <td>1000</td>
+                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
+                        </tr>
+                        <tr>
+                            <td><a href="detalle">2</a></td>
+                            <td>Producto 2</td>
+                            <td>1</td>
+                            <td>800</td>
+                            <td>1600</td>
+                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
+                        </tr>
+                        <tr>
+                            <td><a href="detalle">3</a></td>
+                            <td>Producto3</td>
+                            <td>4</td>
+                            <td>300</td>
+                            <td>1200</td>
+                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
+                        </tr>
+                        <tr>
+                            <td><a href="detalle">4</a></td>
+                            <td>Producto 4</td>
+                            <td>2</td>
+                            <td>500</td>
+                            <td>1000</td>
+                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
+                        </tr>
+                        <tr>
+                            <td><a href="detalle">5</a></td>
+                            <td>Producto 5</td>
+                            <td>3</td>
+                            <td>600</td>
+                            <td>1800</td>
+                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
+                        </tr>
+                        <tr>
+                            <td><a href="detalle">6</a></td>
+                            <td>Producto 6</td>
+                            <td>3</td>
+                            <td>600</td>
+                            <td>1800</td>
+                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
+                        </tr>
+                        <tr>
+                            <td><a href="detalle">7</a></td>
+                            <td>Servicio 1</td>
+                            <td>3</td>
+                            <td>600</td>
+                            <td>1800</td>
+                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
+                        </tr>
+                        <tr>
+                            <td><a href="detalle">8</a></td>
+                            <td>Servicio 2</td>
+                            <td>3</td>
+                            <td>600</td>
+                            <td>1800</td>
+                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
+                        </tr>
+                        <tr>
+                            <td><a href="detalle">9</a></td>
+                            <td>Servicio 3</td>
+                            <td>3</td>
+                            <td>600</td>
+                            <td>1800</td>
+                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
+                        </tr>
+                        <tr>
+                            <td><a href="detalle">10</a></td>
+                            <td>Servicio 4</td>
+                            <td>3</td>
+                            <td>600</td>
+                            <td>1800</td>
+                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
+                        </tr>
 
-                    </tr>
-                    <tr>
-                        <td>ccccc</td>
-                        <td>120</td>
-                        <td>1320</td>
+                    </tbody>
 
-                    </tr>
-                    <tr>
-                        <td>dddd</td>
-                        <td>50</td>
-                        <td>1050</td>
+                </table>
+            </div>
+            <div class="box_dos">
+                <table class="resumen">
+                    <caption class="cap-resu">Resumen</caption>
+                    <thead>
+                        <!-- Encabezado de la tabla -->
+                    <tbody>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Impuestos</th>
+                            <th>Subtotal</th>
 
-                    </tr>
-                </tbody>
-            </thead>
-        </table>
+                        </tr>
+                        <tr>
+                            <td>Producto 1</td>
+                            <td>10</td>
+                            <td>1010</td>
+                        </tr>
+                        <tr>
+                            <td>Producto 2</td>
+                            <td>8</td>
+                            <td>808</td>
 
+                        </tr>
+                        <tr>
+                            <td>Producto 3</td>
+                            <td>120</td>
+                            <td>1320</td>
+
+                        </tr>
+                        <tr>
+                            <td>Producto 4</td>
+                            <td>50</td>
+                            <td>1050</td>
+
+                        </tr>
+
+                    </tbody>
+
+                    </thead>
+
+                </table>
+                <div class="total">
+                    <label >Total: 4188 </label>
+                    <p class="full-width">
+                        <button>Pagar</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+        </form>
     </section>
 
     <!--  <section id="footer">

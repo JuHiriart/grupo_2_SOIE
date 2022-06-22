@@ -1,0 +1,105 @@
+:root {
+
+  /* paleta de colores */
+  --marron    : #B4AA9B;
+  --azul      : #00a8b5;
+  --celeste   : #cae7e2;
+  --verde     : #bcdfb7;
+}
+
+
+* {
+  box-sizing:border-box; 
+  
+  font-family: 'Roboto Serif', serif;
+  font-size: 16px;
+}
+
+
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box_uno, .box_dos {
+
+  flex: 1 1 600px;
+  flex: 1 1 600px;
+  margin:5px;
+  padding: 3px;
+  border: 1px solid var(--azul);
+  background: rgb(208, 255, 248);
+  font-size: 2rem;
+  text-align: center;
+
+
+}
+
+.box_dos {  
+  border: 1px solid rgb(29, 84, 186);
+  background: rgb(132, 169, 205);
+  font-size: 2rem;
+  text-align:center;
+
+  
+}
+
+.cap-prin { font-size: 2rem;background:  var(--celeste)}
+.cap-resu { font-size: 2rem;background: var(--celeste)}
+
+.principal, .resumen  {
+  border-collapse:separate;
+  padding: 1px;
+}
+
+.principal{ width: 55vw;}
+.resumen {  width: 40vw;}
+
+
+
+th{
+  text-align: center;
+  width: 5vw ;
+  height:5vh ;
+ }
+
+ td {
+  text-align:justify;
+  width: 8vw;
+  height:8vh;
+  
+ }
+
+#compra {padding: 3em;}
+
+tr:nth-child(even) {
+  background-color: var(--celeste);
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: var(--celeste); 
+  
+}
+
+.total{
+color: rgb(9, 225, 225);
+padding: 4em;}
+
+.total label{font-size: 30px;}
+
+button,
+input
+{
+  padding: 1em;
+}
+
+button {
+  background: lightgrey;
+  width: 25%;
+  border:1px;
+}
+button:hover, button:focus {
+  background: rgb(9, 225, 225);
+  outline: 0;
+}

@@ -13,6 +13,7 @@ app.use(express.static(public));
 app.get('/', (req,res) => res.sendFile(path.join(viewsPath, 'home.html')))
 app.get('/productos', (req,res) => res.sendFile(path.join(viewsPath, 'productos.html')))
 app.get('/carrito', (req,res) => res.sendFile(path.join(viewsPath, 'carrito.html')))
+app.get('/detalle', (req,res) => res.sendFile(path.join(viewsPath, 'detalle.html')))
 app.get('/login', (req,res) => res.sendFile(path.join(viewsPath, 'login.html')))
 app.get('/registrarse', (req,res) => res.sendFile(path.join(viewsPath, 'registrarse.html')))
 

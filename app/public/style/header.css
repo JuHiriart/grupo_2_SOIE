@@ -171,7 +171,10 @@ header > div.buttons button.cart > div{
         font-weight: bold;
         color: var(--texto-1);
     }
+}
 
-
-
+@media screen and (min-width: 1080px) {
+    body {
+        font-size: 30px;
+    }
 }

@@ -11,12 +11,13 @@ main input{
 }
 
 main .signInBox {
+    color: #CAE7E2;
     display: flex;
     flex-direction: column;
     border: 1px solid black;
     border-radius: 15px;
     width: 60%;
-    background-color: #BCDFB7;
+    background-color: rgba(4, 104, 111, 0.7);
     justify-content: space-evenly;
     margin: 30px;
     padding: 0 0 1em;

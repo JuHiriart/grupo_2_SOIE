@@ -1,7 +1,7 @@
 /* MOBILE */
 
 header {
-    width: 100vw;
+    width: 100%;
     background-color: inherit;
     display: flex;
     flex-direction: row;

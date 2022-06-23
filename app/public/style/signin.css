@@ -1,0 +1,83 @@
+div{
+    width: 100%;
+}
+
+h1{
+    font-family: 'Roboto serif', serif;
+}
+
+input{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.signInBox {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 60%;
+    background-color: #BCDFB7;
+    justify-content: space-evenly;
+    margin: 30px;
+}
+ 
+.forms label{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+.forms input {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 2px;
+    width: 80%;
+}
+
+.forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1vw;
+    flex-wrap: no-wrap;
+}
+
+label{
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#gender{
+    margin-bottom: 10px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    margin: 20px;
+}
+
+input[type="button"]{
+    background-color: #CAE7E2;
+    border-radius: 5px;
+    height: 30px;
+    width: auto;
+    font-weight: 500;
+}
+
+@media (max-width:800px) {
+    .signInBox{
+        width: 90%;
+    }
+}
+
+@media (min-width:1200px) {
+    .signInBox{
+        width: 35%;
+    }
+}

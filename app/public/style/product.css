@@ -3,9 +3,12 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-content: space-around;
 }
 
+
 .product{
+    margin: 20px 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -13,10 +16,9 @@ main{
 
 
 .productImg{
-    width: 90%;
+    width: 95%;
     height: 25vw;
     object-fit: cover;
-    margin-top: 50px;
     object-position: 0px -150px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -25,71 +27,71 @@ main{
 .detailRight{
     position: absolute;
     background-color: #BCDFB7;
-    top: 57px;
+    top: 10%;
     right: 65px;
-    width: 39vw;
-    height: 24vw;
+    width: 30vw;
+    height: 20vw;
     border: 2px solid #CAE7E2;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 .detailLeft{
     position: absolute;
     background-color: #BCDFB7;
-    top: 57px;
+    top: 10%;
     left: 65px;
-    width: 39vw;
-    height: 24vw;
+    width: 30vw;
+    height: 20vw;
     border: 2px solid #CAE7E2;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }
 
 #productName{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    font-size: large;
+    font-family: 'Roboto Serif', serif;
+    font-weight: 800;
+    font-size: x-large;
+    margin: 20px 0 10px 0;
 }
 
 #productDescription{
-    font-family: 'Roboto Serif', serif;
+    font-family: 'Montserrat', sans-serif;
     text-align: justify;
-    margin: 15px;
+    margin: 0 5px 30px 5px;
 }
 
 .button{
     font-size: xx-large;
+    bottom: -5px;
 }
 
 .produtButtons{
     display: flex;
     justify-content: space-between;
-    width: 10vw;
+    width: 15vw;
     margin: 10px;
-    border: 1px solid black;
-}
-
-.buttonFav{
-    position: relative;
+    position: absolute;
+    bottom: 5px;
 }
 
 .fav{
-    color: red;
-    position: absolute;
+    color:crimson;
+    position: relative;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
 }
 
 .custom-checkbox {
-    margin-left: 2em;
-    position: relative;
+    position: absoulte;
     cursor: pointer;
 }
 
@@ -99,10 +101,14 @@ main{
 
 .custom-checkbox input[type="checkbox"]:checked ~ .fav{
     opacity: 1;
- }
+}
+
+/*.custom-checkbox input[type="checkbox"]:checked ~ .fav{
+    opacity: 1;
+}*/
 
 .noFav{
-    color: gray;
+    color: #00A8B5;
     position: absolute;
 }
 
@@ -114,9 +120,88 @@ label input[type="button"] {
     display: none;
 }
 
-.custom-checkbox input[type="checkbox"]:checked ~ .fav{
-    opacity: 1;
- }
+
+.buy{
+    position: absolute;
+    color: #00A8B5
+}
+
+.share{
+    position: absolute;
+    color: #00A8B5
+    
+}
+
+.buttomBuy{
+    cursor: pointer;
+}
+
+.buttomShare{
+    cursor: pointer;
+}
+
+.custom-checkbox:hover .share, .custom-checkbox:hover .buy{
+    transition: color 0.2s ease-in-out;
+    color: darkblue;
+}
+
+.custom-checkbox:active .buy, .custom-checkbox:active .share {
+    color: white;
+}
+
+@media (max-width:930px) {
+    .productImg{
+        object-fit: contain;
+        height: auto;
+        object-position:0;
+    }
+    .product{
+        flex-wrap: wrap;
+    }
+    .detailRight{
+        top: 2%;
+        right: 20px;
+        width: 95%;
+        height: auto;
+        position:static;
+    }
+    
+    .detailLeft{
+        top: 2%;
+        left: 20px;
+        width: 95%;
+        height: auto;
+        position:static;
+    }
+    #productName{
+        margin-top: 10px;
+    }
+    #productDescription{
+        margin-bottom:60px;
+    }
+    .produtButtons{
+        width: 60vw;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width:580px) {
+    .detailRight{
+        top: 2%;
+        right: 20px;
+        width: 95%;
+        height: auto;
+        position:static;
+    }
+    
+    .detailLeft{
+        top: 2%;
+        left: 20px;
+        width: 95%;
+        height: auto;
+        position:static;
+}
+}
 /*<h2 style="color: #D0C5AF"> #D0C5AF </h2>
 <h2 style="color: #00A8B5"> #00A8B5 </h2>
 <h2 style="color: #BCDFB7"> #BCDFB7 </h2>

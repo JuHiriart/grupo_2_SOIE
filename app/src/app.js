@@ -14,7 +14,7 @@ app.get('/', (req,res) => res.sendFile(path.join(__dirname, 'index.html')))
 app.get('/productos', (req,res) => res.sendFile(path.join(viewsPath, 'detalle.html')))
 app.get('/carrito', (req,res) => res.sendFile(path.join(viewsPath, 'carrito.html')))
 app.get('/login', (req,res) => res.sendFile(path.join(viewsPath, 'login.html')))
-app.get('/registrarse', (req,res) => res.sendFile(path.join(viewsPath, 'registrarse.html')))
+app.get('/registrarse', (req,res) => res.sendFile(path.join(viewsPath, 'signin.html')))
 
 
 

@@ -10,7 +10,7 @@
     --azul              : rgb(4, 103, 110);
     --azul-suave        : rgba(4, 104, 111, 0.7);
     --celeste           : #cde5e1;
-    --celeste-suave     : #d4e9e6fe;
+    --celeste-suave     : #d3e8e5fe;
     --verde             : rgb(92 136 79 / 100%);
     --verde-suave       : rgb(188 223 183 / 100%);
     --texto-1           : rgba(0, 57, 60, 0.815);
@@ -37,7 +37,7 @@ body {
 }
 
 body section {
-    border: 1px solid var(--azul);
+    /* border: 1px solid var(--azul); */
     margin: 5px;
     text-align: center;
     background-color: var(--celeste);

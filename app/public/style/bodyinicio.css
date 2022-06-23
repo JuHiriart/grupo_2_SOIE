@@ -1,9 +1,99 @@
 body {
-    width: auto;
-    height: auto;
-
-    background-image: url("../images/logo/logoSOIEredes.jpg");
+/*     background-image: rgba(0, 0, 0, 0.1) url('..\\images\\banner\\banner-1.png'); */
+    background: linear-gradient( rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) ), url('..\\images\\banner\\banner-1.png');
+    background-position:center top;
     background-size:cover;
     background-repeat:no-repeat;
     background-position: center center;
+    background-attachment: fixed;
+
+    border: none;
+
+    background-blend-mode: darken;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
   }
+
+header {
+  background-color: rgb(255 255 255 / 4%);
+  backdrop-filter: blur(40px);
+
+}
+
+
+
+
+div.about-us {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+
+div.card {
+  width: 70%;
+  padding: 3% 3%;
+  border-radius: 2em;
+  background-color: rgb(255 255 255 / 4%);
+  backdrop-filter: blur(40px);
+  margin: 2rem 0
+}
+
+div.card h2 {
+  font-size: 2rem;
+}
+
+div.card p {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+div.card img {
+  width: 100%;
+  opacity: 0.8;
+  border-radius: 1.2rem;
+}
+
+div.card button {
+  width: 80%;
+  font-size: 2rem;
+  padding: 0.3rem 0.8rem;
+  background-color: var(--azul);
+  color: white;
+  border-radius: 0.5rem;
+}
+
+div.card button:hover {
+  
+}
+
+
+
+footer {
+  background-color: rgb(255 255 255 / 4%);
+  backdrop-filter: blur(40px);
+/*   position: absolute;
+  bottom: 0; */
+}
+
+
+@media screen and (min-width: 1080px) {
+  
+  body {
+    background-color: var(--celeste);
+    background-image: none;
+  }
+
+  div.about-us {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+}

@@ -15,9 +15,9 @@ header {
 
 }
 
-div.content {
+/* div.content {
     margin-top: 60px;
-}
+} */
 
 nav.header li {
     list-style: none;
@@ -125,9 +125,9 @@ header > div.buttons button.cart > div{
         max-width: 140px;
     }
 
-    div.content {
+/*     div.content {
         margin-top: 83px;
-    }
+    } */
     
     
 }
@@ -140,10 +140,10 @@ header > div.buttons button.cart > div{
     div.logo {
         max-width: 150px;
     }
-
+/* 
     div.content {
         margin-top: 100px;
-    }
+    } */
 
     button.menu-ham {
         display: none;

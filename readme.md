@@ -78,3 +78,10 @@ somos un espacio que prioriza el sentirse bien para verse bien. Ofrecemos atenci
 
   entendemos las necesidad del cliente de tener un momento y un lugar para si mismo.
 
+
+ ### Tablero organizacion trabajo
+
+ https://trello.com/b/HRi3QcJH/full-stack-digital-house-soie
+ 
+  
+

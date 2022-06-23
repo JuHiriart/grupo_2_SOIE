@@ -8,13 +8,13 @@
 }
 
 
-* {
+main main * {
   box-sizing: border-box;
   font-family: 'Roboto Serif', serif;
   font-size: 14px;
 }
 
-main {
+main main {
   display: flex;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -23,13 +23,13 @@ main {
   box-sizing: content-box;
 }
 
-.parent {
+main .parent {
   display: flex;
   flex-wrap: wrap;
 }
 
-.box_uno,
-.box_dos {
+main .box_uno,
+main .box_dos {
 
   flex: 0 1 600px;
   flex: 1 1 600px;
@@ -45,7 +45,7 @@ main {
 
 }
 
-.box_dos {
+main .box_dos {
   border: 1px solid rgb(29, 84, 186);
   background: rgb(132, 169, 205);
   font-size: 2rem;
@@ -54,51 +54,51 @@ main {
 
 }
 
-.cap-prin {
+main .cap-prin {
   font-size: 2rem;
   background: var(--celeste)
 }
 
-.cap-resu {
+main .cap-resu {
   font-size: 2rem;
   background: var(--celeste)
 }
 
-.principal,
-.resumen {
+main .principal,
+main .resumen {
   border-collapse: separate;
   padding: 1px;
 }
 
-.principal {
+main .principal {
   width: 55vw;
 }
 
-.resumen {
+main .resumen {
   width: 40vw;
 }
 
 
 
-th {
+main th {
   text-align: center;
   width: 5vw;
   height: 5vh;
 }
 
-td {
+main td {
   text-align: justify;
   width: 8vw;
   height: 8vh;
 
 }
 
-#compra {
+main #compra {
   padding-left: 3em;
   width: 1vw;
 }
 
-#carrito {
+main #carrito {
   font-size: 32px;
   color: rgba(67, 118, 150, 0.867);
 }
@@ -119,7 +119,7 @@ td {
   }
 }
 
-.fas:hover {
+main .fas:hover {
   animation: fas 3s infinite;
   content: "\f0d1";
   color: rgb(126, 26, 189);
@@ -127,44 +127,44 @@ td {
 }
 
 
-tr:nth-child(even) {
+main tr:nth-child(even) {
   background-color: var(--celeste);
 }
 
-th:nth-child(even),
-td:nth-child(even) {
+main th:nth-child(even),
+main td:nth-child(even) {
   background-color: var(--celeste);
 
 }
 
-.total {
+main .total {
   color: rgb(9, 225, 225);
   padding: 3em;
 }
 
-.total label {
+main .total label {
   font-size: 32px;
 }
 
-button,
-input {
+main button,
+main input {
   padding: 1em;
 }
 
-button {
+main button {
   background: lightgrey;
   width: 25%;
   border: 1px;
 }
 
-button:hover,
-button:focus {
+main button:hover,
+main button:focus {
   background: rgb(9, 225, 225);
   outline: 0;
 }
 
 @media (max-width: 389px) {
-  .parent {
+  main .parent {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;

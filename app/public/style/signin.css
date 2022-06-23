@@ -11,12 +11,8 @@ main input{
     font-family: 'Montserrat', sans-serif;
 }
 
-<<<<<<< HEAD
 .signInBox {
     color: #CAE7E2;
-=======
-main .signInBox {
->>>>>>> 60fb2216e83cc909427df3dd65e33a1f3dd32880
     display: flex;
     flex-direction: column;
     border-radius: 30px;

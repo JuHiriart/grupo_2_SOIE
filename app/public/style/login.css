@@ -4,27 +4,22 @@ main div{
 
 main h1{
     font-family: 'Roboto serif', serif;
-    font-size: xx-large;
 }
 
 main input{
     font-family: 'Montserrat', sans-serif;
 }
 
-<<<<<<< HEAD
-.signInBox {
-    color: #CAE7E2;
-=======
 main .signInBox {
->>>>>>> 60fb2216e83cc909427df3dd65e33a1f3dd32880
     display: flex;
     flex-direction: column;
-    border-radius: 30px;
+    border: 1px solid black;
+    border-radius: 15px;
     width: 60%;
-    background-color: rgba(4, 104, 111, 0.7); 
+    background-color: #BCDFB7;
     justify-content: space-evenly;
     margin: 30px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 0 0 1em;
 }
  
 main .forms label{
@@ -37,10 +32,9 @@ main .forms label{
 main .forms input {
     margin: 10px;
     padding: 5px;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 2px;
     width: 80%;
-    height: 35px;
-    border: none;
 }
 
 main .forms {
@@ -53,29 +47,38 @@ main .forms {
 main label{
     margin-bottom: 10px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
 }
 
 main #gender{
     margin-bottom: 10px;
 }
 
-main section {
+section {
     display: flex;
     justify-content: center;
 }
 
-main .btn{
+.btn{
     margin: 20px;
 }
 
 main input[type="button"]{
     background-color: #CAE7E2;
     border-radius: 5px;
-    height: 35px;
+    height: 30px;
     width: auto;
-    font-weight: 600;
-    border: none;
+    font-weight: 500;
+}
+
+
+main .sin-cuenta {
+    width: 60%;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 @media (max-width:800px) {

@@ -4,10 +4,8 @@
   "description": "Proyecto integrador del curso Full Stack en Digital House. Grupo #2.",
   "main": "app.js",
   "scripts": {
-
     "server": "nodemon app/src/app.js",
     "start" : "node app/src/app.js"
-
   },
   "author": "Grupo #2",
   "license": "ISC",

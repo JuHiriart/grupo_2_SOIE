@@ -1,8 +1,9 @@
 body {
-    width: 100vw;
+    width: auto;
     height: auto;
+
     background-image: url("../images/logo/logoSOIEredes.jpg");
-    background-size: cover;
+    background-size:cover;
     background-repeat:no-repeat;
     background-position: center center;
   }

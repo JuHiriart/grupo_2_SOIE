@@ -104,14 +104,26 @@ td {
 }
 
 
-@keyframes fas {0%{opacity: 0%;}
-20%{transform: translate(-28px); opacity:100%}
-100%{opacity:60%}}
+@keyframes fas {
+  0% {
+    opacity: 0%;
+  }
 
-.fas:hover {animation: fas 3s infinite;
+  20% {
+    transform: translate(-28px);
+    opacity: 100%
+  }
+
+  100% {
+    opacity: 60%
+  }
+}
+
+.fas:hover {
+  animation: fas 3s infinite;
   content: "\f0d1";
-  color:rgb(126, 26, 189);
-  background-color:var(--celeste);
+  color: rgb(126, 26, 189);
+  background-color: var(--celeste);
 }
 
 
@@ -160,11 +172,11 @@ button:focus {
     justify-content: space-evenly;
     align-items: stretch;
   }
-  }
- 
-
-  
 }
+
+
+
+
 
 @media (max-width: 768px) {
 
@@ -177,7 +189,7 @@ button:focus {
     align-items: stretch;
   }
 
-  
+
 }
 
 @media (max-width: 800px) {
@@ -188,7 +200,7 @@ button:focus {
   }
 
 
- 
+
 }
 
 @media (max-width: 1280px) {
@@ -197,7 +209,7 @@ button:focus {
     display: flex;
     flex-wrap: wrap;
   }
-  
 
- 
+
+
 }

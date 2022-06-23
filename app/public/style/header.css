@@ -173,8 +173,10 @@ header > div.buttons button.cart > div{
     }
 }
 
+/* Nacho, te comente este cambio porque rompe el estilo de varias vistas. Despues lo vemos mejor.
 @media screen and (min-width: 1080px) {
     body {
         font-size: 30px;
     }
 }
+*/

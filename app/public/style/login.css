@@ -19,6 +19,7 @@ main .signInBox {
     background-color: #BCDFB7;
     justify-content: space-evenly;
     margin: 30px;
+    padding: 0 0 1em;
 }
  
 main .forms label{
@@ -67,6 +68,17 @@ main input[type="button"]{
     height: 30px;
     width: auto;
     font-weight: 500;
+}
+
+
+main .sin-cuenta {
+    width: 60%;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
 @media (max-width:800px) {

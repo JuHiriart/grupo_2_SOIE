@@ -11,12 +11,14 @@
 * {
   box-sizing: border-box;
   font-family: 'Roboto Serif', serif;
-  font-size: 12px;
+  font-size: 14px;
 }
 
-main {display: flex;
-  flex-wrap: wrap;
-  margin-top: 6em;
+main {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-top: 7em;
   width: auto;
   box-sizing: content-box;
 }
@@ -92,8 +94,26 @@ td {
 }
 
 #compra {
-  padding: 2em;
+  padding-left: 3em;
+  width: 1vw;
 }
+
+#carrito {
+  font-size: 32px;
+  color: rgba(67, 118, 150, 0.867);
+}
+
+
+@keyframes fas {0%{opacity: 0%;}
+20%{transform: translate(-28px); opacity:100%}
+100%{opacity:60%}}
+
+.fas:hover {animation: fas 3s infinite;
+  content: "\f0d1";
+  color:rgb(126, 26, 189);
+  background-color:var(--celeste);
+}
+
 
 tr:nth-child(even) {
   background-color: var(--celeste);
@@ -111,7 +131,7 @@ td:nth-child(even) {
 }
 
 .total label {
-  font-size: 30px;
+  font-size: 32px;
 }
 
 button,
@@ -129,4 +149,55 @@ button:hover,
 button:focus {
   background: rgb(9, 225, 225);
   outline: 0;
+}
+
+@media (max-width: 389px) {
+  .parent {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+  }
+ 
+
+  
+}
+
+@media (max-width: 768px) {
+
+  .parent {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+
+  
+}
+
+@media (max-width: 800px) {
+
+  .parent {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+ 
+}
+
+@media (max-width: 1280px) {
+
+  .parent {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+
+ 
 }

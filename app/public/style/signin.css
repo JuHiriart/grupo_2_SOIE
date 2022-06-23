@@ -4,6 +4,7 @@ div{
 
 h1{
     font-family: 'Roboto serif', serif;
+    font-size: xx-large;
 }
 
 input{
@@ -11,14 +12,15 @@ input{
 }
 
 .signInBox {
+    color: #CAE7E2;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    border-radius: 15px;
+    border-radius: 30px;
     width: 60%;
-    background-color: #BCDFB7;
+    background-color: rgba(4, 104, 111, 0.7); 
     justify-content: space-evenly;
     margin: 30px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
  
 .forms label{
@@ -31,9 +33,10 @@ input{
 .forms input {
     margin: 10px;
     padding: 5px;
-    border-radius: 10px;
-    box-shadow: 2px;
+    border-radius: 8px;
     width: 80%;
+    height: 35px;
+    border: none;
 }
 
 .forms {
@@ -46,6 +49,7 @@ input{
 label{
     margin-bottom: 10px;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
 }
 
 #gender{
@@ -64,9 +68,10 @@ section {
 input[type="button"]{
     background-color: #CAE7E2;
     border-radius: 5px;
-    height: 30px;
+    height: 35px;
     width: auto;
-    font-weight: 500;
+    font-weight: 600;
+    border: none;
 }
 
 @media (max-width:800px) {

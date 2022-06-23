@@ -21,18 +21,20 @@ main{
     object-fit: cover;
     object-position: 0px -150px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
 }
 
 
 .detailRight{
+    color: white;
     position: absolute;
-    background-color: #BCDFB7;
+    background-color: #488c94;
     top: 10%;
     right: 65px;
     width: 30vw;
     height: 20vw;
-    border: 2px solid #CAE7E2;
-    border-radius: 5px;
+    border: none;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -41,14 +43,15 @@ main{
 }
 
 .detailLeft{
+    color: white;
     position: absolute;
-    background-color: #BCDFB7;
+    background-color: #488c94;
     top: 10%;
     left: 65px;
     width: 30vw;
     height: 20vw;
-    border: 2px solid #CAE7E2;
-    border-radius: 5px;
+    border: none;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -66,12 +69,12 @@ main{
 #productDescription{
     font-family: 'Montserrat', sans-serif;
     text-align: justify;
-    margin: 0 5px 30px 5px;
+    margin: 0 20px 30px 20px;
 }
 
 .button{
     font-size: xx-large;
-    bottom: -5px;
+    bottom: 20%;
 }
 
 .produtButtons{
@@ -91,7 +94,6 @@ main{
 }
 
 .custom-checkbox {
-    position: absoulte;
     cursor: pointer;
 }
 
@@ -108,7 +110,7 @@ main{
 }*/
 
 .noFav{
-    color: #00A8B5;
+    color: #CAE7E2;
     position: absolute;
 }
 
@@ -123,12 +125,12 @@ label input[type="button"] {
 
 .buy{
     position: absolute;
-    color: #00A8B5
+    color: #CAE7E2;
 }
 
 .share{
     position: absolute;
-    color: #00A8B5
+    color: #CAE7E2;
     
 }
 
@@ -149,7 +151,7 @@ label input[type="button"] {
     color: white;
 }
 
-@media (max-width:930px) {
+@media (max-width:1000px) {
     .productImg{
         object-fit: contain;
         height: auto;

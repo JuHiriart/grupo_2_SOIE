@@ -18,9 +18,7 @@
             <td style="display:flex;justify-items:start;
             align-items:start">
                 <p>
-                Soie es una emprendimiento que se dedica al 
-                Tratamiento Facial.  
-                Realizamos prevencion o cuidado, tambien ayudando a pacientes con tratamientos especificos.
+                Soie es una emprendimiento,con mas de 10 años de experiencia dedicandonos al Tratamientos Faciales. Realizamos prevencion o cuidado, ayudando a pacientes con tratamientos especificos.
                 </p>    
             </td>          
         </tr>

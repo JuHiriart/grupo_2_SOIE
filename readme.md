@@ -27,22 +27,16 @@
 
 ### Referentes del mercado
 
-* https://vpmedicinaestetica.com/
-
-    
-* https://www.catasbeauty.com/
+* https://vpmedicinaestetica.com/ Es una empresa que se dedica a los tratamientos en otro pais, la pagina es de facil navegacion y el diseño es refente.
 
 
-* https://www.ruthazofra.es/
+* https://leticiamartinezberg.com.ar 
 
 
-* https://leticiamartinezberg.com.ar
+* https://zelayabeauty.com/about Es una empresa que es referente en el mercado y para colegas. Sus tratamientos siempre estan actualizados. 
 
 
-* https://zelayabeauty.com/about
-
-
-* https://blauceldona.com/
+* https://blauceldona.com/ Se hizo conocida por los videos que explican aplicaciones y tratamientos que los pacientes y usuarios les conviene. La pagina es de facil navegacion, y facil de entender. 
 
 
 
@@ -82,6 +76,6 @@ somos un espacio que prioriza el sentirse bien para verse bien. Ofrecemos atenci
  ### Tablero organizacion trabajo
 
  https://trello.com/b/HRi3QcJH/full-stack-digital-house-soie
- 
-  
+
+
 

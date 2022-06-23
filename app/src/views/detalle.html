@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/product.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,600;1,8..144,700;1,8..144,800;1,8..144,900&display=swap"
+        rel="stylesheet">
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/5c00d89eed.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/svg" href="/images/logo-mercado-liebre-favicon.svg" />
+
+    <!-- title -->
+    <title>SOIE</title>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo container">
+            <a href="/">
+                <img id="logo" src="images/logo/logo-SOIE.png" alt="logo SOIE">
+            </a>
+        </div>
+
+        <div class="busqueda">
+            <form action="get">
+                <input type="text" name="busqueda" class="busqueda" placeholder="Buscar tratamiento"
+                    autocapitalize="none">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </form>
+        </div>
+
+        <nav class="header">
+            <ul class="site">
+                <li>
+                    <a href="/">
+                        <i class="fa-regular fa-house-blank"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/views/contacto">Contacto</a></li>
+                <!--                 <li><a href="/views/sign-in">Crear usuario</a></li>
+                <li><a href="/views/log-in">Ingresar</a></li> -->
+            </ul>
+        </nav>
+
+        <div class="buttons">
+
+            <a href="/login">
+                <button class="usuario">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </a>
+
+            <a href="/carrito">
+                <button class="cart" style="position: relative;">
+                    <i class="fa-solid fa-bag-shopping">
+                    </i>
+                    <div>2</div>
+                </button>
+            </a>
+
+            <a href="#">
+                <button class="menu-ham">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </a>
+
+        </div>
+
+        </div>
+
+    </header>
+
+    <!-------------------------------------------------------------->
+
+    <main>
+        <section>
+            <div class="product">
+                <img src="/images/products/higiene_facial.PNG" alt="foto" class="productImg">
+                <div class="detailRight">
+                    <p id="productName">Product Name 1</p>
+                    <p id="productDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="produtButtons">
+
+
+                        <label for="buttonShare" class="custom-checkbox">
+                            <input type="button" id="buttonShare">
+                            <i class="fa-solid fa-share-nodes share button"></i>
+                        </label>
+
+                        <label for="buttonBuy" class="custom-checkbox">
+                            <input type="button" id="buttonBuy">
+                            <i class="fa-solid fa-bag-shopping buy button"></i>
+                        </label>
+
+                        <label for="buttonFav1" class="custom-checkbox">
+                            <input type="checkbox" id="buttonFav1">
+                            <i class="fa-solid fa-heart noFav button"></i>
+                            <i class="fa-solid fa-heart fav button"></i>
+                        </label>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="\images\products\IMG_3235.jpg" alt="foto" class="productImg">
+                <div class="detailLeft">
+                    <p id="productName">Product Name 2</p>
+                    <p id="productDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="produtButtons">
+
+                        <label for="buttonShare" class="custom-checkbox">
+                            <input type="button" id="buttonShare">
+                            <i class="fa-solid fa-share-nodes share button"></i>
+                        </label>
+
+                        <label for="buttonBuy" class="custom-checkbox">
+                            <input type="button" id="buttonBuy">
+                            <i class="fa-solid fa-bag-shopping buy button"></i>
+                        </label>
+
+                        <label for="buttonFav2" class="custom-checkbox">
+                            <input type="checkbox" id="buttonFav2">
+                            <i class="fa-solid fa-heart noFav button"></i>
+                            <i class="fa-solid fa-heart fav button"></i>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="/images/products/peeling.PNG" alt="foto" class="productImg">
+                <div class="detailRight">
+                    <p id="productName">Product Name 1</p>
+                    <p id="productDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="produtButtons">
+
+
+                        <label for="buttonShare" class="custom-checkbox">
+                            <input type="button" id="buttonShare">
+                            <i class="fa-solid fa-share-nodes share button"></i>
+                        </label>
+
+                        <label for="buttonBuy" class="custom-checkbox">
+                            <input type="button" id="buttonBuy">
+                            <i class="fa-solid fa-bag-shopping buy button"></i>
+                        </label>
+
+                        <label for="buttonFav3" class="custom-checkbox">
+                            <input type="checkbox" id="buttonFav3">
+                            <i class="fa-solid fa-heart noFav button"></i>
+                            <i class="fa-solid fa-heart fav button"></i>
+                        </label>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="\images\products\productos-031.jpg" alt="foto" class="productImg">
+                <div class="detailLeft">
+                    <p id="productName">Product Name 2</p>
+                    <p id="productDescription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class="produtButtons">
+
+                        <label for="buttonShare" class="custom-checkbox">
+                            <input type="button" id="buttonShare">
+                            <i class="fa-solid fa-share-nodes share button"></i>
+                        </label>
+
+                        <label for="buttonBuy" class="custom-checkbox">
+                            <input type="button" id="buttonBuy">
+                            <i class="fa-solid fa-bag-shopping buy button"></i>
+                        </label>
+
+                        <label for="buttonFav4" class="custom-checkbox">
+                            <input type="checkbox" id="buttonFav4">
+                            <i class="fa-solid fa-heart noFav button"></i>
+                            <i class="fa-solid fa-heart fav button"></i>
+                        </label>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--------------------------------------------------------------->
+
+
+
+
+
+
+    <!-- FOOTER -->
+    <footer>
+        <ul>
+            <li>
+                <div class="img-container">
+                    <img class="logo" src="images/logo/logo-mariposa.png" alt="mariposa">
+                </div>
+            </li>
+            <li>
+                <h2>SOIE</h2>
+                <a href="#">Preguntas</a>
+                <a href="#">Ayuda</a>
+            </li>
+            <li>
+                <h2>PRODUCTOS</h2>
+                <a href="#">Consultas</a>
+                <a href="#">Pedidos especiales</a>
+                <a href="#">Empresarial</a>
+            </li>
+        </ul>
+        <div id="copyright">Copyright: ----------</div>
+    </footer>
+
+
+
+</body>
+
+</html>

@@ -1,7 +1,7 @@
 /* MOBILE */
 
 header {
-    width: 100vw;
+    width: 100%;
     background-color: inherit;
     display: flex;
     flex-direction: row;
@@ -9,8 +9,9 @@ header {
     justify-content: space-between;
     padding : 1rem 2.5vw 0.3rem;
 
-    position: fixed;
+    position: sticky;
     top: 0;
+    z-index: 2;
 
 }
 

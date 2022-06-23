@@ -1,0 +1,95 @@
+main div{
+    width: 100%;
+}
+
+main h1{
+    font-family: 'Roboto serif', serif;
+}
+
+main input{
+    font-family: 'Montserrat', sans-serif;
+}
+
+main .signInBox {
+    color: #CAE7E2;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 60%;
+    background-color: rgba(4, 104, 111, 0.7);
+    justify-content: space-evenly;
+    margin: 30px;
+    padding: 0 0 1em;
+}
+ 
+main .forms label{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .forms input {
+    margin: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 2px;
+    width: 80%;
+}
+
+main .forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: no-wrap;
+}
+
+main label{
+    margin-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main #gender{
+    margin-bottom: 10px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    margin: 20px;
+}
+
+main input[type="button"]{
+    background-color: #CAE7E2;
+    border-radius: 5px;
+    height: 30px;
+    width: auto;
+    font-weight: 500;
+}
+
+
+main .sin-cuenta {
+    width: 60%;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width:800px) {
+    main .signInBox{
+        width: 90%;
+    }
+}
+
+@media (min-width:1200px) {
+    main .signInBox{
+        width: 35%;
+    }
+}

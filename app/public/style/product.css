@@ -1,0 +1,210 @@
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+
+.product{
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+
+.productImg{
+    width: 95%;
+    height: 25vw;
+    object-fit: cover;
+    object-position: 0px -150px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 20px;
+}
+
+
+.detailRight{
+    color: white;
+    position: absolute;
+    background-color: #488c94;
+    top: 10%;
+    right: 65px;
+    width: 30vw;
+    height: 20vw;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.detailLeft{
+    color: white;
+    position: absolute;
+    background-color: #488c94;
+    top: 10%;
+    left: 65px;
+    width: 30vw;
+    height: 20vw;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+#productName{
+    font-family: 'Roboto Serif', serif;
+    font-weight: 800;
+    font-size: x-large;
+    margin: 20px 0 10px 0;
+}
+
+#productDescription{
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    margin: 0 20px 30px 20px;
+}
+
+.button{
+    font-size: xx-large;
+    bottom: 20%;
+}
+
+.produtButtons{
+    display: flex;
+    justify-content: space-between;
+    width: 15vw;
+    margin: 10px;
+    position: absolute;
+    bottom: 5px;
+}
+
+.fav{
+    color:crimson;
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.custom-checkbox {
+    cursor: pointer;
+}
+
+.custom-checkbox:hover .fav{
+    opacity: 0.5;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .fav{
+    opacity: 1;
+}
+
+/*.custom-checkbox input[type="checkbox"]:checked ~ .fav{
+    opacity: 1;
+}*/
+
+.noFav{
+    color: #CAE7E2;
+    position: absolute;
+}
+
+label input[type="checkbox"] {
+    display: none;
+}
+
+label input[type="button"] {
+    display: none;
+}
+
+
+.buy{
+    position: absolute;
+    color: #CAE7E2;
+}
+
+.share{
+    position: absolute;
+    color: #CAE7E2;
+    
+}
+
+.buttomBuy{
+    cursor: pointer;
+}
+
+.buttomShare{
+    cursor: pointer;
+}
+
+.custom-checkbox:hover .share, .custom-checkbox:hover .buy{
+    transition: color 0.2s ease-in-out;
+    color: darkblue;
+}
+
+.custom-checkbox:active .buy, .custom-checkbox:active .share {
+    color: white;
+}
+
+@media (max-width:1000px) {
+    .productImg{
+        object-fit: contain;
+        height: auto;
+        object-position:0;
+    }
+    .product{
+        flex-wrap: wrap;
+    }
+    .detailRight{
+        top: 2%;
+        right: 20px;
+        width: 95%;
+        height: auto;
+        position:static;
+    }
+    
+    .detailLeft{
+        top: 2%;
+        left: 20px;
+        width: 95%;
+        height: auto;
+        position:static;
+    }
+    #productName{
+        margin-top: 10px;
+    }
+    #productDescription{
+        margin-bottom:60px;
+    }
+    .produtButtons{
+        width: 60vw;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width:580px) {
+    .detailRight{
+        top: 2%;
+        right: 20px;
+        width: 95%;
+        height: auto;
+        position:static;
+    }
+    
+    .detailLeft{
+        top: 2%;
+        left: 20px;
+        width: 95%;
+        height: auto;
+        position:static;
+}
+}
+/*<h2 style="color: #D0C5AF"> #D0C5AF </h2>
+<h2 style="color: #00A8B5"> #00A8B5 </h2>
+<h2 style="color: #BCDFB7"> #BCDFB7 </h2>
+<h2 style="color: #CAE7E2"> #CAE7E2 </h2>*/

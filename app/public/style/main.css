@@ -31,7 +31,7 @@
 }
 
 body {
-    width: 100vw;
+    width: 100%;
     margin: 0;
     background-color: var(--celeste-suave);
 }
@@ -42,7 +42,6 @@ body section {
     text-align: center;
     background-color: var(--celeste);
     color: black;
-    height: 200vh;
 }
 
 #main {

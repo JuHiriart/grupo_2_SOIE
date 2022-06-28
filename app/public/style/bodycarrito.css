@@ -1,3 +1,9 @@
+main {
+  background-image: url('../images/banner/lateral.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 main h2.title {
   margin-left: 10%;
   display:none;
@@ -13,6 +19,8 @@ main div.main-container {
 }
 
 
+/* SUBTOTAL */
+
 main div.subtotal {
   width: 90%;
   display: flex;
@@ -20,6 +28,7 @@ main div.subtotal {
   justify-content: center;
   align-items: flex-start;
   padding: 2%;
+  border-bottom: solid 1px var(--azul);
 }
 
 main div.subtotal p {
@@ -44,17 +53,24 @@ main div.subtotal a button {
   padding: 0.5em 1em;
 }
 
+/* PRODUCTOS */
+
 main div.productos {
   margin: 1rem 2.5% 1rem;
+  /* background-color: var(--celeste-suave); */
 }
 
 main div.producto {
   display:grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 3fr 1fr;
+  grid-gap: 1%;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 3fr auto;
 
   padding: 2.5%;
-  background-color: var();
+  background-color: rgba(255, 255, 255, 0.332);
+  backdrop-filter: blur(20px);
+
+  border-radius: 0.5rem;
 }
 
 main div.producto a.img {
@@ -65,8 +81,8 @@ main div.producto img {
   width: 100%;
 }
 
-main div.producto div.detalles {
-  
+main div.producto div.detalles .descripcion {
+  display:none;
 }
 
 main div.producto div.actions {
@@ -80,8 +96,8 @@ main div.producto div.actions {
 
 main div.producto div.actions div.counter {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  width: 6rem;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  width: 7rem;
   height: 2rem;
   justify-items: center;
   justify-content: space-around;
@@ -94,7 +110,7 @@ main div.producto div.actions div.counter {
 }
 
 main div.producto div.actions div.counter div {
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: bold;
     width: 100%;
     height: 100%;
@@ -128,6 +144,10 @@ main div.producto div.actions div.counter div.btn.mas {
 main div.producto div.actions div.counter div.count {
   border-top: solid var(--azul) 2px;
   border-bottom: solid var(--azul) 2px;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 

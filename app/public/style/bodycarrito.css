@@ -1,178 +1,83 @@
-:root {
+main h2.title {
+  margin-left: 10%;
+  display:none;
+}
 
-  /* paleta de colores */
-  --marron: #B4AA9B;
-  --azul: #00a8b5;
-  --celeste: #cae7e2;
-  --verde: #bcdfb7;
+main div.main-container {
+  width : 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  justify-content: center;
+  justify-items: center;
 }
 
 
-main main * {
-  box-sizing: border-box;
-  font-family: 'Roboto Serif', serif;
-  font-size: 14px;
-}
-
-main main {
+main div.subtotal {
+  width: 90%;
   display: flex;
-  flex-wrap: nowrap;
   flex-direction: column;
-  margin-top: 7em;
-  width: auto;
-  box-sizing: content-box;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2%;
 }
 
-main .parent {
-  display: flex;
-  flex-wrap: wrap;
+main div.subtotal p {
+  font-size: larger;
 }
 
-main .box_uno,
-main .box_dos {
-
-  flex: 0 1 600px;
-  flex: 1 1 600px;
-  margin: 3px;
-
-  padding: 3px;
-
-  border: 1px solid var(--azul);
-  background: rgb(208, 255, 248);
-  font-size: 2rem;
-  text-align: center;
-
-
+main div.subtotal p span {
+  font-weight: bold;
 }
 
-main .box_dos {
-  border: 1px solid rgb(29, 84, 186);
-  background: rgb(132, 169, 205);
-  font-size: 2rem;
-  text-align: center;
-
-
+main div.subtotal a {
+  width: 100%;
 }
 
-main .cap-prin {
-  font-size: 2rem;
-  background: var(--celeste)
+main div.subtotal a button {
+  width: 100%;
+  background-color: var(--azul);
+  color: aliceblue;
+  border: solid 1px var(--celeste);
+  border-radius: 0.5em;
+  font-size: large;
+  padding: 0.5em 1em;
 }
 
-main .cap-resu {
-  font-size: 2rem;
-  background: var(--celeste)
+main div.producto {
+  display:grid;
+  grid-template-areas:
+  "i d d d d d d d d d"
+  "a a a a a a a a a a";
 }
 
-main .principal,
-main .resumen {
-  border-collapse: separate;
-  padding: 1px;
+main div.producto a.img {
+  grid-area: 'i';
+  grid-column: 1fr;
 }
 
-main .principal {
-  width: 55vw;
+main div.producto img {
+  width: 100%;
 }
 
-main .resumen {
-  width: 40vw;
+main div.producto div.detalles {
+  grid-area: 'd';
+  grid-column: 5fr;
+}
+
+
+main div.producto img {
+  grid-area: 'i';
+}
+
+main div.producto img {
+  grid-area: 'i';
 }
 
 
 
-main th {
-  text-align: center;
-  width: 5vw;
-  height: 5vh;
-}
-
-main td {
-  text-align: justify;
-  width: 8vw;
-  height: 8vh;
-
-}
-
-main #compra {
-  padding-left: 3em;
-  width: 1vw;
-}
-
-main #carrito {
-  font-size: 32px;
-  color: rgba(67, 118, 150, 0.867);
-}
 
 
-@keyframes fas {
-  0% {
-    opacity: 0%;
-  }
-
-  20% {
-    transform: translate(-28px);
-    opacity: 100%
-  }
-
-  100% {
-    opacity: 60%
-  }
-}
-
-main .fas:hover {
-  animation: fas 3s infinite;
-  content: "\f0d1";
-  color: rgb(126, 26, 189);
-  background-color: var(--celeste);
-}
-
-
-main tr:nth-child(even) {
-  background-color: var(--celeste);
-}
-
-main th:nth-child(even),
-main td:nth-child(even) {
-  background-color: var(--celeste);
-
-}
-
-main .total {
-  color: rgb(9, 225, 225);
-  padding: 3em;
-}
-
-main .total label {
-  font-size: 32px;
-}
-
-main button,
-main input {
-  padding: 1em;
-}
-
-main button {
-  background: lightgrey;
-  width: 25%;
-  border: 1px;
-}
-
-main button:hover,
-main button:focus {
-  background: rgb(9, 225, 225);
-  outline: 0;
-}
-
-@media (max-width: 389px) {
-  main .parent {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: stretch;
-    justify-content: space-evenly;
-    align-items: stretch;
-  }
-}
 
 
 
@@ -180,36 +85,17 @@ main button:focus {
 
 @media (max-width: 768px) {
 
-  .parent {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-content: stretch;
-    justify-content: space-evenly;
-    align-items: stretch;
-  }
 
 
 }
 
 @media (max-width: 800px) {
 
-  .parent {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
 
 
 }
 
 @media (max-width: 1280px) {
-
-  .parent {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
 
 
 }

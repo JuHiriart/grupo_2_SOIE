@@ -8,11 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- stylesheets -->
-
-    <link rel="stylesheet" type="text/css" href="style/header.css">
-    <link rel="stylesheet" type="text/css" href="style/bodycarrito.css">
-    <link rel="stylesheet" type="text/css" href="style/footer.css">
     <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link rel="stylesheet" type="text/css" href="style/bodycarrito.css">
+
     <!-- fonts -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -108,147 +106,56 @@
 
     <main>
         
-        <form action=""></form>
-        <div class="parent">
+        <h2 class="title">Carrito</h2>
 
-            <div class="box_uno">
-                <table class="principal">
-                    <caption class="cap-prin">Productos y Servicios</caption>
-
-
-                    <thead>
-                        <!-- Encabezado de la tabla -->
-
-                        <tr id=" titulos">
-                            <th>Id</th>
-                            <th>Producto</th>
-                            <th>Cantidad</th>
-                            <th>Precio</th>
-                            <th>Total</th>
-                            <th><i id="carrito" class='fas'>&#xf07a;</i></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="detalle">1</a></td>
-                            <td>Producto 1</td>
-                            <td>2</td>
-                            <td>500</td>
-                            <td>1000</td>
-                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
-                        </tr>
-                        <tr>
-                            <td><a href="detalle">2</a></td>
-                            <td>Producto 2</td>
-                            <td>1</td>
-                            <td>800</td>
-                            <td>1600</td>
-                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
-                        </tr>
-                        <tr>
-                            <td><a href="detalle">3</a></td>
-                            <td>Producto3</td>
-                            <td>4</td>
-                            <td>300</td>
-                            <td>1200</td>
-                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
-                        </tr>
-                        <tr>
-                            <td><a href="detalle">4</a></td>
-                            <td>Producto 4</td>
-                            <td>2</td>
-                            <td>500</td>
-                            <td>1000</td>
-                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
-                        </tr>
-                        <tr>
-                            <td><a href="detalle">5</a></td>
-                            <td>Producto 5</td>
-                            <td>3</td>
-                            <td>600</td>
-                            <td>1800</td>
-                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
-                        </tr>
-                        <tr>
-                            <td><a href="detalle">6</a></td>
-                            <td>Producto 6</td>
-                            <td>3</td>
-                            <td>600</td>
-                            <td>1800</td>
-                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
-                        </tr>
-
-                        <tr>
-                            <td><a href="detalle">10</a></td>
-                            <td>Servicio 4</td>
-                            <td>3</td>
-                            <td>600</td>
-                            <td>1800</td>
-                            <td id="compra"><input type="checkbox" name="cb-compra" value="gusta"></td>
-                        </tr>
-
-                    </tbody>
-
-                </table>
+        <div class="main-container">
+            
+            <div class="subtotal">
+                <p>
+                    Subtotal: <span class="precio">$12.300</span>
+                </p>
+                <a href="#" class="pagar">
+                    <button class="pagar">
+                        Proceder a pagar (n productos)
+                    </button>
+                </a>
             </div>
-            <div class="box_dos">
-                <table class="resumen">
-                    <caption class="cap-resu">Resumen</caption>
-                    <thead>
-                        <!-- Encabezado de la tabla -->
-                    <tbody>
-                        <tr>
-                            <th>Producto</th>
-                            <th>Impuestos</th>
-                            <th>Descuento</th>
-                            <th>Subtotal</th>
 
-                        </tr>
-                        <tr>
-                            <td>Producto 1</td>
-                            <td>10</td>
-                            <td>0</td>
-                            <td>1010</td>
-                        </tr>
-                        <tr>
-                            <td>Producto 2</td>
-                            <td>8</td>
-                            <td>0</td>
-                            <td>808</td>
+            <div class="productos">
 
-                        </tr>
-                        <tr>
-                            <td>Producto 3</td>
-                            <td>120</td>
-                            <td>0</td>
-                            <td>1320</td>
+                <div class="producto">
+                    
+                    <a href="#" class="img"> <!-- Luego linkear a detalle del producto -->
+                        <img src="images/products/higiene_facial.PNG" alt="higiene_facial">
+                    </a>
+                    
+                    <div class="detalles">
+                        <a href="#"> <!-- Luego linkear a detalle del producto -->
+                            <p class="titulo">Higiene Facial</p>
+                        </a>
+                        <p class="precio">$1500</p>
+                        <p class="descuento">2%</p>
+                    </div>
 
-                        </tr>
-                        <tr>
-                            <td>Producto 4</td>
-                            <td>50</td>
-                            <td>0</td>
-                            <td>1050</td>
+                    <div class="actions">
+                        <div class="counter">
+                            <div class="menos btn">-</div>
+                            <div class="count btn">1</div>
+                            <div class="mas btn">+</div>
+                        </div>
+                        <a href="#" class="eliminar">
+                            <button>
+                                Quitar del carrito
+                            </button>
+                        </a>
+                    </div>
 
-                        </tr>
-
-                    </tbody>
-
-                    </thead>
-
-                </table>
-                <div class="total">
-                    <label>Total: 4188 </label>
-                    <p class="full-width">
-                        <button>Pagar</button>
-                    </p>
                 </div>
+
             </div>
+
         </div>
 
-
-
-        </form>
     </main>
 
     <footer>

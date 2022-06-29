@@ -64,11 +64,14 @@ main div.subtotal a button {
 
 main div.productos {
   padding: 1rem 2.5% 1rem;
-  background-image: url('../images/banner/cielo.jpg');
+/*   background-image: url('../images/banner/cielo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+
+  background: rgb(188,223,183);
+  background: linear-gradient(0deg, rgba(188,223,183,1) 0%, rgba(119,199,205,1) 100%);
 }
 
 main div.producto {
@@ -79,7 +82,7 @@ main div.producto {
  */
   background: rgba(255, 255, 255, 0.01);
   box-shadow: 0 4px 30px rgb(0 0 0 / 30%);
-  backdrop-filter: blur(7px);
+  backdrop-filter: blur(13px);
   border: 1px solid rgba(255, 255, 255, 0.54);
 
   border-radius: 0.5rem;
@@ -125,7 +128,11 @@ main .producto .detalles p.titulo {
 }
 
 main div.producto div.detalles .descripcion {
-  display:none;
+  /* display:none; */
+}
+
+main .detalles .descuento {
+  color: var(--azul-suave);
 }
 
 main div.producto div.actions {

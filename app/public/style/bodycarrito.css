@@ -64,14 +64,17 @@ main div.subtotal a button {
 
 main div.productos {
   padding: 1rem 2.5% 1rem;
-/*   background-image: url('../images/banner/cielo.jpg');
+
+  background-image: url('../images/banner/cielo.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; */
+  background-attachment: fixed;
 
-  background: rgb(188,223,183);
-  background: linear-gradient(0deg, rgba(188,223,183,1) 0%, rgba(119,199,205,1) 100%);
+ 
+/*   background: rgb(188,223,183);
+  background: linear-gradient(0deg, rgba(188,223,183,1) 0%, rgba(119, 199, 205, 0.577) 100%);
+ */
 }
 
 main div.producto {

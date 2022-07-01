@@ -4,11 +4,12 @@ const app = express();
 const public = path.join(__dirname, '../public')
 const viewsPath = path.join(__dirname, './views');
 
-app.set('puerto', process.env.PORT || 2000);
+
+const listen = require('./modules/listen.js');
+app.listen(listen.port, listen.callback());
 
 
-app.listen(app.get('puerto'), ()=>{console.log(`Abriendo Servidor puerto ${app.get('puerto')}` )});
-app.use(express.static(public));
+app.use(require('./modules/public.js'));
 
 app.get('/', (req,res) => res.sendFile(path.join(viewsPath, 'index.html')))
 app.get('/productList', (req,res) => res.sendFile(path.join(viewsPath, 'productList.html')))

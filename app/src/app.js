@@ -10,13 +10,9 @@ app.set('puerto', process.env.PORT || 2000);
 app.listen(app.get('puerto'), ()=>{console.log(`Abriendo Servidor puerto ${app.get('puerto')}` )});
 app.use(express.static(public));
 
-app.get('/', (req,res) => res.sendFile(path.join(__dirname, 'index.html')))
-app.get('/productos', (req,res) => res.sendFile(path.join(viewsPath, 'detalle.html')))
-app.get('/carrito', (req,res) => res.sendFile(path.join(viewsPath, 'carrito.html')))
-app.get('/detalle', (req,res) => res.sendFile(path.join(viewsPath, 'detalle.html')))
-app.get('/login', (req,res) => res.sendFile(path.join(viewsPath, 'login.html')))
-app.get('/registrarse', (req,res) => res.sendFile(path.join(viewsPath, 'signin.html')))
-
-
-
-
+app.get('/', (req,res) => res.sendFile(path.join(viewsPath, 'index.html')))
+app.get('/productList', (req,res) => res.sendFile(path.join(viewsPath, 'productList.html')))
+app.get('/productCart', (req,res) => res.sendFile(path.join(viewsPath, 'productCart.html')))
+app.get('/productDetail', (req,res) => res.sendFile(path.join(viewsPath, 'productDetail.html'))) // HACER VISTA DETALLE DE PRODUCTO
+app.get('/logIn', (req,res) => res.sendFile(path.join(viewsPath, 'logIn.html')))
+app.get('/signIn', (req,res) => res.sendFile(path.join(viewsPath, 'signIn.html')))

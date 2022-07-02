@@ -1,0 +1,8 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: space-around;
+}
+
+.bt2{padding:6px;border-radius:10px;}

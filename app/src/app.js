@@ -16,6 +16,9 @@ const {login,signin} = require ('./controllers/users.js');
 const {cart} = require ('./controllers/checkout.js');
 const {productList,productDetail} = require ('./controllers/products.js');
 
+app.set('view', resolve(__dirname, 'views'));
+app.set('view engine', 'ejs');
+
 app.get('/', home);
 app.get('/productList', productList);
 app.get('/productCart', cart);

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./includes/head.ejs') %>
+
+
+    <body>
+        <!-- HEADER -->
+        <%- include('./includes/header.ejs') %>
+            <main>
+                <form action="#" target="" method="get" name="formDatosProducto">
+
+                    <label for="titulo">Titulo</label>
+                    <input type="text" name="titulo" id="titulo" placeholder="Escribe tu titulo" />
+
+                    <label for="descripcion">Descripción</label>
+                    <textarea name="descripcion" for="descripc"
+                        placeholder="describe brevemente en menos de 300 carácteres" maxlength="300"></textarea>
+
+                    <input type="file" name="image" id="image" />
+
+                    <label for="estado">Estado</label>
+                      <input type="radio" id="activo" name="fav_language" value="Activo">
+                      <label for="activo">Activo</label>
+                    <label for="estado">Descuento</label>
+                    <input type="radio" id="cero" name="fav_language" value="0">
+                      <label for="cero">Sin Descuento</label></br>
+                    <input type="radio" id="uno" name="fav_language" value="1">
+                      <label for="uno">Tipo de descuento 1</label></br>
+                    <input type="radio" id="dos" name="fav_language" value="2">
+                      <label for="dos">Tipo de descuento 2</label></br>
+
+                    <label for="titulo">Precio</label>
+                    <input type="number" name="precio" id="precio" step="0.01" min="0" value="0" />
+
+
+                    <input type="submit" name="guardar" value="guardar" />
+                </form>
+            </main>
+            <!-- FOOTER -->
+            <%- include('./includes/footer.ejs') %>
+
+    </body>
+
+</html>

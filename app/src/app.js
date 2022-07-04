@@ -16,7 +16,7 @@ app.set('view engine', 'ejs'); //implementación del motor de templates
 
 //---------------
 
-app.use(require('./routes/main.routes.js')); //con esta linea pedis todas las rutas
+app.use(require('./routes/main.routes.js'));                    //con esta linea pedis todas las rutas
 app.use('/productos',require('./routes/products.routes.js'));
 app.use('/checkout',require('./routes/checkout.routes.js'));
 app.use('/usuarios',require('./routes/users.routes.js'));

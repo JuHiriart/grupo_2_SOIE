@@ -10,7 +10,7 @@ app.use(require('./modules/public.js'));
 
 //---------------
 app.set('views', path.resolve(__dirname,'views'));
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs'); //implementación del motor de templates
 
 
 

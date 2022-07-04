@@ -1,5 +1,5 @@
 const views = require('../modules/file.js');
 module.exports = {
-    login: (req,res) => res.sendFile(views('user/logIn.html')),
-    signin: (req,res) => res.sendFile(views('user/signIn.html')),
+    login: (req,res) => res.render(views('user/logIn')),
+    signin: (req,res) => res.render(views('user/signIn')),
 }

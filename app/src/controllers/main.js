@@ -1,4 +1,4 @@
 const views = require('../modules/file.js');
 module.exports = {
-    home:(req,res) => res.sendFile(views('index.html'))
+    home:(req,res) => res.render(views('index'))
 }

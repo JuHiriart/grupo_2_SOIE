@@ -3,23 +3,20 @@ const path = require('path');
 const app = express();
 
 
-//-------------------------------------
-
 const listen = require('./modules/listen.js');
 app.listen(listen.port, listen.callback());
 
 app.use(require('./modules/public.js'));
 
+//---------------
+app.set('views', path.resolve(__dirname,'views'));
+app.set('view engine', 'ejs'); //implementación del motor de templates
 
-const {home} = require ('./controllers/main.js');
-const {login,signin} = require ('./controllers/users.js');
-const {cart} = require ('./controllers/checkout.js');
-const {productList,productDetail} = require ('./controllers/products.js');
 
-app.get('/', home);
-app.get('/productList', productList);
-app.get('/productCart', cart);
-app.get('/productDetail', productDetail); // HACER VISTA DETALLE DE PRODUCTO
-app.get('/logIn', login);
-app.get('/signIn', signin);
-//-------------------------------------
+
+//---------------
+
+app.use(require('./routes/main.routes.js'));                    //con esta linea pedis todas las rutas
+app.use('/productos',require('./routes/products.routes.js'));
+app.use('/checkout',require('./routes/checkout.routes.js'));
+app.use('/usuarios',require('./routes/users.routes.js'));

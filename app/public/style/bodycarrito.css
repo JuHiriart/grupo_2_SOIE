@@ -246,10 +246,14 @@ main div.productos {
   background-image: none;
 }
 
-div.subtotal {
+main div.subtotal {
   flex-direction: row;
-  justify-content: space-between;
-
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 15vh;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 main div.subtotal a {
@@ -259,6 +263,7 @@ main div.subtotal a {
   justify-items: center;
   align-items: center;
   align-content: center;
+  text-decoration: none;
 }
 
 div.producto {

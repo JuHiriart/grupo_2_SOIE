@@ -17,8 +17,8 @@
 
 * Dejamos de definir variables en forma individual por los errores que vimos y que nos marcaron con el srping anterior. Al unificar el proyecto nos encontramos que habia errores, por ejemplo nombrar algo en plural o singular, nombres en ingles o castellano.
 
-* Seguimos con las reuniones semanales para ver nuestros avances, nuestras dificultades.  Tambien agregamos algunas horas mas en conjunto por necesidad del spring o del tema.
+* Seguimos con las reuniones semanales para ver nuestros avances, nuestras dificultades.  Tambien agregamos algunas horas mas en conjunto por necesidad del sprint o del tema.
 
-* Hablamos sobre los problemas que tuvimos en el srping anterior en completar o llegar correctamente con los tiempos. Definimos que el que no llega solicite ayuda para que el resto complete con los temas solicitados.
+* Hablamos sobre los problemas que tuvimos en el sprint anterior en completar o llegar correctamente con los tiempos. Definimos que el que no llega solicite ayuda para que el resto complete con los temas solicitados.
 
 * Valoramos el aporte que todos estamos realizando para completar el trabajo. Buen clima de trabajo en el equipo. 

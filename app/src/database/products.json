@@ -38,15 +38,5 @@
         "timeMinutes": 120,
         "off": 0,
         "active": true 
-    },
-    {
-        "name": "Merca al peso",
-        "price": 5000,
-        "description": "Mejor producto traido de paraguay directamente",
-        "img": "https://pm1.narvii.com/6276/03641824aa6e89a7bc3afeee2625b206fc6cab95_hq.jpg",
-        "type": "product",
-        "timeMinutes": "depende como te pegue",
-        "off": 0,
-        "active": true 
     }
 ]

@@ -1,5 +1,4 @@
 const {renderCallback} = require('../modules/render')
-
 const productsRenderData = require('../models/product.model');
 
 module.exports = {

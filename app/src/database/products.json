@@ -1,9 +1,9 @@
 [
     {
         "name": "Intensive Serum Niacinamida",
-        "ption": "HDM : Contiene Niacinamida 10%, Ácido Hialurónico 0,2%, Vitamina E 0,2% y Zinc 0,2%. Regula la secreción de sebo e hidrata.Reduce visiblemente la apariencia de poros. Al favorecer la barrera que protege la humedad del rostro, logra hidratación y restaura el equilibrio cutáneo.",
-        "iprice": 999,
-        "descrimg": "/images/products/higiene_facial.PNG",
+        "description": "HDM : Contiene Niacinamida 10%, Ácido Hialurónico 0,2%, Vitamina E 0,2% y Zinc 0,2%. Regula la secreción de sebo e hidrata.Reduce visiblemente la apariencia de poros. Al favorecer la barrera que protege la humedad del rostro, logra hidratación y restaura el equilibrio cutáneo.",
+        "price": 999,
+        "img": "/images/products/higiene_facial.PNG",
         "type": "service",
         "timeMinutes": 90,
         "off": 0,
@@ -33,9 +33,19 @@
         "name": "Radiofrecuencia fraccionada",
         "price": 999,
         "description": "consiste en aumentar la temperatura de los tejidos sub-cutáneos por aporte energético de una onda electromagnética, la que por vibración molecular incrementa la temperatura del tejido, estimulando así la fabricación de colágeno y elastina.",
-        "img": "/images/products/productos031.jpg",
+        "img": "/images/products/productos-031.jpg",
         "type": "service",
         "timeMinutes": 120,
+        "off": 0,
+        "active": true 
+    },
+    {
+        "name": "Merca al peso",
+        "price": 5000,
+        "description": "Mejor producto traido de paraguay directamente",
+        "img": "https://pm1.narvii.com/6276/03641824aa6e89a7bc3afeee2625b206fc6cab95_hq.jpg",
+        "type": "product",
+        "timeMinutes": "depende como te pegue",
         "off": 0,
         "active": true 
     }

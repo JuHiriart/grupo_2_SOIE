@@ -1,8 +1,9 @@
-const views = require('../modules/file.js');
-const {data,renderCallback} = require('../modules/render')
+const {renderCallback} = require('../modules/render')
+
+const productsRenderData = require('../models/product.model');
 
 module.exports = {
-    productNew: renderCallback('productNew'),
-    productList: renderCallback('productList'),
-    productDetail: renderCallback('productNew'),
+    productNew      : renderCallback('productNew'),
+    productList     : renderCallback('productList' , productsRenderData ),
+    productDetail   : renderCallback('productNew')
 }

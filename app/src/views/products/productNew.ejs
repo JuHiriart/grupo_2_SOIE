@@ -7,76 +7,88 @@
     <body>
         <!-- HEADER -->
         <%- include('../partials/header.ejs') %>
-		<main>
-            <section>
-                <form action="/products/save" target="" method="post" name="formDatosProducto" enctype="multipart/form-data">
+            <main>
+                <section class="contenedor-formularios">
+                    <form action="/products/save" target="" method="post" name="formNewProducto"
+                        enctype="multipart/form-data">
+                        <div class="contenedor-input">
+                            <label for="titulo">Nombre del Producto : </label>
+                            <input type="text" name="titulo" id="titulo" placeholder="Escribe el nombre del producto" />
+                        </div>
+                        <div class="contenedor-input">
+                            <label for="descripcion">Descripción : </label>
+                            <textarea name="descripcion" for="descripc"
+                                placeholder="describe brevemente en menos de 300 carácteres" maxlength="300"></textarea>
+                        </div>
+                        <div class="contenedor-input">
+                            <label for="titulo">Precio : </label>
+                            <input type="number" name="precio" id="precio" step="0.01" min="0" autocomplete="off" />
+                        </div>
+                        <div class="contenedor-input">
 
-                    <label for="titulo">Nombre del Producto : </label>
-                    <input type="text" name="titulo" id="titulo" placeholder="Escribe el nombre del producto" /></br>
+                            <label for="estado">Descuento : </label>
+                            <input type="radio" id="cero" name="fav_language" value="0">
+                              <label for="cero">Sin Descuento</label></br>
+                            <input type="radio" id="uno" name="fav_language" value="1">
+                              <label for="uno">Tipo de descuento uno</label></br>
+                            <input type="radio" id="dos" name="fav_language" value="2">
+                              <label for="dos">Tipo de descuento dos</label></br>
+                        </div>
+                        <div class="contenedor-input">
+                            <label for="categoria">Categoria : </label></br>
+                            <input type="radio" id="prod" name="fav_language" value="prod">
+                              <label for="prod">Producto</label></br>
+                            <input type="radio" id="serv" name="fav_language" value="serv">
+                              <label for="serv">Servicio</label>
+                        </div>
+                        <div class="contenedor-input">
+                            <label for="imagen">Imagen : </label>
+                            <input type="file" name="image" id="image" />
+                        </div>
+                        <div class="contenedor-input">
+                            <label>Tiempo Servicio en minutos : </label>
+                            <select name="Tiempo">
+                                <option>30</option>
+                                <option>45</option>
+                                <option>60</option>
+                                <option>90</option>
+                                <option>180</option>
+                            </select>
+                        </div>
+                        <div class="contenedor-input">
+                            <label>Tamaño del producto : </label>
+                            <select name="Tamano">
+                                <option>XS</option>
+                                <option>S</option>
+                                <option>M</option>
+                                <option>L</option>
+                                <option>XL</option>
+                                <option>XXL</option>
+                            </select>
+                        </div>
+                        <div class="contenedor-input">
 
-                    <label for="descripcion">Descripción : </label>
-                    <textarea name="descripcion" for="descripc"
-                        placeholder="describe brevemente en menos de 300 carácteres" maxlength="300"></textarea></br>
+                            <label for="categoria">Tipo de servicio o producto : </label></br>
+                            <input type="radio" id="tratamiento" name="fav_language" value="tratamiento">
+                              <label for="tratamiento">Tratamiento</label>
+                            <input type="radio" id="cuidado" name="fav_language" value="cuidado">
+                              <label for="cuidado">Cuidado</label>
+                        </div>
+                        <div class="contenedor-input">
+                            <label for="estado">Estado : </label></br>
+                              <input type="radio" id="activo" name="fav_language" value="Activo">
+                              <label for="activo">Activo</label>
+                        </div>
 
-                    <label for="titulo">Precio : </label>
-                    <input type="number" name="precio" id="precio" step="0.01" min="0" autocomplete="off" /></br>
-                    
-                    <label for="estado">Descuento : </label></br>
-                    <input type="radio" id="cero" name="fav_language" value="0">
-                      <label for="cero">Sin Descuento</label></br>
-                    <input type="radio" id="uno" name="fav_language" value="1">
-                      <label for="uno">Tipo de descuento uno</label></br>
-                    <input type="radio" id="dos" name="fav_language" value="2">
-                      <label for="dos">Tipo de descuento dos</label></br>
 
-                    <label for="categoria">Categoria : </label></br>
-                    <input type="radio" id="prod" name="fav_language" value="prod">
-                      <label for="prod">Producto</label></br>
-                    <input type="radio" id="serv" name="fav_language" value="serv">
-                      <label for="serv">Servicio</label></br>
+                        <button class="bt2">Save</button>
 
-                    <label for="imagen">Imagen : </label>
-                    <input type="file" name="image" id="image" /></br>
-
-                    <label>Tiempo Servicio en minutos : </label>
-                    <select name="Tiempo">
-                        <option>30</option>
-                        <option>45</option>
-                        <option>60</option>
-                        <option>90</option>
-                        <option>180</option>                    
-                    </select></br> 
-
-                    <label>Tamaño del producto : </label>
-                    <select name="Tamano">
-                        <option>XS</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                        <option>XXL</option>                     
-                    </select></br>
-
-                   
-                    <label for="categoria">Tipo de servicio o producto : </label></br>
-                    <input type="radio" id="tratamiento" name="fav_language" value="tratamiento">
-                      <label for="tratamiento">Tratamiento</label></br>
-                    <input type="radio" id="cuidado" name="fav_language" value="cuidado">
-                      <label for="cuidado">Cuidado</label></br>
-                   
-                    <label for="estado">Estado : </label></br>
-                      <input type="radio" id="activo" name="fav_language" value="Activo">
-                      <label for="activo">Activo</label></br>
-
-                    <button class="bt2">Save</button>
-                    
-                </form>
-            </section>
-			</main>
+                    </form>
+                </section>
+            </main>
             <!-- FOOTER -->
             <%- include('../partials/footer.ejs') %>
 
     </body>
 
 </html>
-

@@ -28,5 +28,10 @@
         "title"     : "SOIE - Registrarse",
         "style"     : "signin",
         "relPath"   : ["users"]
+    },
+    "productNew": {
+        "title"     : "SOIE - Subir producto",
+        "style"     : "productNew",
+        "relPath"   : ["products"]
     }
 }

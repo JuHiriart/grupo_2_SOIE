@@ -1,85 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <!-- metadata -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- stylesheets -->
-    <link rel="stylesheet" type="text/css" href="style/main.css">
-    <link rel="stylesheet" type="text/css" href="style/bodyinicio.css">
-
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
-    
-    <!-- icons -->
-    <script src="https://kit.fontawesome.com/5c00d89eed.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image/svg" href="/images/logo-mercado-liebre-favicon.svg" />
-
-    <!-- title -->
-    <title>SOIE</title>
-</head>
+<%- include('./partials/head') %>
 
 <body>
 
     <!-- HEADER -->
-    <header>
-        <div class="logo container">
-            <a href="/">
-                <img id="logo" src="images/logo/logo-SOIE.png" alt="logo SOIE">
-            </a>
-        </div>
-
-        <div class="busqueda">
-            <form action="get">
-                <input type="text" name="busqueda" class="busqueda" placeholder="Buscar tratamiento" autocapitalize="none">
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </form>
-        </div>
-    
-        <nav class="header">
-            <ul class="site">
-                <li>
-                    <a href="/">
-                        <i class="fa-regular fa-house-blank"></i>
-                        <span>Inicio</span>
-                    </a>
-                </li>
-                <li><a href="/productList">Productos</a></li>
-                <li><a href="/contacto">Contacto</a></li>
-<!--                 <li><a href="/views/sign-in">Crear usuario</a></li>
-                <li><a href="/views/log-in">Ingresar</a></li> -->
-            </ul>
-        </nav>
-
-        <div class="buttons">
-
-            <a href="/logIn">
-                <button class="usuario">
-                    <i class="fa-solid fa-user"></i>
-                </button>
-            </a>
-            
-            <a href="/productCart">
-                <button class="cart" style="position: relative;">
-                    <i class="fa-solid fa-bars"></i>
-                    <div>2</div>
-                </button>
-            </a>
-            
-            <a href="#">
-                <button class="menu-ham">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-            </a>
-            
-        </div>
-
-    </header>
+    <%- include('./partials/header') %> 
 
     <div class="content">
 
@@ -101,7 +28,7 @@
                 </div>
 
                 <div class="card">
-                    <a href="/productList">
+                    <a href="/products/productList">
                         <button>
                             ¡Conocé nuestros productos!
                         </button>
@@ -112,27 +39,7 @@
     
 
         <!-- FOOTER -->
-        <footer>
-            <ul>
-                <li>
-                    <div class="img-container">
-                        <img class="logo" src="images/logo/logo-mariposa.png" alt="mariposa">
-                    </div>
-                </li>
-                <li>
-                    <h2>SOIE</h2>
-                    <a href="#">Preguntas</a>
-                    <a href="#">Ayuda</a>
-                </li>
-                <li>
-                    <h2>PRODUCTOS</h2>
-                    <a href="#">Consultas</a>
-                    <a href="#">Pedidos especiales</a>
-                    <a href="#">Empresarial</a>
-                </li>
-            </ul>
-            <div id="copyright">Copyright: ----------</div>
-        </footer>
+        <%- include('./partials/footer')  %> 
     </div>
 
 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head')  %> 
+
+<body>
+
+    <!-- HEADER -->
+    <%- include('../partials/header') %>
+    <!------------------------------------------------------->
+    <main>
+        
+        <section>
+            <div class="signInBox">
+                
+                <h1>Registrarse</h1>
+                <div class="forms">
+                    <div>
+                        <label for="name" class="name">
+                            Nombre
+                            <input type="text" id="name" placeholder="Nombre de usuario">
+                        </label>
+                    </div>
+                    <div>
+                        <label for="email" class="email">
+                            Email
+                            <input type="email" id="email" placeholder="Correo electrónico">
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label for="pass" class="pass">
+                            Contraseña
+                            <input type="password" id="pass" placeholder="Contraseña">
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label for="passCon" class="passCon">
+                            Confrimar Contraseña
+                            <input type="password" id="passCon" placeholder="Confirmar contraseña">
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label for="age" class="age">
+                            Fecha de nacimiento
+                            <input type="date" id="age">
+                        </label>
+                    </div>
+                </div>
+                
+                
+                <div id="gender">
+                    <input type="radio" id="hombre" name="gender">
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" id="mujer" name="gender">
+                    <label for="mujer">Mujer</label>
+                    <input type="radio" id="otro" name="gender">
+                    <label for="otro">Otro</label>
+                </div>
+                
+                <form action="TBD" method="POST" class="btn">
+                    <input type="button" value="Crear mi cuenta" id="sendBtn">
+                </form>
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <%- include('../partials/footer')  %> 
+
+
+
+
+</body>
+
+</html>

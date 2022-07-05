@@ -1,4 +1,6 @@
 const views = require('../modules/file.js');
+const {data,renderCallback} = require('../modules/render')
+
 module.exports = {
-    home:(req,res) => res.render(views('index'))
+    home: renderCallback('index')
 }

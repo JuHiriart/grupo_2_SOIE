@@ -24,8 +24,6 @@ header {
 }
 
 
-
-
 div.about-us {
   width: 100%;
   display: flex;
@@ -68,11 +66,6 @@ div.card button {
   color: white;
   border-radius: 0.5rem;
 }
-
-div.card button:hover {
-  
-}
-
 
 
 footer {

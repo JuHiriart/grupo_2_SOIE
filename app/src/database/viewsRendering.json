@@ -4,6 +4,11 @@
         "style"     : "index",
         "relPath"   : []
     },
+    "error": {
+        "title"     : "SOIE - Error",
+        "style"     : "error",
+        "relPath"   : []
+    },
     "productCart": {
         "title"     : "SOIE - Carrito",
         "style"     : "cart",

@@ -1,12 +1,12 @@
 const { Router } = require("express");
-const {login,signin} = require ('../controllers/users.js');
 const routes = Router();
-
-
 
 routes.use(require('../modules/public.js'));
 
-routes.get('/logIn', login);
-routes.get('/signIn', signin);
+const controller = require ('../controllers/users.js');
+
+for (key in controller){
+    routes.get(`/${key}`, controller[key]);
+}
 
 module.exports = routes;

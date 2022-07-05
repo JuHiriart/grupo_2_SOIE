@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %> 
+
+<body>
+
+    <!-- HEADER -->
+    <%- include('../partials/header') %>
+    <!------------------------------------------------------->
+    <main>
+        
+        <section>
+            <div class="signInBox">
+                
+                <h1>Ingreso</h1>
+                <div class="forms">
+                    <div>
+                        <label for="name" class="name">
+                            Usuario
+                            <input type="text" id="name" placeholder="Nombre de usuario">
+                        </label>
+                    </div>
+                    
+                    <div>
+                        <label for="pass" class="pass">
+                            Contraseña
+                            <input type="password" id="pass" placeholder="Contraseña">
+                        </label>
+                    </div>
+                    
+                </div>
+                
+                
+                
+                <form action="TBD" method="POST" class="btn">
+                    <input type="button" value="Ingresar" id="sendBtn">
+                </form>
+                
+                <div class="sin-cuenta">
+                    <p>Todavia no tenes una cuenta? </p>
+                    <a href="/users/signin">Registrate</a>
+                </div>
+            </div>
+            
+        </main>
+        
+        <!-- FOOTER -->
+        <%- include('../partials/footer')  %> 
+
+
+
+</body>
+
+</html>

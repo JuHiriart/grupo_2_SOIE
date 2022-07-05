@@ -17,7 +17,7 @@
     "productList": {
         "title"     : "SOIE - Productos",
         "style"     : "productList",
-        "relPath"   : ["products"]  
+        "relPath"   : ["products"]
     },
     "login": {
         "title"     : "SOIE - Ingresar",
@@ -30,8 +30,8 @@
         "relPath"   : ["users"]
     },
     "productNew": {
-        "title"     : "SOIE - Subir producto",
-        "style"     : "productNew",
-        "relPath"   : ["products"]
+        "title"     : "SOIE - Nuevo producto",
+        "style"     : "porductNew",
+        "relPath"   : ["products"] 
     }
 }

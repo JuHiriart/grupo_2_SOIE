@@ -3,14 +3,14 @@ const views = require('../modules/file.js');
 
 module.exports = {
     login: (req,res) => {
-        res.render( views(login) , {
+        res.render( views('users/login') , {
             title : 'Login',
             style : 'login',
             products : {}
         })
     },
     signin: (req,res) => {
-        res.render( views(signin) , {
+        res.render( views('users/signin') , {
             title : 'Sign In',
             style : 'signin',
         });

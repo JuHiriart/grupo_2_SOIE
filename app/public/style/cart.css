@@ -1,4 +1,6 @@
+main {
 
+}
 
 main h2.title {
   margin-left: 10%;
@@ -128,6 +130,9 @@ main .producto .detalles p.titulo {
   margin-top: 0;
 }
 
+main div.producto div.detalles .descripcion {
+  /* display:none; */
+}
 
 main .detalles .descuento {
   color: var(--azul-suave);

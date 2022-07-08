@@ -1,6 +1,10 @@
-const { render } = require('ejs');
-const {data,renderCallback} = require('../modules/render')
+const views = require('../modules/file.js');
 
 module.exports = {
-    productCart: renderCallback('productCart')
+    productCart: (req, res) => {
+        res.render(views('productCart') , {
+            title : "Cart",
+            style : 'cart',
+        })
+    }
 }

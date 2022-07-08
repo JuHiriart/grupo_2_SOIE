@@ -1,7 +1,10 @@
-
-const {data,renderCallback} = require('../modules/render')
+const views = require('../modules/file.js');
 
 module.exports = {
-    home: renderCallback('index'),
-    error: renderCallback('error'),
+    home: (req, res) => {
+        res.render( views(home), {
+            title : 'Home',
+            style : 'home'
+        } );
+    }
 }

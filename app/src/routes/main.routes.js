@@ -1,9 +1,7 @@
 const { Router } = require("express");
-const {home,error} = require ('../controllers/main.js');
+const con = require ('../controllers/main.js');
 const routes = Router();
 
-
-routes.get('/', home);
-routes.get('/', error);
+routes.get('/', con.home);
 
 module.exports = routes;

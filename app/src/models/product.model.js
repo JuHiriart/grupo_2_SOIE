@@ -1,24 +1,21 @@
 const {readFileSync,writeFileSync} = require ('fs');
 const { resolve } = require('path');
 
+
+
 const products = {
-    index: function(){
-        let file = resolve(__dirname, '../database', 'products.json');
-        let data = readFileSync(file);
+    index: () => {
+        let data = readFileSync( resolve(__dirname, '..','database', 'products.json') );
         return JSON.parse(data);
+    },
+    add : (product) => {
+        let current = this.index();
+        current.push(product);
+        let stringified = JSON.stringify(current,{utf8: true})
+        let file = resolve(__dirname, '..','database', 'products.json');
+        writeFileSync( file, stringified );
     }
 }
 
+module.exports = products ;
 
-let renderData = require('../modules/render');
-let copy = JSON.parse(JSON.stringify(renderData));
-
-copy.data.productList.database = products.index();
-
-module.exports = copy.data
-
-console.log("renderData",renderData)
-
-console.log(
-    module.exports
-)

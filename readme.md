@@ -1,4 +1,4 @@
-# Projecto integrador ![Digital Hogit use](https://badgen.net/badge/icon/DigitalHouse?icon=terminal&color=red&label)
+# Projecto integrador ![Digital House](https://badgen.net/badge/icon/DigitalHouse?icon=terminal&color=red&label)
 ## Grupo #2
 ---
 ## Proyecto:

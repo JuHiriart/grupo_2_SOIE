@@ -6,14 +6,20 @@ const models = {
 }
 
 module.exports = {
-    productList: (req,res) => {
+    list: (req,res) => {
         res.render(views('products/productList'), {
             title : 'Productos',
             style : 'productList',
             products : models.products.index()
         })
     },
-    productDetail: (req,res) => {
+    detail: (req,res) => {
+        res.render(views('products/productDetail'), {
+            title : 'Detalle de producto',
+            style : 'productDetail',
+        })
+    },
+    new: (req,res) => {
         res.render(views('products/productDetail'), {
             title : 'Detalle de producto',
             style : 'productDetail',

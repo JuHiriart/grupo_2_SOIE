@@ -1,6 +1,4 @@
-main {
 
-}
 
 main h2.title {
   margin-left: 10%;
@@ -130,9 +128,6 @@ main .producto .detalles p.titulo {
   margin-top: 0;
 }
 
-main div.producto div.detalles .descripcion {
-  /* display:none; */
-}
 
 main .detalles .descuento {
   color: var(--azul-suave);
@@ -236,7 +231,39 @@ main .producto .actions .eliminar button {
 
 }
 
-@media (max-width: 800px) {
+@media (min-width: 800px) {
+
+header {
+  height: 15vh;
+}
+
+main div.productos {
+  background-image: none;
+}
+
+main div.subtotal {
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: sticky;
+  top: 15vh;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+main div.subtotal a {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+  text-decoration: none;
+}
+
+div.producto {
+  max-width: 500px;
+}
 
 
 

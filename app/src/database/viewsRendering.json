@@ -1,0 +1,32 @@
+{
+    "index": {
+        "title"     : "SOIE - Inicio",
+        "style"     : "index",
+        "relPath"   : []
+    },
+    "error": {
+        "title"     : "SOIE - Error",
+        "style"     : "error",
+        "relPath"   : []
+    },
+    "productCart": {
+        "title"     : "SOIE - Carrito",
+        "style"     : "cart",
+        "relPath"   : []  
+    },
+    "productList": {
+        "title"     : "SOIE - Productos",
+        "style"     : "productList",
+        "relPath"   : ["products"]  
+    },
+    "login": {
+        "title"     : "SOIE - Ingresar",
+        "style"     : "login",
+        "relPath"   : ["users"]
+    },
+    "signin": {
+        "title"     : "SOIE - Registrarse",
+        "style"     : "signin",
+        "relPath"   : ["users"]
+    }
+}

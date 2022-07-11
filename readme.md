@@ -7,11 +7,8 @@
         <tr>
             <td style="max-width:210px" width=50%>
                 <div align="center" >
-                    <img src="media\images\Logo\logoSOIEredes.jpg" style="max-width:200px" width=100%>
+                    <img src="Entregables\media\images\Logo\logoSOIEredes.jpg" style="max-width:200px" width=100%>
                     <br>
-                    <sup>
-                        <strong>SOIE: </strong>un espacio para vos
-                    </sup>
                     </br>        
                 </div>
             </td>

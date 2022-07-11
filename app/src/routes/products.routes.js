@@ -1,12 +1,8 @@
 const { Router } = require("express");
+const con = require ('../controllers/products.js');
 const routes = Router();
 
-routes.use(require('../modules/public.js'));
-
-const controller = require ('../controllers/products.js');
-
-for (key in controller){
-    routes.get(`/${key}`, controller[key]);
-}
+routes.get('/', con.productList);
+routes.get('/detail', con.productDetail); // HACER VISTA DETALLE DE PRODUCTO
 
 module.exports = routes;

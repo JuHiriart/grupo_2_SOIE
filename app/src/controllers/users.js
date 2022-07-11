@@ -1,8 +1,18 @@
-const { render } = require('ejs');
 const views = require('../modules/file.js');
-const {data,renderCallback} = require('../modules/render')
+
 
 module.exports = {
-    login: renderCallback('login'),
-    signin: renderCallback('signin'),
+    login: (req,res) => {
+        res.render( views('users/login') , {
+            title : 'Login',
+            style : 'login',
+            products : {}
+        })
+    },
+    signin: (req,res) => {
+        res.render( views('users/signin') , {
+            title : 'Sign In',
+            style : 'signin',
+        });
+    },
 }

@@ -1,134 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head') %> 
+<%- include('../partials/head') %>
 
-<body>
-    <%- include('../partials/header')  %> 
+    <body>
+        <%- include('../partials/header') %>
 
-    <!-------------------------------------------------------------->
+            <!-------------------------------------------------------------->
 
-    <main>
-        <section>
-            <div class="product">
-                <img src="/images/products/higiene_facial.PNG" alt="foto" class="productImg">
-                <div class="detailRight">
-                    <p id="productName">Intensive Serum Niacinamida</p>
-                    <p id="productDescription">HDM : Contiene Niacinamida 10%, Ácido Hialurónico 0,2%, Vitamina E 0,2% y Zinc 0,2%. Regula la secreción de sebo e hidrata.Reduce visiblemente la apariencia de poros. Al favorecer la barrera que protege la humedad del rostro, logra hidratación y restaura el equilibrio cutáneo.</p>
-                    <div class="produtButtons">
+            <main>
+                <section>
 
+                    <% products.forEach( (e,i)=>{ %>
 
-                        <label for="buttonShare" class="custom-checkbox">
-                            <input type="button" id="buttonShare">
-                            <i class="fa-solid fa-share-nodes share button"></i>
-                        </label>
+                        <div class="product">
+                            <img src=<%=e.img %> alt="foto" class="productImg">
+                            <% if (i%2==0) { %>
+                                <div class="detailRight">
+                                    <% } else { %>
+                                        <div class="detailLeft">
+                                            <% } %>
+                                                <p id="productName">
+                                                    <%= e.name %>
+                                                </p>
+                                                <p id="productDescription">
+                                                    <%= e.description %>
+                                                </p>
+                                                <div class="produtButtons">
 
-                        <label for="buttonBuy" class="custom-checkbox">
-                            <input type="button" id="buttonBuy">
-                            <i class="fa-solid fa-bag-shopping buy button"></i>
-                        </label>
+                                                    <label for="buttonShare" class="custom-checkbox">
+                                                        <input type="button" id="buttonShare">
+                                                        <i class="fa-solid fa-share-nodes share button"></i>
+                                                    </label>
 
-                        <label for="buttonFav1" class="custom-checkbox">
-                            <input type="checkbox" id="buttonFav1">
-                            <i class="fa-solid fa-heart noFav button"></i>
-                            <i class="fa-solid fa-heart fav button"></i>
-                        </label>
+                                                    <label for="buttonBuy" class="custom-checkbox">
+                                                        <input type="button" id="buttonBuy">
+                                                        <i class="fa-solid fa-bag-shopping buy button"></i>
+                                                    </label>
 
+                                                    <label for="buttonFav2" class="custom-checkbox">
+                                                        <input type="checkbox" id="buttonFav2">
+                                                        <i class="fa-solid fa-heart noFav button"></i>
+                                                        <i class="fa-solid fa-heart fav button"></i>
+                                                    </label>
 
-                    </div>
-                </div>
-            </div>
+                                                </div>
+                                        </div>
+                                </div>
 
-            <div class="product">
-                <img src="\images\products\IMG_3235.jpg" alt="foto" class="productImg">
-                <div class="detailLeft">
-                    <p id="productName">Protector solar facial</p>
-                    <p id="productDescription">EMULSIÓN FPS 50+ Protección solar facial diaria contra rayos UVA/ UVB sin color para todo tipo de pie. Previene el envejecimiento prematuro de la piel y aparición de manchas provocadas por el sol. Textura ligera y de rápida absorción.</p>
-                    <div class="produtButtons">
+                                <% }) %>
+                </section>
 
-                        <label for="buttonShare" class="custom-checkbox">
-                            <input type="button" id="buttonShare">
-                            <i class="fa-solid fa-share-nodes share button"></i>
-                        </label>
+            </main>
 
-                        <label for="buttonBuy" class="custom-checkbox">
-                            <input type="button" id="buttonBuy">
-                            <i class="fa-solid fa-bag-shopping buy button"></i>
-                        </label>
+            <!-- FOOTER -->
+            <%- include('../partials/footer') %>
 
-                        <label for="buttonFav2" class="custom-checkbox">
-                            <input type="checkbox" id="buttonFav2">
-                            <i class="fa-solid fa-heart noFav button"></i>
-                            <i class="fa-solid fa-heart fav button"></i>
-                        </label>
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="/images/products/peeling.PNG" alt="foto" class="productImg">
-                <div class="detailRight">
-                    <p id="productName">Peeling</p>
-                    <p id="productDescription">Se aplica un peeling bio enzimático. Se deja actuar 15 minutos. Este peeling es apto para todo tipo de piel, incluso las sensibles.</p>
-                    <div class="produtButtons">
-
-
-                        <label for="buttonShare" class="custom-checkbox">
-                            <input type="button" id="buttonShare">
-                            <i class="fa-solid fa-share-nodes share button"></i>
-                        </label>
-
-                        <label for="buttonBuy" class="custom-checkbox">
-                            <input type="button" id="buttonBuy">
-                            <i class="fa-solid fa-bag-shopping buy button"></i>
-                        </label>
-
-                        <label for="buttonFav3" class="custom-checkbox">
-                            <input type="checkbox" id="buttonFav3">
-                            <i class="fa-solid fa-heart noFav button"></i>
-                            <i class="fa-solid fa-heart fav button"></i>
-                        </label>
-
-
-                    </div>
-                </div>
-            </div>
-
-            <div class="product">
-                <img src="\images\products\productos-031.jpg" alt="foto" class="productImg">
-                <div class="detailLeft">
-                    <p id="productName">Radiofrecuencia fraccionada</p>
-                    <p id="productDescription">consiste en aumentar la temperatura de los tejidos sub-cutáneos por aporte energético de una onda electromagnética, la que por vibración molecular incrementa la temperatura del tejido, estimulando así la fabricación de colágeno y elastina.</p>
-                    <div class="produtButtons">
-
-                        <label for="buttonShare" class="custom-checkbox">
-                            <input type="button" id="buttonShare">
-                            <i class="fa-solid fa-share-nodes share button"></i>
-                        </label>
-
-                        <label for="buttonBuy" class="custom-checkbox">
-                            <input type="button" id="buttonBuy">
-                            <i class="fa-solid fa-bag-shopping buy button"></i>
-                        </label>
-
-                        <label for="buttonFav4" class="custom-checkbox">
-                            <input type="checkbox" id="buttonFav4">
-                            <i class="fa-solid fa-heart noFav button"></i>
-                            <i class="fa-solid fa-heart fav button"></i>
-                        </label>
-
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-    </main>
-
-    <!-- FOOTER -->
-    <%- include('../partials/footer')  %> 
-
-</body>
+    </body>
 
 </html>

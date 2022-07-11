@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Intensive Serum Niacinamida",
+        "description": "HDM : Contiene Niacinamida 10%, Ácido Hialurónico 0,2%, Vitamina E 0,2% y Zinc 0,2%. Regula la secreción de sebo e hidrata.Reduce visiblemente la apariencia de poros. Al favorecer la barrera que protege la humedad del rostro, logra hidratación y restaura el equilibrio cutáneo.",
+        "price": 999,
+        "img": "/images/products/higiene_facial.PNG",
+        "type": "service",
+        "timeMinutes": 90,
+        "off": 0,
+        "active": true 
+    },
+    {
+        "name": "Protector solar facial",
+        "price": 999,
+        "description": "EMULSIÓN FPS 50+ Protección solar facial diaria contra rayos UVA/ UVB sin color para todo tipo de pie. Previene el envejecimiento prematuro de la piel y aparición de manchas provocadas por el sol. Textura ligera y de rápida absorción.",
+        "img": "/images/products/IMG_3235.jpg",
+        "type": "product",
+        "timeMinutes": 0,
+        "off": 0,
+        "active": true
+    },
+    {
+        "name": "Peeling",
+        "price": 999,
+        "description": "Se aplica un peeling bio enzimático. Se deja actuar 15 minutos. Este peeling es apto para todo tipo de piel, incluso las sensibles.",
+        "img": "/images/products/peeling.PNG",
+        "type": "service",
+        "timeMinutes": 30,
+        "off": 0,
+        "active": true 
+    },
+    {
+        "name": "Radiofrecuencia fraccionada",
+        "price": 999,
+        "description": "consiste en aumentar la temperatura de los tejidos sub-cutáneos por aporte energético de una onda electromagnética, la que por vibración molecular incrementa la temperatura del tejido, estimulando así la fabricación de colágeno y elastina.",
+        "img": "/images/products/productos-031.jpg",
+        "type": "service",
+        "timeMinutes": 120,
+        "off": 0,
+        "active": true 
+    }
+]

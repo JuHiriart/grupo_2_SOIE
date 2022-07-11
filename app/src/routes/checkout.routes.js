@@ -1,12 +1,7 @@
 const { Router } = require("express");
+const con = require ('../controllers/checkout.js');
 const routes = Router();
 
-routes.use(require('../modules/public.js'));
-
-const controller = require ('../controllers/checkout.js');
-
-for (key in controller){
-    routes.get(`/${key}`, controller[key]);
-}
+routes.get('/', con.productCart)
 
 module.exports = routes;

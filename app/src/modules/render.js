@@ -9,10 +9,10 @@ const viewsRendering = JSON.parse(
 
 module.exports.data = viewsRendering;
 
-module.exports.renderCallback = (key) => {
-    let view = viewsRendering[key];
+module.exports.renderCallback = (key, data = viewsRendering) => {
+    let view = data[key];
     let dir = resolve(__dirname,'..','views', ...view.relPath, key);
-    return (req,res) => { res.render(dir,view) }
+    return (req,res) => { res.render(dir,view)}
 }
 
 /* console.log(

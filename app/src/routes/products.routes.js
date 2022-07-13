@@ -1,8 +1,14 @@
+const conName  = 'products'
+
+// importo el controlador en la variable con
+const con = require(`../controllers/${conName}.js`);
+
+// importo el router
 const { Router } = require("express");
-const con = require ('../controllers/products.js');
 const routes = Router();
 
-routes.get('/', con.productList);
-routes.get('/detail', con.productDetail); // HACER VISTA DETALLE DE PRODUCTO
+routes.get('/'      , con.list      );
+routes.get('/detail', con.detail    ); // HACER VISTA DETALLE DE PRODUCTO
+routes.get('/new'   , con.new       );
 
 module.exports = routes;

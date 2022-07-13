@@ -1,5 +1,10 @@
+const conName  = 'main'
+
+// importo el controlador en la variable con
+const con = require(`../controllers/${conName}.js`);
+
+// importo el router
 const { Router } = require("express");
-const con = require ('../controllers/main.js');
 const routes = Router();
 
 routes.get('/', con.home);

@@ -19,7 +19,7 @@ module.exports = {
             style : 'productDetail',
         })
     },
-    new: (req,res) => {
+    newp: (req,res) => {
         res.render(views('products/productNew'), {
             title : 'Crear producto',
             style : 'productNew',

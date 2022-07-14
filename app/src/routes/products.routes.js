@@ -7,8 +7,8 @@ const con = require(`../controllers/${conName}.js`);
 const { Router } = require("express");
 const routes = Router();
 
-routes.get('/'      , con.list     );
-routes.get('/detail', con.detail   ); // HACER VISTA DETALLE DE PRODUCTO
-routes.get('/newp'  , con.newp     );
+routes.get('/'      , con.list );
+routes.get('/detail', con.detail); // HACER VISTA DETALLE DE PRODUCTO
+routes.get('/newp'  , con.newp);
 
 module.exports = routes;

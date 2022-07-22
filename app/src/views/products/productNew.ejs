@@ -7,8 +7,11 @@
         <%- include('../partials/header.ejs') %>
             <main>
                 <section class="contenedor-formularios">
+                  
                     <form action="PRN" target="" method="POST" name="formNewProducto"
                         enctype="multipart/form-data">
+
+                        <h1>Creación de Productos</h1>
                         <div class="contenedor-input">
                             <label for="titulo">Nombre del Producto : </label>
                             <input type="text" name="titulo" id="titulo" placeholder="Escribe el nombre del producto" />
@@ -35,9 +38,9 @@
                         <div class="contenedor-input">
                             <label for="categoria">Categoria : </label></br>
                             <input type="radio" id="prod" name="fav_language" value="prod">
-                              <label for="prod">Producto</label></br>
+                              <label for="prod">Producto </label></br>
                             <input type="radio" id="serv" name="fav_language" value="serv">
-                              <label for="serv">Servicio</label>
+                              <label for="serv">Servicio </label>
                         </div>
                         <div class="contenedor-input">
                             <label for="imagen">Imagen : </label>

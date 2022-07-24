@@ -17,6 +17,7 @@ module.exports = {
         res.render(views('products/productDetail'), {
             title : 'Detalle de producto',
             style : 'productDetail',
+            product : models.products.getById(req.params.id),
         })
     },
     new: (req,res) => {

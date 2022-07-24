@@ -20,9 +20,9 @@ module.exports = {
         })
     },
     new: (req,res) => {
-        res.render(views('products/productDetail'), {
-            title : 'Detalle de producto',
-            style : 'productDetail',
+        res.render(views('products/productNew'), {
+            title : 'Agregar nuevo producto',
+            style : 'productNew',
         })
     },
 }

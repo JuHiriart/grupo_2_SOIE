@@ -21,7 +21,7 @@ module.exports = {
     },
     new: (req,res) => {
         res.render(views('products/productNew'), {
-            title : 'Agregar nuevo producto',
+            title : 'Nuevo producto',
             style : 'productNew',
         })
     },

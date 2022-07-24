@@ -1,0 +1,70 @@
+.descriptionBox{
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 15px;
+    width: 30%;
+    margin: 0% 1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    align-items: center;
+}
+
+#name{
+    margin: 5%;
+    font-family: 'Roboto Serif', serif;
+    text-align: left;
+    width: 90%;
+}
+
+#price{
+    margin: 5%;
+    color: green;
+    text-align: left;
+    width: 90%;
+}
+
+#description{
+    margin: 20px;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    width: 90%;
+}
+
+#pImg{
+    width: 50%;
+    object-fit: contain;
+}
+
+.product{
+    display: flex;
+    justify-content: center;
+}
+
+#pNow{
+    width: 50%;
+    height: 3em;
+    background-color: #00A8B5;
+    margin: 10px;
+    border-radius: 10%;
+    border: 1px solid lightgray;
+}
+
+#pCart{
+    width: 50%;
+    height: 3em;
+    background-color: #D0C5AF;
+    margin: 10px;
+    border-radius: 10%;
+    border: 1px solid lightgray;
+}
+
+label{
+    font-family: 'Montserrat', sans-serif;
+}
+
+button{
+    font-family: 'Roboto Serif', serif;
+    font-weight: bold;
+}

@@ -1,0 +1,11 @@
+[
+    {
+        "id"    : 10 ,    
+        "firstName"     : "Leo",
+        "lastName"      : "Messi",
+        "email"         : "pulga10@gmail.com",    
+        "password"      : "cristiano_pete",
+        "category"      : "admin",
+        "image"        : "img-user-10.png"
+    }
+]

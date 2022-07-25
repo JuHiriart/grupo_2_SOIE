@@ -5,12 +5,20 @@ const models = {
     products : require('../models/product.model.js'),
 }
 
+
 module.exports = {
     list: (req,res) => {
+
+        let products = models.products.index();
+
+        if(req.query && req.query.name){
+            products = products.filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1)
+        }
+
         res.render(views('products/productList'), {
             title : 'Productos',
             style : 'productList',
-            products : models.products.index()
+            products : products
         })
     },
     detail: (req,res) => {

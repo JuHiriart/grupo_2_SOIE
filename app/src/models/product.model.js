@@ -24,4 +24,4 @@ products.getById = ( id ) => {
     return current.find( product => product.id === id );
 }
 
-module.exports = products
+module.exports = products;

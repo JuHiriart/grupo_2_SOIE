@@ -11,20 +11,20 @@
             <main>
                 <section>
 
-                    <% products.forEach( (e,i)=>{ %>
+                    <% products.forEach( ( product,i)=>{ %>
 
                         <div class="product">
-                            <img src=<%=e.img %> alt="foto" class="productImg">
+                            <img src=<%= product.img %> alt="foto" class="productImg">
                             <% if (i%2==0) { %>
                                 <div class="detailRight">
                                     <% } else { %>
                                         <div class="detailLeft">
                                             <% } %>
-                                                <p id="productName">
-                                                    <%= e.name %>
-                                                </p>
+                                                <a id="productName" href=<%= `products/${ product.id }/detail` %>>
+                                                    <%=  product.name %>
+                                                </a>
                                                 <p id="productDescription">
-                                                    <%= e.description %>
+                                                    <%=  product.description %>
                                                 </p>
                                                 <div class="produtButtons">
 

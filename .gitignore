@@ -105,3 +105,7 @@ dist
 
 # Configuración de extención de terminales
 .vscode/
+
+# debugging js script
+.debug.js
+debug.js

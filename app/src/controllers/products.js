@@ -14,10 +14,11 @@ module.exports = {
         })
     },
     detail: (req,res) => {
+        let product = models.products.getById(req.params.id);
         res.render(views('products/productDetail'), {
-            title : 'Detalle de producto',
             style : 'productDetail',
-            product : models.products.getById(req.params.id),
+            title : `SOIE - ${product.name}`,
+            product : product,
         })
     },
     new: (req,res) => {

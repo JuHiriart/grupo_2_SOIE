@@ -21,9 +21,7 @@ products.add = (product) => {
 
 products.getById = ( id ) => {
     let current = products.index();
-    current.forEach( (product) => {
-        if (product.id === id) return product;
-    } );
+    return current.find( product => product.id === id );
 }
 
 module.exports = products

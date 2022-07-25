@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "server": "nodemon app/src/app.js",
-    "start": "node app/src/app.js"
+    "start": "node app/src/app.js",
+    "test": "nodemon app/src/app.js -e json,js,ejs,mjs"
   },
   "author": "Grupo #2",
   "license": "ISC",
@@ -16,6 +17,7 @@
     "override": "^0.0.1"
   },
   "devDependencies": {
+    "nodemon": "^2.0.19",
     "webpack-cli": "^4.9.2"
   }
 }

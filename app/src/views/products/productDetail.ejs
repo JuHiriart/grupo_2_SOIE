@@ -13,30 +13,35 @@
         <section>
             <div class="product">
 
-                <img src="/images\products\protector-sin-color1.jpg" alt="imagen del producto" id="pImg">
+                <img src="<%= product.img %>" alt="imagen del producto" id="pImg">
                 <div class="descriptionBox">
-                    <h1 id="name">Name</h1>
-                    <p id="description">description del producto bla bla saduihasdiuhbas i n asudhañsioudhnñio  asñoudhañsohd ñoasndñouash ñdiouhasñodhasñudhas igai iasld iasd iuashidhñid hi ias diuashduah ñio a hñadh aoshd ñoa h ha  añosudhñah ñia uia ñah añ uisilñyusiñu sñdfuioa sud aiu as gh ghañskg da a iñafiñ gifasd iasg auiñsduiñ ashfghsad g fa</p>
-                    <h2 id="price">$999,99</h2>
+                    <h1 id="name"><%=  product.name %></h1>
+                    <p id="description"><%= product.description %></p>
+                    <h2 id="price">$<%= product.price %></h2>
                     
-                    <form action="" id="pData">
-                        <label for="qty">
-                            Cantidad
-                            <input type="number" id="qty" name="qty" min="1" max="10">
-                        </label>
-                    </form>
-
-                    <form action="" id="pData">
-                        <label for="duration">
-                            Duración
-                            <select name="duration" id="duration">
-                                <option value="1">1 hora</option>
-                                <option value="1.5">1 hora y media</option>
-                                <option value="2">2 horas</option>
-                            </select>
-                        </label>
-                    </form>   
-                    
+                    <% if (product.type === 'product') { %>
+                     
+                        
+                        <form action="" id="pData">
+                            <label for="qty">
+                                Cantidad
+                                <input type="number" id="qty" name="qty" min="1" max="10">
+                            </label>
+                        </form>
+                    <% }else{ %>
+                        <form action="" id="pData">
+                            <label for="duration">
+                                Duración
+                                <select name="duration" id="duration">
+                                    <option value="1">1 hora</option>
+                                    <option value="1.5">1 hora y media</option>
+                                    <option value="2">2 horas</option>
+                                </select>
+                            </label>
+                        </form>   
+                        
+                    <% } %> 
+                        
                     <button type="submit" form="pData" value="" id="pNow">Comprar ahora</button>
                     <button type="submit" form="pData" value="" id="pCart">Agregar al carrito</button> 
                 </div>

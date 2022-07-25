@@ -10,6 +10,7 @@ const routes = Router();
 routes.get( '/'      , con.list       );
 // routes.get('/detail', con.detail    ); // HACER VISTA DETALLE DE PRODUCTO
 routes.get( '/new'   , con.new        );
+routes.get( '/abm'   , con.abm        );
 
 routes.get( '/:id/detail', con.detail );
 

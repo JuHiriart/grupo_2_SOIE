@@ -8,7 +8,6 @@
 
     <%- include('../partials/header') %>
 
-
     <main>
         <section>
             <div class="product">
@@ -17,8 +16,21 @@
                 <div class="descriptionBox">
                     <h1 id="name"><%=  product.name %></h1>
                     <p id="description"><%= product.description %></p>
-                    <h2 id="price">$<%= product.price %></h2>
+                    <% if (product.off != 0) { %>
+                        <div>
+                            <div  class="off">
+                                <h3 id="priceOld">$<%= product.price %></h3>
+                                <h5 id="offPer"><%= product.off %>% OFF </h5>
+                            </div>
+                            <h2 id="priceNew">$<%= product.price - (product.price*product.off/100) %></h2>
+                        </div>
                     
+                    <% } else { %>
+                         
+                        <h2 id="price">$<%= product.price %></h2>
+                        
+                    <% } %>
+                        
                     <% if (product.type === 'product') { %>
                      
                         

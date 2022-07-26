@@ -37,14 +37,17 @@ module.exports = {
             style : 'productNew',
         })
     },
-
-    store: ( req, res) => {
-        // res.send(JSON.stringify(req.body));
-        
-        let product = req.body;
-        product.id = models.products.getNewId();
-        models.products.add(product)
-        res.redirect(`/products/${product.id}/detail`);
+    store : {
+        data: ( req, res) => {
+            // res.send(JSON.stringify(req.body));
+            
+            let product = req.body;
+            product.id = models.products.getNewId();
+            product.img = `/images/products/${req.file.filename}`;
+            models.products.add(product)
+            res.redirect(`/products/${product.id}/detail`);
+        },
+        upload: models.products.storeFile()
     },
 
     abm:  (req,res) => {

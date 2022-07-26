@@ -1,8 +1,8 @@
 const {readFileSync,writeFileSync} = require ('fs');
-const { resolve } = require('path');
-// const products = require('../controllers/products');
+const path = require('path');
+const multer = require('multer');
 
-const fileDir = resolve( __dirname, '..', 'database', 'products.json' );
+const fileDir = path.resolve( __dirname, '..', 'database', 'products.json' );
 
 
 const products = {};
@@ -30,6 +30,25 @@ products.getNewId = () => {
                 .filter(product => product.id )
                 .map(product => parseInt(product.id));
     return Math.max(...ids) + 1;
+}
+
+products.storeFile = (req, file) => {
+
+    const storage = multer.diskStorage({
+
+        destination: function (req, file, cb) {
+          // cb(null, path.resolve(__dirname, '..', '..', 'public','images'));
+          cb(null, './app/public/images/products')
+        },
+
+        filename: function (req, file, cb) {
+          let name = ['img', new Date().getTime() , ...req.body.name.toLowerCase().split(" ")].join('-') + path.extname(file.originalname);
+          cb(null, name)
+        }
+      })
+
+    return multer({storage})
+
 }
 
 

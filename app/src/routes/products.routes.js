@@ -12,7 +12,7 @@ routes.get( '/'      , con.list       );
 
 /* create a new product */
 routes.get( '/create'   , con.new        );
-routes.post( '/'        , con.store      );
+routes.post( '/'        , con.store.upload.single('img') , con.store.data );
 
 routes.get( '/abm'   , con.abm        );
 

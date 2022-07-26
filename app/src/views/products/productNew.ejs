@@ -8,7 +8,7 @@
             <main>
                 <section class="contenedor-formularios">
                   
-                    <form action="/products" method="POST" name="formNewProducto">
+                    <form action="/products" method="POST" name="formNewProducto" enctype="multipart/form-data">
 
                         <h1>Nuevo producto</h1>
                         
@@ -49,7 +49,7 @@
 
                         <div class="contenedor-input">
                             <label for="imagen">Imagen : </label>
-                            <input type="file" name="img" id="image" accept="image/png, image/png" >
+                            <input type="file" name="img" id="img" accept="image/png, image/jpg" >
                         </div>
 
                         <button type="submit" class="bt2">Guardar</button>

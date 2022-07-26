@@ -1,0 +1,60 @@
+<form action="/products?_method=<%= product.new ? 'POST' : 'PUT'%>" method="POST"
+    name="form<%= product.new ? 'New' : 'Edit' %>Producto" enctype="multipart/form-data">
+    <h1>
+        <%= product.new ? 'Nuevo Producto' : 'Editar Producto' %>
+    </h1>
+
+    <div class="contenedor-input">
+        <label for="titulo">Nombre del Producto : </label>
+        <input type="text" name="name" id="titulo" value="<%= product.name ?? '' %>">
+    </div>
+    <div class="contenedor-input">
+        <label for="descripcion">Descripción : </label>
+        <textarea name="description" placeholder="Máximo 500 caracteres" maxlength="500" rows="5"
+            cols="30">
+            <%= product.description ?? '' %>
+        </textarea>
+    </div>
+    <div class="contenedor-input">
+        <label for="titulo">Precio : </label>
+        <input type="number" value="<%= product.price ?? '' %>" name="price" id="precio" step="0.01"
+            min="0" autocomplete="off" />
+    </div>
+    <div class="contenedor-input">
+        <label for="off">Descuento (%): </label>
+        <input type="number" value="<%= product.off ?? '' %>" name="off" step="1" min="0" max="100"
+            autocomplete="off">
+    </div>
+    <div class="contenedor-input">
+        <label for="categoria">Categoria : </label>
+        <div>
+            <input type="radio" id="product" name="type" value="product" <% if
+                (product.type=='product' ) { %> checked <% } %> >
+                <label for="product">Producto </label>
+        </div>
+        <div>
+            <input type="radio" id="service" name="type" value="service" <% if
+                (product.type=='service' ) { %> checked <% } %> >
+                <label for="service">Servicio </label>
+        </div>
+    </div>
+
+    <% if ( product.type=='service' || !product.type ) { %>
+        <div class="contenedor-input">
+            <label>Tiempo Servicio en minutos : </label>
+            <input type="number" value="<%= product.timeMinutes ?? '' %>" name="timeMinutes"
+                step="1" min="1" autocomplete="off">
+        </div>
+        <% } %>
+
+            <div class="contenedor-input">
+                <label for="imagen">Imagen : </label>
+                <input type="file" name="img" id="img" accept="image/png, image/jpg">
+                <% if (product.img) { %>
+                    <img src="<%= product.img %>" alt="image not avaible"
+                        style="padding: 3%; border-radius: 1em;">
+                    <% } %>
+            </div>
+
+            <button type="submit" class="bt2">Guardar</button>
+</form>

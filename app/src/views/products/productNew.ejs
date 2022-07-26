@@ -7,55 +7,9 @@
         <%- include('../partials/header.ejs') %>
             <main>
                 <section class="contenedor-formularios">
-                  
-                    <form action="/products" method="POST" name="formNewProducto" enctype="multipart/form-data">
 
-                        <h1>Nuevo producto</h1>
-                        
-                        <div class="contenedor-input">
-                            <label for="titulo">Nombre del Producto : </label>
-                            <input type="text" name="name" id="titulo">
-                        </div>
-                        <div class="contenedor-input">
-                            <label for="descripcion">Descripción : </label>
-                            <textarea name="description" for="descripc" placeholder="Máximo 300 caracteres" maxlength="300" rows="5" cols="30"></textarea>
-                        </div>
-                        <div class="contenedor-input">
-                            <label for="titulo">Precio : </label>
-                            <input type="number" name="price" id="precio" step="0.01" min="0" autocomplete="off" />
-                        </div>
-                        <div class="contenedor-input">
-                            <label for="off">Descuento : </label>
-                            <input type="number" name="off" step="1" min="0" max="100" autocomplete="off">
-                        </div>
-                        <div class="contenedor-input">
-                                <label for="categoria">Categoria : </label>
-                                <div>
-                                    <input type="radio" id="product" name="type" value="product">
-                                    <label for="product">Producto </label>
-                                </div>
-                                <div>
-                                    <input type="radio" id="service" name="type" value="service">
-                                    <label for="service">Servicio </label>
-                                </div>
-                        </div>
+                    <%- include('../partials/productForm.ejs') %>
 
-                        <% if (true) { %>
-                            <div class="contenedor-input">
-                                <label>Tiempo Servicio en minutos : </label>
-                                <input type="number" name="timeMinutes" step="1" min="1" autocomplete="off">
-                            </div>
-                        <% } %>
-
-                        <div class="contenedor-input">
-                            <label for="imagen">Imagen : </label>
-                            <input type="file" name="img" id="img" accept="image/png, image/jpg" >
-                        </div>
-
-                        <button type="submit" class="bt2">Guardar</button>
-                    </form>
-
-                    
                 </section>
             </main>
             

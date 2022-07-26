@@ -12,6 +12,8 @@ routes.get( '/'      , con.list       );
 routes.get( '/new'   , con.new        );
 routes.post( '/'     , con.store      );
 
+routes.get( '/abm'   , con.abm        );
+
 routes.get( '/:id/detail', con.detail );
 
 routes.get( '/:id/edit', con.detail );

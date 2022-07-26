@@ -33,10 +33,13 @@ module.exports = {
 
     new: ( req, res) => {
         res.render(views('products/productNew'), {
+            new : true,
             title : 'Nuevo producto',
             style : 'productNew',
+            product : {},
         })
     },
+
     store : {
         data: ( req, res) => {
             // res.send(JSON.stringify(req.body));
@@ -48,6 +51,16 @@ module.exports = {
             res.redirect(`/products/${product.id}/detail`);
         },
         upload: models.products.storeFile()
+    },
+
+    edit: ( req, res) => {
+        let product = models.products.getById(req.params.id);
+        res.render(views('products/edit'), {
+            new : false,
+            style : 'productNew',
+            title : `Editar: ${product.name}`,
+            product ,
+        })
     },
 
     abm:  (req,res) => {

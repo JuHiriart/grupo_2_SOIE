@@ -68,3 +68,23 @@ button{
     font-family: 'Roboto Serif', serif;
     font-weight: bold;
 }
+
+.off{
+    display: flex;
+    align-items: baseline;
+}
+
+#offPer{
+    margin: 0.5em;
+}
+
+#priceOld{
+    text-decoration: line-through;
+    color: black;
+    margin: 0.5em;
+}
+
+#priceNew{
+    margin: 0.5em;
+    color: green;
+}

@@ -41,11 +41,11 @@ module.exports = {
     store: ( req, res) => {
         res.send(JSON.stringify(req.body));
         
-        // let product = req.body;
-        // product.id = models.products.getNewId();
-        // models.products.add(product)
+        //let product = req.body;
+        //product.id = models.products.getNewId();
+        //models.products.add(product)
         
-        // res.redirect(`/products/${product.id}/detail`);
+        //res.redirect(`/products/${product.id}/detail`);
     },
 
     abm:  (req,res) => {

@@ -21,7 +21,7 @@ products.add = (product) => {
 
 products.getById = ( id ) => {
     let current = products.index();
-    return current.find( product => product.id === id );
+    return current.find( product => product.id == id );
 }
 
 products.getNewId = () => {

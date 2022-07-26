@@ -7,8 +7,10 @@ const con = require(`../controllers/${conName}.js`);
 const { Router } = require("express");
 const routes = Router();
 
+/* get all products */
 routes.get( '/'      , con.list       );
 
+/* create a new product */
 routes.get( '/create'   , con.new        );
 routes.post( '/'        , con.store      );
 

@@ -24,4 +24,13 @@ products.getById = ( id ) => {
     return current.find( product => product.id === id );
 }
 
+products.getNewId = () => {
+    let current = products.index();
+    let ids = current
+                .filter(product => product.id )
+                .map(product => parseInt(product.id));
+    return Math.max(...ids) + 1;
+}
+
+
 module.exports = products;

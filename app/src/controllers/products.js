@@ -7,7 +7,7 @@ const models = {
 
 
 module.exports = {
-    list: (req,res) => {
+    list: ( req, res) => {
 
         let products = models.products.index();
 
@@ -21,7 +21,7 @@ module.exports = {
             products : products
         })
     },
-    detail: (req,res) => {
+    detail: ( req, res) => {
         let product = models.products.getById(req.params.id);
         res.render(views('products/productDetail'), {
             style : 'productDetail',
@@ -29,10 +29,17 @@ module.exports = {
             product : product,
         })
     },
-    new: (req,res) => {
+    new: ( req, res) => {
         res.render(views('products/productNew'), {
             title : 'Nuevo producto',
             style : 'productNew',
         })
+    },
+    store: ( req, res) => {
+        let product = req.body;
+        product.id = models.products.getNewId();
+        models.products.add(product)
+        // res.send(JSON.stringify(req.body));
+        res.redirect(`/products/${product.id}/detail`);
     },
 }

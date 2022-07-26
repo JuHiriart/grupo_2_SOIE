@@ -8,9 +8,12 @@ const { Router } = require("express");
 const routes = Router();
 
 routes.get( '/'      , con.list       );
-// routes.get('/detail', con.detail    ); // HACER VISTA DETALLE DE PRODUCTO
+
 routes.get( '/new'   , con.new        );
+routes.post( '/'     , con.store      );
 
 routes.get( '/:id/detail', con.detail );
+
+routes.get( '/:id/edit', con.detail );
 
 module.exports = routes;

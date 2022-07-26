@@ -88,3 +88,18 @@ button{
     margin: 0.5em;
     color: green;
 }
+
+@media (max-width:1000px) {
+
+    .product{
+        flex-wrap: wrap;
+    }
+    .descriptionBox{
+        width: 60%;
+        margin: 30px;
+    }
+    #pImg{
+        width: 60%;
+    }
+
+}

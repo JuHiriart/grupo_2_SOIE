@@ -1,7 +1,7 @@
-<form action="/products<%= product.new ? '' : `/${product.id}?_method=PUT`%>" method="POST"
-    name="form<%= product.new ? 'New' : 'Edit' %>Producto" enctype="multipart/form-data">
+<form action="/products<%= method %>" method="POST"
+    name="formProducto" enctype="multipart/form-data">
     <h1>
-        <%= product.new ? 'Nuevo Producto' : 'Editar Producto' %>
+        <%= h1 %>
     </h1>
 
     <div class="contenedor-input">

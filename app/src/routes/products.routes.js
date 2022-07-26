@@ -22,4 +22,8 @@ routes.get( '/:id/detail', con.detail );
 routes.get( '/:id/edit', con.edit );
 routes.put( '/:id', con.storeEdit.upload.single('img') , con.storeEdit.data );
 
+/* delete a product */
+routes.delete( '/:id' , con.delete );
+
+
 module.exports = routes;

@@ -57,7 +57,13 @@ products.put = (product) => {
   current [index] = product;
   let stringified = JSON.stringify(current,{utf8: true},'\t')
   writeFileSync( fileDir, stringified );
-}
+},
 
+products.delete = (id) => {
+  let current = products.index();
+  current = current.filter( product => product.id != id );
+  let stringified = JSON.stringify(current,{utf8: true},'\t')
+  writeFileSync( fileDir, stringified );
+}
 
 module.exports = products;

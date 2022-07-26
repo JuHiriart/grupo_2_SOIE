@@ -34,8 +34,9 @@ module.exports = {
 
     new: ( req, res) => {
         res.render(views('products/productNew'), {
-            new : true,
+            method: '',
             title : 'Nuevo producto',
+            h1 : 'Nuevo Producto',
             style : 'productNew',
             product : {},
         })
@@ -57,8 +58,9 @@ module.exports = {
     edit: ( req, res) => {
         let product = models.products.getById(req.params.id);
         res.render(views('products/edit'), {
-            new : false,
+            method : `/${product.id}?_method=PUT`,
             style : 'productNew',
+            h1 : 'Editar Producto',
             title : `Editar: ${product.name}`,
             product ,
         })
@@ -90,5 +92,10 @@ module.exports = {
             style : 'productAbm',
             products : products,
         })
+    },
+    delete: (req,res) => {
+        let id = req.params.id;
+        models.products.delete(id);
+        res.redirect('/products');
     },
 }

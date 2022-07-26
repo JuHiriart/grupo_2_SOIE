@@ -7,7 +7,7 @@ const models = {
 
 
 module.exports = {
-    
+
     list: ( req, res) => {
 
         let products = models.products.index();
@@ -39,11 +39,13 @@ module.exports = {
     },
 
     store: ( req, res) => {
-        let product = req.body;
-        product.id = models.products.getNewId();
-        models.products.add(product)
-        // res.send(JSON.stringify(req.body));
-        res.redirect(`/products/${product.id}/detail`);
+        res.send(JSON.stringify(req.body));
+        
+        // let product = req.body;
+        // product.id = models.products.getNewId();
+        // models.products.add(product)
+        
+        // res.redirect(`/products/${product.id}/detail`);
     },
 
     abm:  (req,res) => {

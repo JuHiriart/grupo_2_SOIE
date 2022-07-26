@@ -9,8 +9,8 @@ const routes = Router();
 
 routes.get( '/'      , con.list       );
 
-routes.get( '/new'   , con.new        );
-routes.post( '/'     , con.store      );
+routes.get( '/create'   , con.new        );
+routes.post( '/store'        , con.store      );
 
 routes.get( '/abm'   , con.abm        );
 

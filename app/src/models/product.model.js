@@ -51,5 +51,13 @@ products.storeFile = (req, file) => {
 
 }
 
+products.put = (product) => {
+  let current = products.index();
+  let index = current.map(prod => prod.id).indexOf(product.id);
+  current [index] = product;
+  let stringified = JSON.stringify(current,{utf8: true},'\t')
+  writeFileSync( fileDir, stringified );
+}
+
 
 module.exports = products;

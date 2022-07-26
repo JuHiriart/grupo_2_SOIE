@@ -1,4 +1,4 @@
-<form action="/products?_method=<%= product.new ? 'POST' : 'PUT'%>" method="POST"
+<form action="/products<%= product.new ? '' : `/${product.id}?_method=PUT`%>" method="POST"
     name="form<%= product.new ? 'New' : 'Edit' %>Producto" enctype="multipart/form-data">
     <h1>
         <%= product.new ? 'Nuevo Producto' : 'Editar Producto' %>
@@ -11,9 +11,7 @@
     <div class="contenedor-input">
         <label for="descripcion">Descripción : </label>
         <textarea name="description" placeholder="Máximo 500 caracteres" maxlength="500" rows="5"
-            cols="30">
-            <%= product.description ?? '' %>
-        </textarea>
+            cols="30"><%= product.description ?? '' %></textarea>
     </div>
     <div class="contenedor-input">
         <label for="titulo">Precio : </label>

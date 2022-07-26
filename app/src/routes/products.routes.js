@@ -20,6 +20,6 @@ routes.get( '/:id/detail', con.detail );
 
 /* edit a product's details */
 routes.get( '/:id/edit', con.edit );
-// routes.post( '/:id/edit', con.edit );
+routes.put( '/:id', con.storeEdit.upload.single('img') , con.storeEdit.data );
 
 module.exports = routes;

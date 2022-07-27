@@ -9,7 +9,7 @@ app.listen(listen.port, listen.callback() );
 
 app.use( express.urlencoded({extended:false}) ); //req.body y req.query
 app.use( express.json() ); //procesar info que venga en formato json
-app.use( method('m') ); // En la url poner ?m= un metodo no común
+app.use(method('_method')); // En la url poner ?m= un metodo no común
 
 
 // set public directory

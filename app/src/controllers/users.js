@@ -13,6 +13,13 @@ module.exports = {
         res.render( views('users/signin') , {
             title : 'Sign In',
             style : 'signin',
+            user : {},
         });
     },
+
+    signinPost: (req,res) => {
+        let data = req.body;
+        // res.send(data);
+        
+    }
 }

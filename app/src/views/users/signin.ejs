@@ -1,79 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('../partials/head')  %> 
+<%- include('../partials/head') %>
 
-<body>
+    <body>
 
-    <!-- HEADER -->
-    <%- include('../partials/header') %>
-    <!------------------------------------------------------->
-    <main>
-        
-        <section>
-            <div class="signInBox">
-                
-                <h1>Registrarse</h1>
-                <div class="forms">
-                    <div>
-                        <label for="name" class="name">
-                            Nombre
-                            <input type="text" id="name" placeholder="Nombre de usuario">
-                        </label>
+        <!-- HEADER -->
+        <%- include('../partials/header') %>
+            <!------------------------------------------------------->
+            <main>
+
+                <section>
+                    <div class="signInBox">
+
+                        <h1>Registrarse</h1>
+
+                        <form action="/users/signin?_method=POST" id="userForm" method="POST">
+
+                            <!-- NOMBRE -->
+                            <div>
+                                <label for="name" class="name">
+                                    Nombre
+                                    <input type="text" id="name" name="name" placeholder="Nombre de usuario"
+                                        value=<%= user.fistName ?? '' %> >
+                                </label>
+                            </div>
+
+                            <!-- EMAIL -->
+                            <div>
+                                <label for="email" class="email">
+                                    Email
+                                    <input type="email" id="email" name="email" placeholder="Correo electrónico"
+                                        value=<%= user.lastName ?? '' %> >
+                                </label>
+                            </div>
+
+                            <!-- PASSWORD -->
+                            <div>
+                                <label for="password" class="pass">
+                                    Contraseña
+                                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                                </label>
+                            </div>
+
+                            <!-- PASSWORD CONFIRMATION -->
+                            <div>
+                                <label for="passCon" class="passCon">
+                                    Confirmar Contraseña
+                                    <input type="password" id="passCon" name="passCon" placeholder="Confirmar contraseña">
+                                </label>
+                            </div>
+
+                            <!-- BIRTH -->
+                            <div>
+                                <label for="birth" class="birth">
+                                    Fecha de nacimiento
+                                    <input type="date" id="birth" value=<%= user.birth ?? '' %>>
+                                </label>
+                            </div>
+
+                            <!-- GENDER -->
+                            <label for="gender">Genero</label>
+                            <select class="gender options" name="gender">
+
+                                <!-- HOMBRE -->
+                                <option type="radio" id="hombre" name="gender" <% if (user.gender=='hombre' ) { %> selected <% } %> >
+                                <label for="hombre">Hombre</label>
+                                <!-- MUJER -->
+                                <option type="radio" id="mujer" name="gender" <% if (user.gender=='mujer' ) { %> selected <% } %>>
+                                <label for="mujer">Mujer</label>
+                                <!-- OTRO -->
+                                <option type="radio" id="otro" name="gender" <% if (user.gender=='otro' ) {%> selected <% } %>>
+                                <label for="otro">Otro</label>
+
+                            </select>
+
+                            <input type="submit" value="Crear mi cuenta" id="sendBtn">
+                            
+                        </div>
+
+
                     </div>
-                    <div>
-                        <label for="email" class="email">
-                            Email
-                            <input type="email" id="email" placeholder="Correo electrónico">
-                        </label>
-                    </div>
-                    
-                    <div>
-                        <label for="pass" class="pass">
-                            Contraseña
-                            <input type="password" id="pass" placeholder="Contraseña">
-                        </label>
-                    </div>
-                    
-                    <div>
-                        <label for="passCon" class="passCon">
-                            Confrimar Contraseña
-                            <input type="password" id="passCon" placeholder="Confirmar contraseña">
-                        </label>
-                    </div>
-                    
-                    <div>
-                        <label for="age" class="age">
-                            Fecha de nacimiento
-                            <input type="date" id="age">
-                        </label>
-                    </div>
-                </div>
-                
-                
-                <div id="gender">
-                    <input type="radio" id="hombre" name="gender">
-                    <label for="hombre">Hombre</label>
-                    <input type="radio" id="mujer" name="gender">
-                    <label for="mujer">Mujer</label>
-                    <input type="radio" id="otro" name="gender">
-                    <label for="otro">Otro</label>
-                </div>
-                
-                <form action="TBD" method="POST" class="btn">
-                    <input type="button" value="Crear mi cuenta" id="sendBtn">
-                </form>
-            </div>
-        </section>
-        
-    </main>
+                    </form>
 
-    <!-- FOOTER -->
-    <%- include('../partials/footer')  %> 
+
+
+                </section>
+
+            </main>
+
+            <!-- FOOTER -->
+            <%- include('../partials/footer') %>
 
 
 
 
-</body>
+    </body>
 
 </html>

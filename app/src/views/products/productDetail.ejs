@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+
+
+
+    <body>
+
+        <%- include('../partials/header') %>
+
+            <main>
+                <section>
+                    <div class="product">
+
+                        <img src="<%= product.img %>" alt="imagen del producto" id="pImg">
+                        <div class="descriptionBox">
+                            <h1 id="name">
+                                <%= product.name %>
+                            </h1>
+                            <p id="description">
+                                <%= product.description %>
+                            </p>
+                            <% if (product.off !=0) { %>
+                                <div>
+                                    <div class="off">
+                                        <h3 id="priceOld">$<%= product.price %>
+                                        </h3>
+                                        <h5 id="offPer">
+                                            <%= product.off %>% OFF
+                                        </h5>
+                                    </div>
+                                    <h2 id="priceNew">$<%= product.price - (product.price*product.off/100) %>
+                                    </h2>
+                                </div>
+
+                                <% } else { %>
+
+                                    <h2 id="price">$<%= product.price %>
+                                    </h2>
+
+                                    <% } %>
+
+                                        <% if (product.type==='product' ) { %>
+
+
+                                            <form action="" id="pData">
+                                                <label for="qty">
+                                                    Cantidad
+                                                    <input type="number" id="qty" name="qty" min="1" max="10">
+                                                </label>
+                                            </form>
+                                            <% }else{ %>
+                                                <form action="" id="pData">
+                                                    <label for="duration">
+                                                        Duración
+                                                        <select name="duration" id="duration">
+                                                            <option value="1">1 hora</option>
+                                                            <option value="1.5">1 hora y media</option>
+                                                            <option value="2">2 horas</option>
+                                                        </select>
+                                                    </label>
+                                                </form>
+
+                                                <% } %>
+
+                                                    <button type="submit" form="pData" value="" id="pNow">Comprar
+                                                        ahora</button>
+                                                    <button type="submit" form="pData" value="" id="pCart">Agregar al
+                                                        carrito</button>
+                                                    <a href="/products/<%= product.id %>/edit">
+                                                        <button>Modificar</button>
+                                                    </a>
+                                                    <form action="/products/<%= product.id  %>?_method=DELETE" method="POST"
+                                                        style="display: inline-flex">
+                                                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                                                    </form>
+                        </div>
+
+                    </div>
+                </section>
+            </main>
+
+
+
+            <%- include('../partials/footer') %>
+    </body>
+
+</html>

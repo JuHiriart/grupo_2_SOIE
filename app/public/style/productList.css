@@ -64,6 +64,8 @@ main{
     font-weight: 800;
     font-size: x-large;
     margin: 20px 0 10px 0;
+    text-decoration: none;
+    color: white;
 }
 
 #productDescription{
@@ -143,7 +145,7 @@ label input[type="button"] {
 }
 
 .custom-checkbox:hover .share, .custom-checkbox:hover .buy{
-    transition: color 0.2s ease-in-out;
+    transition: color 0.05s ease-in-out;
     color: darkblue;
 }
 

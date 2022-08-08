@@ -7,8 +7,23 @@ const con = require(`../controllers/${conName}.js`);
 const { Router } = require("express");
 const routes = Router();
 
-routes.get('/'      , con.list );
-routes.get('/detail', con.detail); // HACER VISTA DETALLE DE PRODUCTO
-routes.get('/newp'  , con.newp);
+/* get all products */
+routes.get( '/'      , con.list       );
+routes.get( '/abm'   , con.abm        );
+
+/* create a new product */
+routes.get( '/create'   , con.new        );
+routes.post( '/'        , con.store.upload.single('img') , con.store.data );
+
+/* show details of a product */
+routes.get( '/:id/detail', con.detail );
+
+/* edit a product's details */
+routes.get( '/:id/edit', con.edit );
+routes.put( '/:id', con.storeEdit.upload.single('img') , con.storeEdit.data );
+
+/* delete a product */
+routes.delete( '/:id' , con.delete );
+
 
 module.exports = routes;

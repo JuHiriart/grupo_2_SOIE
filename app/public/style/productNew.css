@@ -1,8 +1,51 @@
+main div{
+    width: 100%;
+    background-color: white;
+}
+main h1{
+    font-family: 'Roboto serif', serif;
+    color: rgba(4, 104, 111, 0.7);
+    font-size: xx-large;
+}
+
+main label{
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+main input{
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 1rem;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+textarea{
+    resize: vertical;
+}
+
+main form{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    justify-content:center;
+    align-items: center;
+    width: 80%;
+}
+
 .contenedor-formularios{
+    width: 40%;
+    border: 1px solid lightgray;
+    border-radius: 15px;
     color: #CAE7E2;
     display: flex;
     flex-direction: column;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
     justify-content:center;
     align-content:space-around ;
     margin: 30px rgba(182, 79, 7, 0.726);
@@ -14,9 +57,37 @@
 }
 
 .contenedor-input {
-    position: relative;
-    margin-bottom: 40px;
-   
+
+    width: 100%;
+    color: #CAE7E2;
+    display:flex;
+    flex-direction: column;
+    border-radius: 5px;
+    margin: 5px;
+    font-weight: 600;
+    background-color: rgba(4, 104, 111, 0.7); 
+    box-shadow: rgba(13, 70, 109, 0.24) 0px 3px 8px;
 }
 
-.bt2{padding:6px;border-radius:10px;}
+.contenedor-input div{
+    background-color: rgba(4, 104, 111, 0.0);
+    text-align: left;
+}
+
+.bt2{ 
+    background-color: #a3dfd5;
+    border-radius: 5px;
+    height: 45px;
+    width: 100px;
+    font-weight: 600;
+    margin: 5px;
+    border: none;
+}
+
+
+@media (max-width:800px) {
+    main .contenedor-formularios{
+        width: 90%;
+    }
+}
+

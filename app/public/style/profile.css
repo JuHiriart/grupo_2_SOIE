@@ -1,0 +1,56 @@
+main{
+    display: flex;
+    justify-content: center;
+}
+
+.mainBox{
+    display: flex;
+    margin: 5em;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--azul-suave);
+    width: 70%;
+}
+
+.infoBox{
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0;
+    padding: 1em;
+    background-color: white;
+    border-radius: 5%;
+}
+
+#userImg{
+    width: auto;
+    height: 15em;
+    object-fit: contain;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: white;
+    
+}
+
+h1, h2, h3 {
+    font-family:'Montserrat', sans-serif;
+    font-weight: 500; ;
+}
+
+.class{
+    font-family:'Montserrat', sans-serif;
+    font-weight: 300;
+    text-decoration: underline;
+}
+
+@media (max-width:1000px) {
+    .mainBox{
+        flex-direction: column;
+    }
+
+    #userImg{
+        margin-top: 2em;
+    }
+
+
+
+}

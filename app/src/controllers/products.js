@@ -1,6 +1,5 @@
 const views = require('../modules/file.js');
 const {resolve} = require('path');
-const products = require('../models/product.model.js');
 
 const models = {
     products : require('../models/product.model.js'),

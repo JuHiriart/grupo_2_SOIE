@@ -56,6 +56,13 @@ users.storeFile = (req, file) => {
 
 }
 
+// esta funcion chequea si el usuario existe en el archivo de usuarios
+users.isValidUser = (user) => {
+  let current = users.index();
+  let res = current.find( u => u.email == user.email );
+  // devuelve el usuario si existe, sino devuelve false
+  return bcrypt.compareSync(user.password, res.password) ? res : false;
+}
 
 
 

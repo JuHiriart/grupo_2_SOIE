@@ -1,4 +1,5 @@
 const views = require('../modules/file.js');
+const bcrypt = require('bcrypt');
 
 const models = {
     users : require('../models/user.model.js'),
@@ -37,6 +38,7 @@ module.exports = {
         data : (req,res) => {
             let user = req.body;
             user.id = models.users.getNewId();
+            user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10));
             
             user.img = req.file ? 
                 `/images/users/avatars/${req.file.filename ?? ''}` :
@@ -44,12 +46,12 @@ module.exports = {
 
             models.users.add(user)
 
-            res.send({
-                status: "User signed successfully",
-                user: user
-            });
+            // res.send({
+            //     status: "User signed successfully",
+            //     user: user
+            // });
 
-            // res.redirect(`/users/${user.id}/profile`);
+            res.redirect(`/users/${user.id}/profile`);
         },
         // manejo de archivos
         upload: models.users.storeFile()

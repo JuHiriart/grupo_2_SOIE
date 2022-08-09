@@ -19,10 +19,19 @@
 
                             <!-- NOMBRE -->
                             <div>
-                                <label for="name" class="name">
+                                <label for="first_name" class="first_name">
                                     Nombre
-                                    <input type="text" id="name" name="name" placeholder="Nombre de usuario"
-                                        value=<%= user.fistName ?? '' %> >
+                                    <input type="text" id="first_name" name="first_name" placeholder="Nombre de usuario"
+                                        value=<%= user.fist_name ?? '' %> >
+                                </label>
+                            </div>
+
+                            <!-- APELLIDO -->
+                            <div>
+                                <label for="lastName" class="name">
+                                    Apellido
+                                    <input type="text" id="last_name" name="last_name" placeholder="Nombre de usuario"
+                                        value=<%= user.last_name ?? '' %> >
                                 </label>
                             </div>
 
@@ -31,7 +40,7 @@
                                 <label for="email" class="email">
                                     Email
                                     <input type="email" id="email" name="email" placeholder="Correo electrónico"
-                                        value=<%= user.lastName ?? '' %> >
+                                        value=<%= user.email ?? '' %> >
                                 </label>
                             </div>
 

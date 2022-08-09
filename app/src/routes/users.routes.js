@@ -11,7 +11,10 @@ const routes = Router();
 routes.get('/login', con.login);
 routes.get('/signin', con.signin);
 
+// muestra el perfil de usuario
+routes.get('/:id/profile', con.profile);
+
 // metodo POST de signin. Recibe los datos de la vista signin y los envia al controlador.
-routes.post('/signin', con.signinPost);
+routes.post('/signin', con.signinPost.upload.single('img'), con.signinPost.data);
 
 module.exports = routes;

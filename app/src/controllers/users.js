@@ -2,6 +2,7 @@ const views = require('../modules/file.js');
 
 const models = {
     users : require('../models/user.model.js'),
+    products : require('../models/product.model.js')
 }
 
 
@@ -30,8 +31,9 @@ module.exports = {
         });
     },
 
+    // este controlador lo divido en dos, uno que usa multer para subir el archivo, y otro que controla los datos del form
     signinPost: {
-        // este controlador lo divido en dos, uno que usa multer para subir el archivo, y otro que controla los datos del form
+        // manejo de datos del formulario
         data : (req,res) => {
             let user = req.body;
             user.id = models.users.getNewId();
@@ -43,12 +45,13 @@ module.exports = {
             models.users.add(user)
 
             res.send({
-                status: "usser signed successfully",
+                status: "User signed successfully",
                 user: user
             });
 
             // res.redirect(`/users/${user.id}/profile`);
         },
+        // manejo de archivos
         upload: models.users.storeFile()
     }
 }

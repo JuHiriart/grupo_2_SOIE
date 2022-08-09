@@ -36,6 +36,7 @@ users.getNewId = () => {
 }
 
 
+// configuracion de multer para guardar los archivos de imagen de los usuarios
 users.storeFile = (req, file) => {
 
     const storage = multer.diskStorage({

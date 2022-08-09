@@ -15,7 +15,7 @@
 
                         <h1>Registrarse</h1>
 
-                        <form action="/users/signin?_method=POST" id="userForm" method="POST">
+                        <form action="/users/signin?_method=POST" id="userForm" method="POST" enctype="multipart/form-data" name="signin-form">
 
                             <!-- NOMBRE -->
                             <div>
@@ -67,7 +67,7 @@
                                     <input type="date" id="birth" value=<%= user.birth ?? '' %>>
                                 </label>
                             </div>
-
+                            
                             <!-- GENDER -->
                             <label for="gender">Genero</label>
                             <select class="gender options" name="gender">
@@ -83,7 +83,16 @@
                                 <label for="otro">Otro</label>
 
                             </select>
+                            
+                            <!-- PROFILE PICTURE -->
+                            <div>
+                                <label for="img" class="img">
+                                    Foto de perfil
+                                    <input type="file" id="img" name="img" accept="image/png, image/jpg">
+                                </label>
+                            </div>
 
+                            
                             <input type="submit" value="Crear mi cuenta" id="sendBtn">
                             
                         </div>

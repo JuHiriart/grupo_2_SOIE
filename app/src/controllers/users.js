@@ -1,5 +1,7 @@
 const views = require('../modules/file.js');
 
+const {validationResult} = require('express-validator'); // requiero esto para la verificacion del Sign In
+
 const models = {
     users : require('../models/user.model.js'),
     products : require('../models/product.model.js')
@@ -35,6 +37,14 @@ module.exports = {
     signinPost: {
         // manejo de datos del formulario
         data : (req,res) => {
+
+            let errors = validationResult(req);
+            if (!errors.isEmpty()){
+                res.send (errors);
+
+            }
+
+
             let user = req.body;
             user.id = models.users.getNewId();
             

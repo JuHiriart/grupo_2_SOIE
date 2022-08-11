@@ -40,28 +40,35 @@ module.exports = {
         data : (req,res) => {
 
             let errors = validationResult(req);
-            if (!errors.isEmpty()){
-                res.send (errors);
+            if (errors.isEmpty()){
 
+                console.log("MENSAJE DEBUG");
+                let user = req.body;
+                user.id = models.users.getNewId();
+                user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10));
+                
+                user.img = req.file ? 
+                    `/images/users/avatars/${req.file.filename ?? ''}` :
+                    '/images/users/avatars/default.jpg';
+    
+                models.users.add(user)
+                
+                // res.send({
+                //     status: "User signed successfully",
+                //     user: user
+                // });
+    
+               // res.redirect(`/users/${user.id}/profile`);
+
+            } 
+            
+            else {
+                
+                res.send (errors);
+                console.log(errors);
             }
 
-
-            let user = req.body;
-            user.id = models.users.getNewId();
-            user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10));
-            
-            user.img = req.file ? 
-                `/images/users/avatars/${req.file.filename ?? ''}` :
-                '/images/users/avatars/default.jpg';
-
-            models.users.add(user)
-
-            // res.send({
-            //     status: "User signed successfully",
-            //     user: user
-            // });
-
-            res.redirect(`/users/${user.id}/profile`);
+  
         },
         // manejo de archivos
         upload: models.users.storeFile()

@@ -336,5 +336,45 @@
 		"gender": "Hombre",
 		"id": 34,
 		"img": "/images/users/avatars/default.jpg"
+	},
+	{
+		"first_name": "",
+		"last_name": "",
+		"email": "",
+		"password": "$2b$10$nWM0JMANg.2.u3Dt0xM6fOCZoqFRs0QSthPaqNnnJsfTT0m.sygFi",
+		"passCon": "",
+		"gender": "Hombre",
+		"id": 35,
+		"img": "/images/users/avatars/default.jpg"
+	},
+	{
+		"first_name": "aeiou",
+		"last_name": "",
+		"email": "",
+		"password": "$2b$10$wG4aimbJ1lK5EZFqxBY6Xe2LfkcdaZwHyPB43Ns70XlfvOoLiHo76",
+		"passCon": "",
+		"gender": "Hombre",
+		"id": 36,
+		"img": "/images/users/avatars/default.jpg"
+	},
+	{
+		"first_name": "aeiouaaaaaa",
+		"last_name": "",
+		"email": "",
+		"password": "$2b$10$oHpkfbt2vRQZ5CmjoXZ.e.WG2nLLJonf.t7cHlRpiBoRwG/.arZB6",
+		"passCon": "",
+		"gender": "Hombre",
+		"id": 37,
+		"img": "/images/users/avatars/default.jpg"
+	},
+	{
+		"first_name": "aeiouaaaaaa2",
+		"last_name": "",
+		"email": "",
+		"password": "$2b$10$Qt.cMSJR4icO.1BwcQSMf.ePVqN44DGl58K9rlKfWEG9m2B9f070W",
+		"passCon": "",
+		"gender": "Hombre",
+		"id": 38,
+		"img": "/images/users/avatars/default.jpg"
 	}
 ]

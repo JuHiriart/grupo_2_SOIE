@@ -8,8 +8,7 @@ const { Router } = require("express");
 const routes = Router();
 
 //validaciones
-const {body} = require('express-validator');
-const validations = require('../middlewares/validations');
+const validations = require('../middlewares/validations.js');
 
 // metodos GET de login y signin, muestran las vistas.
 routes.get('/login', con.login);

@@ -74,6 +74,8 @@ main .error {
     color: red;
     background-color: aliceblue;
     font-size: small;
+    width: 50%;
+    border: solid 1px red;
 }
 
 @media (max-width:800px) {

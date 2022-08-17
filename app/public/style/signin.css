@@ -70,6 +70,12 @@ main input[type="button"]{
     border: none;
 }
 
+main .error {
+    color: red;
+    background-color: aliceblue;
+    font-size: small;
+}
+
 @media (max-width:800px) {
     main .signInBox{
         width: 90%;

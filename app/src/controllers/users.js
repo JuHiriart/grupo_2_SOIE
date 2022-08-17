@@ -19,6 +19,7 @@ module.exports = {
     },
     signin: (req,res) => {
         res.render( views('users/signin') , {
+            errors: {},
             title : 'Sign In',
             style : 'signin',
             user : {},
@@ -40,35 +41,33 @@ module.exports = {
         data : (req,res) => {
 
             let errors = validationResult(req);
-            if (errors.isEmpty()){
-
-                console.log("MENSAJE DEBUG");
-                let user = req.body;
-                user.id = models.users.getNewId();
-                user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10));
-                
-                user.img = req.file ? 
-                    `/images/users/avatars/${req.file.filename ?? ''}` :
-                    '/images/users/avatars/default.jpg';
-    
-                models.users.add(user)
-                
-                // res.send({
-                //     status: "User signed successfully",
-                //     user: user
-                // });
-    
-               // res.redirect(`/users/${user.id}/profile`);
-
-            } 
-            
-            else {
-                
-                res.send (errors);
-                console.log(errors);
+            // si hay errores, vuelvo a la vista signin con los errores
+            if (!errors.isEmpty()){
+                res.render('users/signin', {
+                    errors: errors.mapped(),
+                    user : req.body,
+                    title : 'Sign In',
+                    style : 'signin',
+                });
             }
 
-  
+            // si no hay errores, creo el usuario y lo guardo en el archivo
+            let user = req.body;
+            user.id = models.users.getNewId();
+            user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10));
+            
+            user.img = req.file ? 
+                `/images/users/avatars/${req.file.filename ?? ''}` :
+                '/images/users/avatars/default.jpg';
+
+            models.users.add(user)
+
+            // res.send({
+            //     status: "User signed successfully",
+            //     user: user
+            // });
+
+            res.redirect(`/users/${user.id}/profile`);
         },
         // manejo de archivos
         upload: models.users.storeFile()

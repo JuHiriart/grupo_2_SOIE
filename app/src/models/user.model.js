@@ -65,6 +65,12 @@ users.isValidUser = (user) => {
 }
 
 
+users.getByEmail = (email) => {
+  let current = users.index();
+  return current.find( user => user.email == email );
+}
+
+
 
 
 

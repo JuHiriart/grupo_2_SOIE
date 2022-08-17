@@ -28,6 +28,7 @@ module.exports = {
 
     profile: (req,res) => {
         let user = models.users.getById(req.params.id);
+        res.send(user);
         res.render( views('users/profile') , {
             title : 'Profile',
             style : 'profile',
@@ -74,6 +75,7 @@ module.exports = {
             let user = req.body;
             user.id = models.users.getNewId();
             user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10));
+            delete user.passCon;
             
             user.img = req.file ? 
                 `/images/users/avatars/${req.file.filename ?? ''}` :
@@ -87,7 +89,7 @@ module.exports = {
             //     user: user
             // });
             // // -----------------
-
+            
             res.redirect(`/users/${user.id}/profile`);
         },
         // manejo de archivos

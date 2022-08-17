@@ -4,7 +4,6 @@ const multer = require('multer');
 
 const fileDir = path.resolve( __dirname, '..', 'database', 'users.json' );
 
-
 const users = {};
 
 users.index = () => {
@@ -12,6 +11,7 @@ users.index = () => {
     return JSON.parse(data);
 };
 
+// esta funcion guarda un nuevo usuario en el archivo de usuarios
 users.add = (user) => {
     let current = users.index();
     current.push(user);
@@ -19,11 +19,13 @@ users.add = (user) => {
     writeFileSync( fileDir, stringified );
 }
 
+// esta funcion devuelve un usuario por id
 users.getById = ( id ) => {
   let current = users.index();
   return current.find( user => user.id == id );
 }
 
+// esta funcion devuelve el proximo id para un usuario
 users.getNewId = () => {
   let current = users.index();
   if (current.length === 0) {
@@ -34,7 +36,6 @@ users.getNewId = () => {
               .map(user => parseInt(user.id));
   return Math.max(...ids) + 1;
 }
-
 
 // configuracion de multer para guardar los archivos de imagen de los usuarios
 users.storeFile = (req, file) => {
@@ -47,7 +48,13 @@ users.storeFile = (req, file) => {
         },
 
         filename: function (req, file, cb) {
-          let name = ['img', new Date().getTime() , ...req.body.first_name.toLowerCase().split(" ")].join('-') + path.extname(file.originalname);
+          let name = [
+
+            'img',
+            new Date().getTime() ,
+            ...req.body.first_name.toLowerCase().split(" ")
+            
+          ].join('-') + path.extname(file.originalname);
           cb(null, name)
         }
       })

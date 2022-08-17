@@ -2,29 +2,28 @@ const {check} = require('express-validator');
 const model = require('../models/user.model.js');
 
 module.exports = {
+
     signIn : [
 
         check('first_name')
 
-            .notEmpty()
-            .withMessage("Debes ingresar un nombre")
+            .notEmpty().withMessage("Debes ingresar un nombre")
             .bail(),
 
         check('last_name')
 
-            .notEmpty()
-            .withMessage("Debes ingresar un apellido")
+            .notEmpty().withMessage("Debes ingresar un apellido")
             .bail(),
 
         check('email')
         
-            .isEmail()
-            .withMessage("Debes ingresar un email válido")
+            .isEmail().withMessage("Debes ingresar un email válido")
             .bail()
         
             .custom( value => { // chequeo que el email no exista en la base de datos
                 return model.getByEmail(value) ? false : true; // si el email ya existe, devuelve false
-            }).withMessage("El email ya existe en nuesra base de datos. Intenta ingresar con tu cuenta o registrate con otro email.")
+            })
+            .withMessage("El email ya existe en nuesra base de datos. Intenta ingresar con tu cuenta o registrate con otro email.")
             .bail(),
 
         check('password')
@@ -38,11 +37,10 @@ module.exports = {
             
         check('passCon')
 
-            .notEmpty()
-            .withMessage("Debes confirmar la contraseña")
+            .notEmpty().withMessage("Debes confirmar la contraseña")
             .bail()
 
-            .custom(async (passCon, {req}) => { 
+            .custom(async (passCon, {req}) => { // chequeo que la contraseña y la confirmacion sean iguales
                 const password = req.body.password;
                 return password !== passCon ; 
             })
@@ -52,10 +50,16 @@ module.exports = {
 
             .notEmpty().withMessage("Debes ingresar una fecha de nacimiento"),
 
-        // AGREGAR alidaciones de domicilio y telefono
+        check('telefono')
+
+            .matches(/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/)
+            .withMessage("Debes ingresar un número de teléfono válido (Arg)"),
+        
+        check('direccion')
+
+            .notEmpty().withMessage("Debes ingresar una dirección"),
 
         ],
 
-
-    signUp : [],
+    login : [],
 }

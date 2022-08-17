@@ -19,10 +19,10 @@ module.exports = {
     },
     signin: (req,res) => {
         res.render( views('users/signin') , {
-            errors: {},
             title : 'Sign In',
             style : 'signin',
-            user : {},
+            errors: {},
+            user  : {},
         });
     },
 

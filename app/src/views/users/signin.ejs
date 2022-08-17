@@ -101,6 +101,29 @@
                                 <label for="otro">Otro</label>
 
                             </select>
+
+                            <!-- DIRECCION -->
+                            <div>
+                                <label for="direccion" class="direccion">
+                                    Direccion
+                                    <input type="text" name="direccion" id="direccion" placeholder="Direccion" value=<%= user.direccion ?? '' %>>
+                                    <% if (locals.errors && errors.direccion) { %>
+                                        <div class="error"><%= errors.direccion.msg %></div>
+                                    <% } %>
+                                </label>
+                            </div>
+
+                            <!-- telefono -->
+                            <div>
+                                <label for="telefono" class="telefono">
+                                    Telefono
+                                    <input type="tel" name="telefono" id="telefono" placeholder="Telefono" value=<%= user.telefono ?? '' %>>
+                                    <% if (locals.errors && errors.telefono) { %>
+                                        <div class="error"><%= errors.telefono.msg %></div>
+                                    <% } %>
+                                </label>
+                            </div>
+                            
                             
                             <!-- PROFILE PICTURE -->
                             <div>

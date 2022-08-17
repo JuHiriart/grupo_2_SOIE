@@ -23,10 +23,10 @@
                                     Nombre
                                     <input type="text" id="first_name" name="first_name" placeholder="Nombre del usuario"
                                         value=<%= user.first_name ?? '' %> >
+                                        <% if (locals.errors && errors.first_name) { %>
+                                            <div class="error"><%= errors.first_name.msg %></div>
+                                        <% } %>
                                 </label>
-                                <% if (locals.errors && errors.first_name) { %>
-                                    <div class="error"><%= errors.first_name.msg %></div>
-                                <% } %>
                             </div>
 
                             <!-- APELLIDO -->
@@ -35,10 +35,10 @@
                                     Apellido
                                     <input type="text" id="last_name" name="last_name" placeholder="Apellido del usuario"
                                         value=<%= user.last_name ?? '' %> >
+                                        <% if (locals.errors && errors.last_name) { %>
+                                            <div class="error"><%= errors.last_name.msg %></div>
+                                        <% } %>
                                 </label>
-                                <% if (locals.errors && errors.last_name) { %>
-                                    <div class="error"><%= errors.last_name.msg %></div>
-                                <% } %>
                             </div>
 
                             <!-- EMAIL -->
@@ -47,10 +47,10 @@
                                     Email
                                     <input type="email" id="email" name="email" placeholder="Correo electrónico"
                                         value=<%= user.email ?? '' %> >
+                                        <% if (locals.errors && errors.email ) { %>
+                                            <div class="error"><%= errors.email.msg %></div>
+                                        <% } %>
                                 </label>
-                                <% if (locals.errors && errors.email ) { %>
-                                    <div class="error"><%= errors.email.msg %></div>
-                                <% } %>
                             </div>
 
                             <!-- PASSWORD -->
@@ -58,10 +58,10 @@
                                 <label for="password" class="pass">
                                     Contraseña
                                     <input type="password" name="password" id="password" placeholder="Contraseña">
+                                    <% if (locals.errors && errors.password) { %>
+                                        <div class="error"><%= errors.password.msg %></div>
+                                    <% } %>
                                 </label>
-                                <% if (locals.errors && errors.password) { %>
-                                    <div class="error"><%= errors.password.msg %></div>
-                                <% } %>
                             </div>
 
                             <!-- PASSWORD CONFIRMATION -->
@@ -69,10 +69,10 @@
                                 <label for="passCon" class="passCon">
                                     Confirmar Contraseña
                                     <input type="password" id="passCon" name="passCon" placeholder="Confirmar contraseña">
+                                    <% if (locals.errors && errors.passCon) { %>
+                                        <div class="error"><%= errors.passCon.msg %></div>
+                                    <% } %>
                                 </label>
-                                <% if (locals.errors && errors.passCon) { %>
-                                    <div class="error"><%= errors.passCon.msg %></div>
-                                <% } %>
                             </div>
 
                             <!-- BIRTH -->
@@ -80,10 +80,10 @@
                                 <label for="birth" class="birth">
                                     Fecha de nacimiento
                                     <input type="date" id="birth" value=<%= user.birth ?? '' %>>
+                                    <% if (locals.errors && errors.birth) { %>
+                                        <div class="error"><%= errors.birth.msg %></div>
+                                    <% } %>
                                 </label>
-                                <% if (locals.errors && errors.birth) { %>
-                                    <div class="error"><%= errors.birth.msg %></div>
-                                <% } %>
                             </div>
                             
                             <!-- GENDER -->
@@ -107,10 +107,10 @@
                                 <label for="img" class="img">
                                     Foto de perfil
                                     <input type="file" id="img" name="img" accept="image/png, image/jpg">
+                                    <% if (locals.errors && errors.img) { %>
+                                        <div class="error"><%= errors.img.msg %></div>
+                                    <% } %>
                                 </label>
-                                <% if (locals.errors && errors.img) { %>
-                                    <div class="error"><%= errors.img.msg %></div>
-                                <% } %>
                             </div>
 
                             

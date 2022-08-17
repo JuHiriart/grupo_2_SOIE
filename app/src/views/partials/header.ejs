@@ -38,8 +38,8 @@
             <% } else{ %>
             <div class="user">
                     <img class="userImage" src="/images/users/haudi.png " alt="Imagen de usuario">
-                    <a href=""> <!--esto debe redireccionar a la vista de usuario-->
-                        Haudi <!--el nombre debe ser una variable dinamica-->
+                    <a href="/user/<%= user.id %>/profile"> <!--esto debe redireccionar a la vista de usuario-->
+                        <%= user.first_name %> <!--el nombre debe ser una variable dinamica-->
                     </a>
                 </div>
             <% } %>

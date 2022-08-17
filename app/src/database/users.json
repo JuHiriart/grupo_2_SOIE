@@ -1,202 +1,252 @@
 [
 	{
 		"id": 1,
-		"firstName": "Byrann",
-		"lastName": "Giron",
+		"first_name": "Byrann",
+		"last_name": "Giron",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "bgiron0@friendfeed.com",
 		"password": "iLVWV2F",
 		"category": "client",
-		"image": "https://robohash.org/nonconsequunturitaque.png?size=50x50&set=set1"
+		"img": "https://robohash.org/nonconsequunturitaque.png?size=50x50&set=set1"
 	},
 	{
 		"id": 2,
-		"firstName": "Gwennie",
-		"lastName": "Rubinivitz",
+		"first_name": "Gwennie",
+		"last_name": "Rubinivitz",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "grubinivitz1@cyberchimps.com",
 		"password": "LEbPmVmJhe",
 		"category": "client",
-		"image": "https://robohash.org/quasimagnisequi.png?size=50x50&set=set1"
+		"img": "https://robohash.org/quasimagnisequi.png?size=50x50&set=set1"
 	},
 	{
 		"id": 3,
-		"firstName": "Darren",
-		"lastName": "Keford",
+		"first_name": "Darren",
+		"last_name": "Keford",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "dkeford2@e-recht24.de",
 		"password": "RqkNbnx5aKC",
 		"category": "client",
-		"image": "https://robohash.org/autemsuntpossimus.png?size=50x50&set=set1"
+		"img": "https://robohash.org/autemsuntpossimus.png?size=50x50&set=set1"
 	},
 	{
 		"id": 4,
-		"firstName": "Audie",
-		"lastName": "Shellard",
+		"first_name": "Audie",
+		"last_name": "Shellard",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "ashellard3@bbb.org",
 		"password": "6OaXwsWNOK",
 		"category": "client",
-		"image": "https://robohash.org/atmolestiaeillo.png?size=50x50&set=set1"
+		"img": "https://robohash.org/atmolestiaeillo.png?size=50x50&set=set1"
 	},
 	{
 		"id": 5,
-		"firstName": "Hammad",
-		"lastName": "Bancroft",
+		"first_name": "Hammad",
+		"last_name": "Bancroft",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "hbancroft4@mlb.com",
 		"password": "1e9ccA2Zp",
 		"category": "client",
-		"image": "https://robohash.org/autemvoluptasmodi.png?size=50x50&set=set1"
+		"img": "https://robohash.org/autemvoluptasmodi.png?size=50x50&set=set1"
 	},
 	{
 		"id": 6,
-		"firstName": "Gabey",
-		"lastName": "MacAnellye",
+		"first_name": "Gabey",
+		"last_name": "MacAnellye",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "gmacanellye5@yandex.ru",
 		"password": "nfSHp7n",
 		"category": "client",
-		"image": "https://robohash.org/corporispariaturrem.png?size=50x50&set=set1"
+		"img": "https://robohash.org/corporispariaturrem.png?size=50x50&set=set1"
 	},
 	{
 		"id": 7,
-		"firstName": "Anabal",
-		"lastName": "Shillingford",
+		"first_name": "Anabal",
+		"last_name": "Shillingford",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "ashillingford6@cocolog-nifty.com",
 		"password": "4lK0aZDxO",
 		"category": "client",
-		"image": "https://robohash.org/iustoautomnis.png?size=50x50&set=set1"
+		"img": "https://robohash.org/iustoautomnis.png?size=50x50&set=set1"
 	},
 	{
 		"id": 8,
-		"firstName": "Otis",
-		"lastName": "Clother",
+		"first_name": "Otis",
+		"last_name": "Clother",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "oclother7@stumbleupon.com",
 		"password": "uwFXJogD",
 		"category": "client",
-		"image": "https://robohash.org/repellendusdolortempora.png?size=50x50&set=set1"
+		"img": "https://robohash.org/repellendusdolortempora.png?size=50x50&set=set1"
 	},
 	{
 		"id": 9,
-		"firstName": "Averil",
-		"lastName": "Boyen",
+		"first_name": "Averil",
+		"last_name": "Boyen",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "aboyen8@myspace.com",
 		"password": "5vAEOSisizR",
 		"category": "client",
-		"image": "https://robohash.org/idharumqui.png?size=50x50&set=set1"
+		"img": "https://robohash.org/idharumqui.png?size=50x50&set=set1"
 	},
 	{
 		"id": 10,
-		"firstName": "Danya",
-		"lastName": "Bly",
+		"first_name": "Danya",
+		"last_name": "Bly",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "dbly9@creativecommons.org",
 		"password": "0UPuaNTWMlVY",
 		"category": "client",
-		"image": "https://robohash.org/sithicaspernatur.png?size=50x50&set=set1"
+		"img": "https://robohash.org/sithicaspernatur.png?size=50x50&set=set1"
 	},
 	{
 		"id": 11,
-		"firstName": "Angie",
-		"lastName": "Glazzard",
+		"first_name": "Angie",
+		"last_name": "Glazzard",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "aglazzarda@ca.gov",
 		"password": "Nowu9ANQ",
 		"category": "client",
-		"image": "https://robohash.org/etadipisciveritatis.png?size=50x50&set=set1"
+		"img": "https://robohash.org/etadipisciveritatis.png?size=50x50&set=set1"
 	},
 	{
 		"id": 12,
-		"firstName": "Ellwood",
-		"lastName": "Iacovino",
+		"first_name": "Ellwood",
+		"last_name": "Iacovino",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "eiacovinob@rakuten.co.jp",
 		"password": "etB5Ut1seyZ",
 		"category": "client",
-		"image": "https://robohash.org/minusnullaplaceat.png?size=50x50&set=set1"
+		"img": "https://robohash.org/minusnullaplaceat.png?size=50x50&set=set1"
 	},
 	{
 		"id": 13,
-		"firstName": "Zara",
-		"lastName": "Marzello",
+		"first_name": "Zara",
+		"last_name": "Marzello",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "zmarzelloc@yandex.ru",
 		"password": "bB9tUaeQCkf3",
 		"category": "client",
-		"image": "https://robohash.org/vitaeaperiamrepellendus.png?size=50x50&set=set1"
+		"img": "https://robohash.org/vitaeaperiamrepellendus.png?size=50x50&set=set1"
 	},
 	{
 		"id": 14,
-		"firstName": "Goldina",
-		"lastName": "Sanday",
+		"first_name": "Goldina",
+		"last_name": "Sanday",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "gsandayd@theatlantic.com",
 		"password": "iZgosywnRy",
 		"category": "client",
-		"image": "https://robohash.org/utoccaecaticumque.png?size=50x50&set=set1"
+		"img": "https://robohash.org/utoccaecaticumque.png?size=50x50&set=set1"
 	},
 	{
 		"id": 15,
-		"firstName": "Philippa",
-		"lastName": "Spedding",
+		"first_name": "Philippa",
+		"last_name": "Spedding",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "pspeddinge@unblog.fr",
 		"password": "IHkHyWKAs",
 		"category": "client",
-		"image": "https://robohash.org/etenimdolores.png?size=50x50&set=set1"
+		"img": "https://robohash.org/etenimdolores.png?size=50x50&set=set1"
 	},
 	{
 		"id": 16,
-		"firstName": "Ado",
-		"lastName": "Starsmeare",
+		"first_name": "Ado",
+		"last_name": "Starsmeare",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "astarsmearef@engadget.com",
 		"password": "YgEjmXvR",
 		"category": "client",
-		"image": "https://robohash.org/quisquasvoluptatem.png?size=50x50&set=set1"
+		"img": "https://robohash.org/quisquasvoluptatem.png?size=50x50&set=set1"
 	},
 	{
 		"id": 17,
-		"firstName": "Howie",
-		"lastName": "Abson",
+		"first_name": "Howie",
+		"last_name": "Abson",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "habsong@dion.ne.jp",
 		"password": "Gco0tTEv",
 		"category": "client",
-		"image": "https://robohash.org/adipiscivoluptasnisi.png?size=50x50&set=set1"
+		"img": "https://robohash.org/adipiscivoluptasnisi.png?size=50x50&set=set1"
 	},
 	{
 		"id": 18,
-		"firstName": "Niki",
-		"lastName": "Maidens",
+		"first_name": "Niki",
+		"last_name": "Maidens",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "nmaidensh@theguardian.com",
 		"password": "s97JpS6VY",
 		"category": "client",
-		"image": "https://robohash.org/facereutfacilis.png?size=50x50&set=set1"
+		"img": "https://robohash.org/facereutfacilis.png?size=50x50&set=set1"
 	},
 	{
 		"id": 19,
-		"firstName": "Kaitlyn",
-		"lastName": "Ettritch",
+		"first_name": "Kaitlyn",
+		"last_name": "Ettritch",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "kettritchi@typepad.com",
 		"password": "WnQRDp85",
 		"category": "client",
-		"image": "https://robohash.org/autdolorenostrum.png?size=50x50&set=set1"
+		"img": "https://robohash.org/autdolorenostrum.png?size=50x50&set=set1"
 	},
 	{
 		"id": 20,
-		"firstName": "Peter",
-		"lastName": "Natwick",
+		"first_name": "Peter",
+		"last_name": "Natwick",
 		"birth": "12/10/1995",
+		"gender" : "Hombre",
 		"email": "pnatwickj@sciencedirect.com",
 		"password": "iilQovZ4bH8",
 		"category": "admin",
-		"image": "https://robohash.org/sitfugased.png?size=50x50&set=set1"
+		"img": "https://robohash.org/sitfugased.png?size=50x50&set=set1"
+	},
+	{
+		"first_name": "Manuel",
+		"last_name": "Belgrano",
+		"email": "manuArg@gmail.com",
+		"password": "$2b$10$o/YsPVFJjHFSFDiDSa6.wexwA4bZoZr9qfRIw64XLtR4cU4rXH7cS",
+		"birth": "2022-08-02",
+		"gender": "Hombre",
+		"id": 21,
+		"img": "/imgs/users/avatars/default.jpg"
+	},
+	{
+		"first_name": "Manuel",
+		"last_name": "Belgrano",
+		"email": "manuArgento@gmail.com",
+		"password": "$2b$10$4c1rMQBtiNrGXx6c.HC3iuReLM9IrMabCIgQkoFN5KBwc9CVsuafS",
+		"birth": "2022-08-02",
+		"gender": "Hombre",
+		"id": 22,
+		"img": "/imgs/users/avatars/default.jpg"
+	},
+	{
+		"first_name": "Manuel",
+		"last_name": "Belgrano",
+		"email": "manuCabj@gmail.com",
+		"password": "$2b$10$YancRMtXU1Qwaq74V/Iz3eEy6vGdvMDQ0aQh5QXb60DGCAHVnI5UO",
+		"birth": "2022-09-06",
+		"gender": "Hombre",
+		"id": 23,
+		"img": "/imgs/users/avatars/default.jpg"
 	}
 ]

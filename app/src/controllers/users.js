@@ -30,6 +30,7 @@ module.exports = {
         let user = models.users.getById(req.params.id);
         // res.send(user);
         res.render( views('users/profile') , {
+            user: {},
             title : 'Profile',
             style : 'profile',
             user : user,

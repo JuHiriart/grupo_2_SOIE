@@ -40,16 +40,35 @@ module.exports = {
         // manejo de datos del formulario
         data : (req,res) => {
 
+            // obtengo los posibles errores en la validacion
             let errors = validationResult(req);
+
             // si hay errores, vuelvo a la vista signin con los errores
             if (!errors.isEmpty()){
+
+                // // debuggin --------
+                // res.send({
+                //     data : req.body,
+                //     errors : errors.mapped(),
+                // });
+                // // -----------------
+                
                 res.render('users/signin', {
                     errors: errors.mapped(),
                     user : req.body,
                     title : 'Sign In',
                     style : 'signin',
                 });
+                
+                return // detengo la ejecucion del controlador
             }
+
+            // // debuggin --------
+            // res.send({
+            //     data : req.body,
+            //     errors : errors.mapped(),
+            // });
+            // // -----------------
 
             // si no hay errores, creo el usuario y lo guardo en el archivo
             let user = req.body;
@@ -62,10 +81,12 @@ module.exports = {
 
             models.users.add(user)
 
+            // // debuggin --------
             // res.send({
             //     status: "User signed successfully",
             //     user: user
             // });
+            // // -----------------
 
             res.redirect(`/users/${user.id}/profile`);
         },

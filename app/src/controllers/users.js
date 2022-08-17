@@ -28,7 +28,7 @@ module.exports = {
 
     profile: (req,res) => {
         let user = models.users.getById(req.params.id);
-        res.send(user);
+        // res.send(user);
         res.render( views('users/profile') , {
             title : 'Profile',
             style : 'profile',
@@ -75,6 +75,7 @@ module.exports = {
             let user = req.body;
             user.id = models.users.getNewId();
             user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10));
+            user.category = 'client';
             delete user.passCon;
             
             user.img = req.file ? 

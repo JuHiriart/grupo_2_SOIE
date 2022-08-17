@@ -17,10 +17,6 @@ module.exports = {
             .bail(),
 
         check('email')
-
-            .notEmpty()
-            .withMessage("Debes ingresar un email")
-            .bail()
         
             .isEmail()
             .withMessage("Debes ingresar un email válido")
@@ -28,14 +24,10 @@ module.exports = {
         
             .custom( value => { // chequeo que el email no exista en la base de datos
                 return model.getByEmail(value) ? false : true; // si el email ya existe, devuelve false
-            }).withMessage("El Email ya existe")
+            }).withMessage("El email ya existe en nuesra base de datos. Intenta ingresar con tu cuenta o registrate con otro email.")
             .bail(),
 
         check('password')
-        
-            .notEmpty()
-            .withMessage("Debes ingresar una contraseña")
-            .bail()
             
             .isLength({min:4, max:16})
             .withMessage("la contraseña debe tener entre 4 y 16 caracteres")
@@ -58,7 +50,9 @@ module.exports = {
             
         check('birth')
 
-            .notEmpty().withMessage("Debes ingresar una fecha de nacimiento")
+            .notEmpty().withMessage("Debes ingresar una fecha de nacimiento"),
+
+        // AGREGAR alidaciones de domicilio y telefono
 
         ],
 

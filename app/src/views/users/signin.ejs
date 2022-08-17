@@ -79,7 +79,7 @@
                             <div>
                                 <label for="birth" class="birth">
                                     Fecha de nacimiento
-                                    <input type="date" id="birth" value=<%= user.birth ?? '' %>>
+                                    <input type="date" name="birth" id="birth" value=<%= user.birth ?? '' %>>
                                     <% if (locals.errors && errors.birth) { %>
                                         <div class="error"><%= errors.birth.msg %></div>
                                     <% } %>

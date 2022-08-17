@@ -5,7 +5,7 @@ module.exports = {
     signIn : [
 
         check('first_name')
-        
+
             .notEmpty()
             .withMessage("Debes ingresar un nombre")
             .bail(),
@@ -54,7 +54,14 @@ module.exports = {
                 const password = req.body.password;
                 return password !== passCon ; 
             })
-            .withMessage("Las contraseñas no coinciden")
+            .withMessage("Las contraseñas no coinciden"),
+            
+        check('birth')
+
+            .notEmpty().withMessage("Debes ingresar una fecha de nacimiento")
+
         ],
+
+
     signUp : [],
 }

@@ -27,7 +27,7 @@
 
     <div>
 
-        <% if(true){ %>  <!--cambiar de true a false para ver los headers-->
+        <% if(userLogged == undefined){ %>  <!--cambiar de true a false para ver los headers-->
         <div class="noUser">
                 <!-- falta condicion del if comprobando si el usuario esta logueado-->
                 <a href="/users/login">Log In</a>
@@ -37,9 +37,9 @@
             
             <% } else{ %>
             <div class="user">
-                    <img class="userImage" src="/images/users/haudi.png " alt="Imagen de usuario">
-                    <a href="/user/<%= user.id %>/profile"> <!--esto debe redireccionar a la vista de usuario-->
-                        <%= user.first_name %> <!--el nombre debe ser una variable dinamica-->
+                    <img class="userImage" src=<%= userLogged.img %>  alt="Imagen de usuario">
+                    <a href="/users/<%= userLogged.id %>/profile"> <!--esto debe redireccionar a la vista de usuario-->
+                        <%= userLogged.first_name %> <!--el nombre debe ser una variable dinamica-->
                     </a>
                 </div>
             <% } %>

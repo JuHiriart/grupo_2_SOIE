@@ -5,6 +5,7 @@ module.exports = {
         res.render(views('productCart') , {
             title : "Cart",
             style : 'cart',
+            userLogged : req.session.userLogged
         })
     }
 }

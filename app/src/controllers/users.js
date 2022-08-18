@@ -1,7 +1,9 @@
 const views = require('../modules/file.js');
 const bcrypt = require('bcrypt');
+const session = require('express-session')
 
 const {validationResult} = require('express-validator'); // requiero esto para la verificacion del Sign In
+const { emitWarning } = require('process');
 
 const models = {
     users : require('../models/user.model.js'),
@@ -14,7 +16,8 @@ module.exports = {
         res.render( views('users/login') , {
             title : 'Login',
             style : 'login',
-            users : {}
+            user : {},
+            userLogged : req.session.userLogged
         })
     },
     signin: (req,res) => {
@@ -23,6 +26,7 @@ module.exports = {
             title : 'Sign In',
             style : 'signin',
             user : {},
+            userLogged : req.session.userLogged
         });
     },
 
@@ -34,6 +38,7 @@ module.exports = {
             title : 'Profile',
             style : 'profile',
             user : user,
+            userLogged : req.session.userLogged
         });
     },
 
@@ -60,6 +65,7 @@ module.exports = {
                     user : req.body,
                     title : 'Sign In',
                     style : 'signin',
+                    userLogged : req.session.userLogged
                 });
                 
                 return // detengo la ejecucion del controlador
@@ -96,5 +102,54 @@ module.exports = {
         },
         // manejo de archivos
         upload: models.users.storeFile()
+    },
+    //proceso de inicio de sesión
+    processLogin: (req, res) =>  {
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()){
+
+            let userList;
+
+            if(usersJSON = ''){
+                userList = [];
+            } else {
+                userList = models.users.index();
+            }
+            
+
+
+            for (let index = 0; index < userList.length; index++) {
+                if(userList[index].email == req.body.email && bcrypt.compareSync(req.body.password, userList[index].password)) {
+                    var userLogging = userList[index];
+                    break;
+                }
+            }
+
+            if (userLogging == undefined) {
+                return res.render('users/login', {
+                    errors: [
+                        {msg: "Credenciales inválidas"}
+                    ],
+                    user : req.body,
+                    title : 'Log In',
+                    style: 'login',
+                    userLogged : req.session.userLogged
+                })
+            }
+            
+            req.session.userLogged = userLogging;
+            console.log(req.session.userLogged)
+            res.redirect('/')
+
+        } else {
+            res.render('users/login', {
+                errors: errors.mapped(),
+                user : req.body,
+                title : 'Log In',
+                style : 'login',
+                userLogged : req.session.userLogged
+            });
+        }
     }
 }

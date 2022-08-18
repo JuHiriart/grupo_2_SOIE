@@ -57,5 +57,15 @@ module.exports = {
         ],
 
 
-    signUp : [],
+    logIn : [
+        check('email')
+        
+            .isEmail()
+            .withMessage("Debes ingresar un email válido"),
+
+        check('password')
+            
+            .isLength({min:4, max:16})
+            .withMessage("la contraseña debe tener entre 4 y 16 caracteres")
+    ],
 }

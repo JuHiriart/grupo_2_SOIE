@@ -20,4 +20,7 @@ routes.get('/:id/profile', con.profile);
 // metodo POST de signin. Recibe los datos de la vista signin y los envia al controlador.
 routes.post('/signin', con.signinPost.upload.single('img'), validations.signIn, con.signinPost.data);
 
+// metodo POST de login
+routes.post('/login', validations.logIn, con.processLogin);
+
 module.exports = routes;

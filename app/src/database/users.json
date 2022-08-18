@@ -250,13 +250,28 @@
 		"img": "/imgs/users/avatars/default.jpg"
 	},
 	{
-		"first_name": "Santiago",
-		"last_name": "Hiriart",
-		"email": "hiriart1234@gmail.com",
-		"password": "$2b$10$5jjnOd/ynZWEhYG6Sh3NSu0NSQXp9PaMzoEV2Ad3uVz2lA1ye0Keu",
-		"birth": "1995-05-26",
+		"first_name": "Felipe",
+		"last_name": "Mataviejas",
+		"email": "feliEl6@gmail.com",
+		"password": "$2b$10$GsjDkdGgSdsHXJTk2Ay61eCVqrBS9MkSl89emHaabR8bq.pMziWue",
+		"birth": "1159-09-16",
 		"gender": "Hombre",
+		"direccion": "French",
+		"telefono": "5492324687408",
 		"id": 24,
+		"category": "client",
+		"img": "/images/users/avatars/default.jpg"
+	},
+	{
+		"first_name": "Anakin",
+		"last_name": "Skywalker",
+		"email": "imYourFather@jedi.com",
+		"password": "$2b$10$aO7uRkf0259eBBEus1t//OE9r0XgJip1DC2uU3hxBClZQf35/PXV6",
+		"birth": "2990-07-13",
+		"gender": "Hombre",
+		"direccion": "Tatooine",
+		"telefono": "2324685784",
+		"id": 25,
 		"category": "client",
 		"img": "/images/users/avatars/default.jpg"
 	}

@@ -1,9 +1,7 @@
 const views = require('../modules/file.js');
 const bcrypt = require('bcrypt');
-const session = require('express-session')
 
 const {validationResult} = require('express-validator'); // requiero esto para la verificacion del Sign In
-const { emitWarning } = require('process');
 
 const models = {
     users : require('../models/user.model.js'),
@@ -22,7 +20,6 @@ module.exports = {
     },
     signin: (req,res) => {
         res.render( views('users/signin') , {
-            errors: {},
             title : 'Sign In',
             style : 'signin',
             user : {},

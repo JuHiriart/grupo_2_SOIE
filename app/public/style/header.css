@@ -15,6 +15,51 @@ header {
 
 }
 
+.noUser{
+    width: 8em;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+}
+
+.noUser p, a{
+    text-decoration: none;
+    color: var(--texto-1);
+    font-family: 'Montserrat', sans-serif;
+    word-wrap: initial;
+    font-weight: 600;
+}
+
+.noUser a:hover{
+    color: white;
+}
+
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.user a {
+    text-decoration: none;
+    color: var(--texto-1);
+    font-family: 'Montserrat', sans-serif;
+    word-wrap: initial;
+    font-weight: 600;
+    padding: 0.5em;
+}
+
+.user a:hover{
+    color: white;
+}
+
+.userImage{
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    object-fit: cover;
+}
+
 /* div.content {
     margin-top: 60px;
 } */

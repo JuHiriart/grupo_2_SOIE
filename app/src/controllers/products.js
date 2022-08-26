@@ -1,6 +1,5 @@
 const views = require('../modules/file.js');
 const {resolve} = require('path');
-const products = require('../models/product.model.js');
 
 const models = {
     products : require('../models/product.model.js'),
@@ -19,7 +18,8 @@ module.exports = {
         res.render(views('products/productList'), {
             title : 'Productos',
             style : 'productList',
-            products : products
+            products : products,
+            userLogged : req.session.userLogged
         })
     },
 
@@ -29,6 +29,7 @@ module.exports = {
             style : 'productDetail',
             title : `SOIE - ${product.name}`,
             product : product,
+            userLogged : req.session.userLogged
         })
     },
 
@@ -39,6 +40,7 @@ module.exports = {
             h1 : 'Nuevo Producto',
             style : 'productNew',
             product : {},
+            userLogged : req.session.userLogged
         })
     },
 
@@ -63,6 +65,7 @@ module.exports = {
             h1 : 'Editar Producto',
             title : `Editar: ${product.name}`,
             product ,
+            userLogged : req.session.userLogged
         })
     },
 
@@ -91,6 +94,7 @@ module.exports = {
             title : 'ABM productos',
             style : 'productAbm',
             products : products,
+            userLogged : req.session.userLogged
         })
     },
     delete: (req,res) => {

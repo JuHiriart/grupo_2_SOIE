@@ -23,14 +23,14 @@ main input{
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
  
-main .forms label{
+main form label{
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     flex-direction: column;
 }
 
-main .forms input {
+main form input, main form select {
     margin: 10px;
     padding: 5px;
     border-radius: 8px;
@@ -39,7 +39,7 @@ main .forms input {
     border: none;
 }
 
-main .forms {
+main form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -50,10 +50,6 @@ main label{
     margin-bottom: 10px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
-}
-
-main #gender{
-    margin-bottom: 10px;
 }
 
 main section {
@@ -72,6 +68,14 @@ main input[type="button"]{
     width: auto;
     font-weight: 600;
     border: none;
+}
+
+main .error {
+    color: red;
+    background-color: aliceblue;
+    font-size: small;
+    width: 50%;
+    border: solid 1px red;
 }
 
 @media (max-width:800px) {

@@ -33,7 +33,7 @@ module.exports = {
         },
 
         img: {
-          type: Sequelize.INTEGER,
+          type: Sequelize.TEXT,
           allowNull: false, //Comentado hasta que solucionemos las tablas intermedias
         },
         password: {

@@ -9,8 +9,8 @@
     "test": "nodemon app/src/app.js -e json,js,ejs,mjs",
     "sq-i" : "sequelize init" ,
     "sq-ms" : "sequelize init:migrations && init:seeders",
-    "sq-mg": "sequelize migration:generate --name products",
-    "sq-sg": "sequelize seed:generate --name users",
+    "sq-mg": "sequelize migration:generate --name time",
+    "sq-sg": "sequelize seed:generate --name category",
     "sq-db": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all"
   },
   "author": "Grupo #2",

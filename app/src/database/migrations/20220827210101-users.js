@@ -10,11 +10,11 @@ module.exports = {
           autoIncrement: true,
           primaryKey: true,
         },
-        first_name: {
+        firstName: {
           type: Sequelize.STRING,
           allowNull: false,
         },
-        last_name: {
+        lastName: {
           type: Sequelize.STRING,
           allowNull: false,
         },
@@ -40,17 +40,17 @@ module.exports = {
           type: Sequelize.TEXT,
           allowNull: false,
         },
-        direccion: {
-          type: Sequelize.BOOLEAN,
+        adress: {
+          type: Sequelize.TEXT,
           allowNull: false,
         },
-        telefono: {
+        numberPhone: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
         category  : {
           type: Sequelize.TEXT,
-          allowNull: false,
+          
         },
 
       });

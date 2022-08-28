@@ -5,7 +5,7 @@ const {validationResult} = require('express-validator'); // requiero esto para l
 
 const models = {
     users : require('../models/user.model.js'),
-    products : require('../models/product.model.js')
+   // products : require('../models/product.model.js') revisar si hay que borrarla.
 }
 
 

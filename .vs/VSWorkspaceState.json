@@ -6,8 +6,11 @@
     "\\app\\public\\images",
     "\\app\\public\\images\\banner",
     "\\app\\src",
+    "\\app\\src\\database",
+    "\\app\\src\\database\\config",
+    "\\app\\src\\database\\models",
     "\\Entregables"
   ],
-  "SelectedNode": "\\app\\src\\app.js",
+  "SelectedNode": "\\app\\src\\database\\models\\index.js",
   "PreviewInSolutionExplorer": false
 }

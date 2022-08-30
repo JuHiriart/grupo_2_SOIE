@@ -3,6 +3,8 @@ const path = require('path');
 const app = express();
 const method = require( 'method-override' );
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
+const cookieAuthMiddleware = require('./middlewares/cookieAuthMiddleware');
 
 // start server
 const listen = require( './modules/listen.js' );
@@ -18,6 +20,10 @@ app.use(  require( './modules/public.js') );
 
 //session
 app.use( session({secret: 'Proyecto SOIE'}));
+
+//cookies
+app.use(cookieParser());
+app.use(cookieAuthMiddleware);
 
 // set view engine
 app.set('views', path.resolve(__dirname,'views') );

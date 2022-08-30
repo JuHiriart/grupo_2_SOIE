@@ -136,7 +136,12 @@ module.exports = {
                 })
             }
             
+            
+
             req.session.userLogged = userLogging;
+            if (req.body.rememberMe != undefined){
+                res.cookie('rememberMe', userLogging.email, { maxAge: 600000})   //cookie te recuerda 10 minutos
+            }
             console.log(req.session.userLogged)
             res.redirect('/')
 

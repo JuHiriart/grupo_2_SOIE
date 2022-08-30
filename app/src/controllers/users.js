@@ -2,6 +2,7 @@ const views = require('../modules/file.js');
 const bcrypt = require('bcrypt');
 
 const {validationResult} = require('express-validator'); // requiero esto para la verificacion del Sign In
+const users = require('../models/user.model.js');
 
 const models = {
     users : require('../models/user.model.js'),
@@ -95,7 +96,7 @@ module.exports = {
             // });
             // // -----------------
             
-            res.redirect(`/users/${user.id}/profile`);
+            res.redirect(`/users/login`);
         },
         // manejo de archivos
         upload: models.users.storeFile()
@@ -148,5 +149,16 @@ module.exports = {
                 userLogged : req.session.userLogged
             });
         }
+    },
+
+    userList: (req, res) => {
+        let users = models.users.index();
+        
+        res.render( views('users/list') , {
+            title : 'Lista de usuarios',
+            style : 'userList',
+            users : users,
+            userLogged : req.session.userLogged
+        })
     }
 }

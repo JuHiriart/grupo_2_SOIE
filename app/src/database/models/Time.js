@@ -20,6 +20,11 @@ module.export = (sequelize, dataTypes) => {
     };
 
     const Time = sequelize.define(alias, cols, config);
-
+       Time.associate = function (models) {
+        Time.hasMany(models.Products, {
+            as: "products",
+            foreigntKey: "id_time"
+        })
+    }
     return Time;
 };

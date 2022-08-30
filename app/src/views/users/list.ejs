@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('../partials/head') %>
+
+<body>
+
+    <!-- HEADER -->
+    <%- include('../partials/header') %>
+
+    <main>
+        <table id="userTable">
+            <tr>
+                <th>ID</th>
+                <th>Imagen</th>
+                <th>Email</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Dirección</th>
+                <th>telefono</th>
+                <th>Acción</th>
+            </tr>
+            <% users.forEach((user) => { %>
+                <tr>
+                    <td><h3> id:<%= user.id %> </h3></td>       
+                    <td><img class="userImg" src="<%= user.img %> " alt="Imagen del usuario"></td>
+                    <td><h3><%= user.email %></h3></td> 
+                    <td><p><%= user.firstName %></p></td>
+                    <td><p><%= user.lastName %></p></td>   
+                    <td><%= user.direccion %> </td>
+                    <td><%= user.telefono %> </td>
+                    <td>
+                        <input class="btn" type="button" value="edit">
+                        <input class="btn" type="button" value="delete">
+                    </td>
+                </tr>
+                <% }) %>
+        </table>
+       
+    </main>
+
+    
+</body>

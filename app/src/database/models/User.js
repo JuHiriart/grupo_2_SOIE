@@ -56,6 +56,16 @@ module.export = (sequelize, dataTypes) => {
     };
 
     const User = sequelize.define(alias, cols, config);
-
+      User.associate = function (models) {
+        User.hasMany(models.Cart, {
+            as: "cart",
+            foreigntKey: "id_user"
+        }),
+        Category.belongsTo(models.Category, {
+            as: "category",
+            foreigntKey: "id_category"
+        })
+    
+    }
     return User;
 };

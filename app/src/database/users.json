@@ -274,5 +274,18 @@
 		"id": 25,
 		"category": "client",
 		"img": "/images/users/avatars/default.jpg"
+	},
+	{
+		"first_name": "admin",
+		"last_name": "admin",
+		"email": "admin@admin.com",
+		"password": "$2b$10$0LcXLzNZvjvM/Qd6MzpKbe8IF3hj4MmGXjHSK3IFFye.135mQgZhm",
+		"birth": "1212-12-12",
+		"gender": "Hombre",
+		"direccion": "admin123",
+		"telefono": "1123456789",
+		"id": 26,
+		"category": "client",
+		"img": "/images/users/avatars/default.jpg"
 	}
 ]

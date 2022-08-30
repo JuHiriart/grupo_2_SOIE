@@ -46,12 +46,29 @@ module.export = (sequelize, dataTypes) => {
 
     };
 
-    let config = {
-        tableName: "Produts",
+   let config = {
+        tableName: "Products",
         timesTamps: false
     };
 
     const Product = sequelize.define(alias, cols, config);
+    Product.associate = function (models) {
+
+        Product.hasMany(models.ProducCart, {
+                as: "produccart",
+                foreigntKey: "id_Products"
+            }),
+        Product.belongsTo(models.Type, {
+                as: "type",
+                foreigntKey: "id_types"
+            }),
+
+        Product.belongsTo(models.Time, {
+                as: "time",
+                foreigntKey: "id_time"
+            })  
+
+    }
 
     return Product;
 };

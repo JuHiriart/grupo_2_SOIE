@@ -6,7 +6,7 @@ const users = require('../models/user.model.js');
 
 const models = {
     users : require('../models/user.model.js'),
-   // products : require('../models/product.model.js') revisar si hay que borrarla.
+    //products : require('../models/product.model.js') // revisar si hay que borrarla.
 }
 
 

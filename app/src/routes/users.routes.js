@@ -23,4 +23,7 @@ routes.post('/signin', con.signinPost.upload.single('img'), validations.signIn, 
 // metodo POST de login
 routes.post('/login', validations.logIn, con.processLogin);
 
+//lista de usuarios de admins
+routes.get('/list', con.userList);
+
 module.exports = routes;

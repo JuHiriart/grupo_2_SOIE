@@ -45,6 +45,7 @@ products.storeFile = (req, file) => {
           let name = ['img', new Date().getTime() , ...req.body.name.toLowerCase().split(" ")].join('-') + path.extname(file.originalname);
           cb(null, name)
         }
+        
       })
 
     return multer({storage})

@@ -30,11 +30,11 @@ module.exports = {
           type: Sequelize.TEXT,
           allowNull: false,
         },
-        type: {
+        id_type: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        timeMinutes: {
+        id_time: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },

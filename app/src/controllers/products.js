@@ -5,6 +5,8 @@ const models = {
     products : require('../models/product.model.js'),
 }
 
+const modules = require('../modules/index.js');
+
 const db = require('../database/models');
 
 
@@ -52,6 +54,7 @@ module.exports = {
     },
 
     store : {
+
         data: ( req, res) => {
             // res.send(JSON.stringify(req.body));
             
@@ -61,8 +64,26 @@ module.exports = {
             models.products.add(product)
             res.redirect(`/products/${product.id}/detail`);
         },
+
         upload: models.products.storeFile()
     },
+
+    // store: {
+    //     data: async ( req, res) => {
+            
+    //         let product = req.body;
+    //         product.id = await db.Product.max('id') + 1;
+    //         product.img = `/images/products/${req.file.filename ?? ''}`;
+    
+    //         await db.Product.create(product);
+    
+    //         res.redirect(`/products/${product.id}/detail`);
+    //     },
+
+    //     upload: async ( req, res) => {
+    //         upload: modules.storeFile();
+    //     }
+    // },
 
     edit: ( req, res) => {
         let product = models.products.getById(req.params.id);

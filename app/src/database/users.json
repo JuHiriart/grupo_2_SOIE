@@ -7,7 +7,7 @@
 		"gender": "Hombre",
 		"email": "bgiron0@friendfeed.com",
 		"password": "iLVWV2F",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/nonconsequunturitaque.png?size=50x50&set=set1"
 	},
 	{
@@ -18,7 +18,7 @@
 		"gender": "Hombre",
 		"email": "grubinivitz1@cyberchimps.com",
 		"password": "LEbPmVmJhe",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/quasimagnisequi.png?size=50x50&set=set1"
 	},
 	{
@@ -29,7 +29,7 @@
 		"gender": "Hombre",
 		"email": "dkeford2@e-recht24.de",
 		"password": "RqkNbnx5aKC",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/autemsuntpossimus.png?size=50x50&set=set1"
 	},
 	{
@@ -40,7 +40,7 @@
 		"gender": "Hombre",
 		"email": "ashellard3@bbb.org",
 		"password": "6OaXwsWNOK",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/atmolestiaeillo.png?size=50x50&set=set1"
 	},
 	{
@@ -51,7 +51,7 @@
 		"gender": "Hombre",
 		"email": "hbancroft4@mlb.com",
 		"password": "1e9ccA2Zp",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/autemvoluptasmodi.png?size=50x50&set=set1"
 	},
 	{
@@ -62,7 +62,7 @@
 		"gender": "Hombre",
 		"email": "gmacanellye5@yandex.ru",
 		"password": "nfSHp7n",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/corporispariaturrem.png?size=50x50&set=set1"
 	},
 	{
@@ -73,7 +73,7 @@
 		"gender": "Hombre",
 		"email": "ashillingford6@cocolog-nifty.com",
 		"password": "4lK0aZDxO",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/iustoautomnis.png?size=50x50&set=set1"
 	},
 	{
@@ -84,7 +84,7 @@
 		"gender": "Hombre",
 		"email": "oclother7@stumbleupon.com",
 		"password": "uwFXJogD",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/repellendusdolortempora.png?size=50x50&set=set1"
 	},
 	{
@@ -95,7 +95,7 @@
 		"gender": "Hombre",
 		"email": "aboyen8@myspace.com",
 		"password": "5vAEOSisizR",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/idharumqui.png?size=50x50&set=set1"
 	},
 	{
@@ -106,7 +106,7 @@
 		"gender": "Hombre",
 		"email": "dbly9@creativecommons.org",
 		"password": "0UPuaNTWMlVY",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/sithicaspernatur.png?size=50x50&set=set1"
 	},
 	{
@@ -117,7 +117,7 @@
 		"gender": "Hombre",
 		"email": "aglazzarda@ca.gov",
 		"password": "Nowu9ANQ",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/etadipisciveritatis.png?size=50x50&set=set1"
 	},
 	{
@@ -128,7 +128,7 @@
 		"gender": "Hombre",
 		"email": "eiacovinob@rakuten.co.jp",
 		"password": "etB5Ut1seyZ",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/minusnullaplaceat.png?size=50x50&set=set1"
 	},
 	{
@@ -139,7 +139,7 @@
 		"gender": "Hombre",
 		"email": "zmarzelloc@yandex.ru",
 		"password": "bB9tUaeQCkf3",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/vitaeaperiamrepellendus.png?size=50x50&set=set1"
 	},
 	{
@@ -150,7 +150,7 @@
 		"gender": "Hombre",
 		"email": "gsandayd@theatlantic.com",
 		"password": "iZgosywnRy",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/utoccaecaticumque.png?size=50x50&set=set1"
 	},
 	{
@@ -161,7 +161,7 @@
 		"gender": "Hombre",
 		"email": "pspeddinge@unblog.fr",
 		"password": "IHkHyWKAs",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/etenimdolores.png?size=50x50&set=set1"
 	},
 	{
@@ -172,7 +172,7 @@
 		"gender": "Hombre",
 		"email": "astarsmearef@engadget.com",
 		"password": "YgEjmXvR",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/quisquasvoluptatem.png?size=50x50&set=set1"
 	},
 	{
@@ -183,7 +183,7 @@
 		"gender": "Hombre",
 		"email": "habsong@dion.ne.jp",
 		"password": "Gco0tTEv",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/adipiscivoluptasnisi.png?size=50x50&set=set1"
 	},
 	{
@@ -194,7 +194,7 @@
 		"gender": "Hombre",
 		"email": "nmaidensh@theguardian.com",
 		"password": "s97JpS6VY",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/facereutfacilis.png?size=50x50&set=set1"
 	},
 	{
@@ -205,7 +205,7 @@
 		"gender": "Hombre",
 		"email": "kettritchi@typepad.com",
 		"password": "WnQRDp85",
-		"category": "client",
+		"category": 1,
 		"img": "https://robohash.org/autdolorenostrum.png?size=50x50&set=set1"
 	},
 	{
@@ -216,7 +216,7 @@
 		"gender": "Hombre",
 		"email": "pnatwickj@sciencedirect.com",
 		"password": "iilQovZ4bH8",
-		"category": "admin",
+		"category": 2,
 		"img": "https://robohash.org/sitfugased.png?size=50x50&set=set1"
 	},
 	{
@@ -259,7 +259,7 @@
 		"address": "French",
 		"numberPhone": "5492324687408",
 		"id": 24,
-		"category": "client",
+		"category": 1,
 		"img": "/images/users/avatars/default.jpg"
 	},
 	{
@@ -272,7 +272,7 @@
 		"address": "Tatooine",
 		"numberPhone": "2324685784",
 		"id": 25,
-		"category": "client",
+		"category": 1,
 		"img": "/images/users/avatars/default.jpg"
 	},
 	{
@@ -285,7 +285,7 @@
 		"address": "admin123",
 		"numberPhone": "1123456789",
 		"id": 26,
-		"category": "client",
+		"category": 3,
 		"img": "/images/users/avatars/default.jpg"
 	}
 ]

@@ -1,4 +1,4 @@
-const func = (sequelize, dataTypes) => {
+module.exports = Time = (sequelize, dataTypes) => {
     let alias = "Times";
     let cols = {
         id: {
@@ -23,7 +23,7 @@ const func = (sequelize, dataTypes) => {
 
     Time.associate = function (models) {
 
-        Time.hasMany(models.Products, {
+        Time.hasMany(models.Product, {
             as: "products",
             foreignKey: "id_time"
         });
@@ -33,5 +33,3 @@ const func = (sequelize, dataTypes) => {
 
     return Time;
 };
-
-module.exports = func;

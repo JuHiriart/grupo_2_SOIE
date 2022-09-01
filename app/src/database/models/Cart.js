@@ -1,4 +1,4 @@
-const func = (sequelize, dataTypes) => {
+module.exports = Cart = (sequelize, dataTypes) => {
 
     let alias = "Carts";
     let cols = {
@@ -66,8 +66,5 @@ const func = (sequelize, dataTypes) => {
     }
 
     return Cart;
-    
+
 };
-
-
-module.exports = func;

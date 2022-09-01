@@ -1,4 +1,4 @@
-const func = (sequelize, dataTypes) => {
+module.exports = User = (sequelize, dataTypes) => {
     let alias = "Users";
     let cols = {
         id: {
@@ -39,7 +39,7 @@ const func = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
 
         },
-        adress: {
+        address: {
             type: dataTypes.STRING,
 
         },
@@ -73,5 +73,3 @@ const func = (sequelize, dataTypes) => {
 
     return User;
 };
-
-module.exports = func;

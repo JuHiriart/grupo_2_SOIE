@@ -50,7 +50,7 @@ INSERT INTO `sequelizemeta` (`name`) VALUES
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `birth`, `gender`, `img`, `password`, `adress`, `numberPhone`, `category`) VALUES
+INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `birth`, `gender`, `img`, `password`, `address`, `numberPhone`, `category`) VALUES
 (1, 'Byrann', 'Giron', 'bgiron0@friendfeed.com', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/nonconsequunturitaque.png?size=50x50&set=set1', 'iLVWV2F', '', 0, 'client'),
 (2, 'Gwennie', 'Rubinivitz', 'grubinivitz1@cyberchimps.com', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/quasimagnisequi.png?size=50x50&set=set1', 'LEbPmVmJhe', '', 0, 'client'),
 (3, 'Darren', 'Keford', 'dkeford2@e-recht24.de', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/autemsuntpossimus.png?size=50x50&set=set1', 'RqkNbnx5aKC', '', 0, 'client'),

@@ -30,14 +30,14 @@ module.exports = {
         });
     },
 
-    profile: (req,res) => {
-        let user = models.users.getById(req.params.id);
+    profile: async (req,res) => {
+        // let user = models.users.getById(req.params.id);
+        let user = await db.User.findByPk(req.params.id);
         // res.send(user);
         res.render( views('users/profile') , {
-            user: {},
             title : 'Profile',
             style : 'profile',
-            user : user,
+            user : user ?? {},
             userLogged : req.session.userLogged
         });
     },

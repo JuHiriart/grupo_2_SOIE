@@ -1,4 +1,4 @@
-const func = (sequelize, dataTypes) => {
+module.exports = Status = (sequelize, dataTypes) => {
     let alias = "Status";
     let cols = {
         id: {
@@ -32,5 +32,3 @@ const func = (sequelize, dataTypes) => {
 
     return Status;
 };
-
-module.exports = func;

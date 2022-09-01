@@ -137,7 +137,7 @@ CREATE TABLE `users` (
   `gender` text NOT NULL,
   `img` text NOT NULL,
   `password` text NOT NULL,
-  `adress` text NOT NULL,
+  `address` text NOT NULL,
   `numberPhone` int(11) NOT NULL,
   `category` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;

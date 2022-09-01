@@ -5,12 +5,12 @@ module.exports = {
 
     signIn : [
 
-        check('first_name')
+        check('firstName')
 
             .notEmpty().withMessage("Debes ingresar un nombre")
             .bail(),
 
-        check('last_name')
+        check('lastName')
 
             .notEmpty().withMessage("Debes ingresar un apellido")
             .bail(),
@@ -50,12 +50,12 @@ module.exports = {
 
             .notEmpty().withMessage("Debes ingresar una fecha de nacimiento"),
 
-        check('telefono')
+        check('numberPhone')
 
             .matches(/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/)
             .withMessage("Debes ingresar un número de teléfono válido (Arg)"),
         
-        check('direccion')
+        check('address')
 
             .notEmpty().withMessage("Debes ingresar una dirección"),
 

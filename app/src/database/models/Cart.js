@@ -1,5 +1,5 @@
 const func = (sequelize, dataTypes) => {
-    
+
     let alias = "Carts";
     let cols = {
         id: {
@@ -42,28 +42,31 @@ const func = (sequelize, dataTypes) => {
 
     let config = {
         tableName: "Cart",
-        timesTamps: false
+        timeStamps: false
     };
 
     const Cart = sequelize.define(alias, cols, config);
-    
+
     Cart.associate = function (models) {
+
         Cart.hasMany(models.ProductCart, {
             as: "productcart",
-            foreigntKey: "id_ProductCart"
-        }),
-            Cart.belongsTo(models.Status, {
-                as: "status",
-                foreigntKey: "id_status"
-            }),
-            Cart.belongsTo(models.Users, {
-                as: "users",
-                foreigntKey: "id_user"
-            })
+            foreignKey: "id_ProductCart"
+        });
 
+        Cart.belongsTo(models.Status, {
+            as: "status",
+            foreignKey: "id_status"
+        });
+
+        Cart.belongsTo(models.User, {
+            as: "user",
+            foreignKey: "id_user"
+        });
     }
 
     return Cart;
+    
 };
 
 

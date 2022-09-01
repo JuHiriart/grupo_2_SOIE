@@ -48,7 +48,7 @@ const func = (sequelize, dataTypes) => {
 
     let config = {
         tableName: "Products",
-        timesTamps: false
+        timeStamps: false
     };
 
     const Product = sequelize.define(alias, cols, config);
@@ -57,17 +57,18 @@ const func = (sequelize, dataTypes) => {
 
         Product.hasMany(models.ProducCart, {
             as: "produccart",
-            foreigntKey: "id_Products"
-        }),
-            Product.belongsTo(models.Type, {
-                as: "type",
-                foreigntKey: "id_types"
-            }),
+            foreignKey: "id_Products"
+        });
+        
+        Product.belongsTo(models.Type, {
+            as: "type",
+            foreignKey: "id_types"
+        });
 
-            Product.belongsTo(models.Time, {
-                as: "time",
-                foreigntKey: "id_time"
-            })
+        Product.belongsTo(models.Time, {
+            as: "time",
+            foreignKey: "id_time"
+        })
 
     }
 

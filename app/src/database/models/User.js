@@ -52,20 +52,22 @@ const func = (sequelize, dataTypes) => {
 
     let config = {
         tableName: "Users",
-        timesTamps: false
+        timeStamps: false
     };
 
     const User = sequelize.define(alias, cols, config);
 
     User.associate = function (models) {
-        User.hasMany(models.Cart, {
-            as: "cart",
-            foreigntKey: "id_user"
-        }),
-            Category.belongsTo(models.Category, {
-                as: "category",
-                foreigntKey: "id_category"
-            })
+
+        // User.hasMany(models.Cart, {
+        //     as: "cart",
+        //     foreignKey: "id_user"
+        // });
+        
+        // User.belongsTo(models.Category, {
+        //     as: "category",
+        //     foreignKey: "id_category"
+        // });
 
     }
 

@@ -27,7 +27,7 @@ const func = (sequelize, dataTypes) => {
 
     let config = {
         tableName: "ProdutCart",
-        timesTamps: false
+        timeStamps: false
     };
 
     const ProductCart = sequelize.define(alias, cols, config);
@@ -36,13 +36,13 @@ const func = (sequelize, dataTypes) => {
 
         ProductCart.belongsTo(models.Product, {
             as: "products",
-            foreigntKey: "id_Products"
-        }),
+            foreignKey: "id_Products"
+        });
 
-            Product.belongsTo(models.Cart, {
-                as: "cart",
-                foreigntKey: "id_ProductCart"
-            })
+        ProductCart.belongsTo(models.Cart, {
+            as: "cart",
+            foreignKey: "id_ProductCart"
+        });
 
     }
     return ProductCart;

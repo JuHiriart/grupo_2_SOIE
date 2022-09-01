@@ -16,16 +16,18 @@ const func = (sequelize, dataTypes) => {
 
     let config = {
         tableName: "Type",
-        timesTamps: false
+        timeStamps: false
     };
 
     const Type = sequelize.define(alias, cols, config);
 
     Type.associate = function (models) {
+
         Type.hasMany(models.Products, {
             as: "products",
-            foreigntKey: "id_types"
-        })
+            foreignKey: "id_types"
+        });
+        
     }
 
     return Type;

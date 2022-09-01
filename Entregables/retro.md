@@ -1,4 +1,4 @@
-# Retrospectiva sobre del Quinto sprint
+# Retrospectiva sobre del Sexto sprint
 
 * Comenzar a hacer: Los puntos obligatorios para terminar en tiempo
 

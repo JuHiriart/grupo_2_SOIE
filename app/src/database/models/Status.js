@@ -1,4 +1,4 @@
-module.export = (sequelize, dataTypes) => {
+const func = (sequelize, dataTypes) => {
     let alias = "Status";
     let cols = {
         id: {
@@ -20,11 +20,15 @@ module.export = (sequelize, dataTypes) => {
     };
 
     const Status = sequelize.define(alias, cols, config);
-       Status.associate = function (models) {
-         Status.hasMany(models.Cart, {
+
+    Status.associate = function (models) {
+        Status.hasMany(models.Cart, {
             as: "cart",
             foreigntKey: "id_status"
         })
     }
+
     return Status;
 };
+
+module.exports = func;

@@ -1,4 +1,4 @@
-module.export = (sequelize, dataTypes) => {
+const func = (sequelize, dataTypes) => {
     let alias = "Users";
     let cols = {
         id: {
@@ -32,7 +32,7 @@ module.export = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
         },
         idCategory: {
-            type: DataTypes.INTEGER
+            type: dataTypes.INTEGER
 
         },
         image: {
@@ -56,16 +56,20 @@ module.export = (sequelize, dataTypes) => {
     };
 
     const User = sequelize.define(alias, cols, config);
-      User.associate = function (models) {
+
+    User.associate = function (models) {
         User.hasMany(models.Cart, {
             as: "cart",
             foreigntKey: "id_user"
         }),
-        Category.belongsTo(models.Category, {
-            as: "category",
-            foreigntKey: "id_category"
-        })
-    
+            Category.belongsTo(models.Category, {
+                as: "category",
+                foreigntKey: "id_category"
+            })
+
     }
+
     return User;
 };
+
+module.exports = func;

@@ -1,4 +1,4 @@
-module.export = (sequelize, dataTypes) => {
+const func = (sequelize, dataTypes) => {
     let alias = "Times";
     let cols = {
         id: {
@@ -20,11 +20,15 @@ module.export = (sequelize, dataTypes) => {
     };
 
     const Time = sequelize.define(alias, cols, config);
-       Time.associate = function (models) {
+
+    Time.associate = function (models) {
         Time.hasMany(models.Products, {
             as: "products",
             foreigntKey: "id_time"
         })
     }
+
     return Time;
 };
+
+module.exports = func;

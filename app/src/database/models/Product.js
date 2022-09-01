@@ -1,4 +1,4 @@
-module.export = (sequelize, dataTypes) => {
+const func = (sequelize, dataTypes) => {
     let alias = "Products";
     let cols = {
         id: {
@@ -46,29 +46,33 @@ module.export = (sequelize, dataTypes) => {
 
     };
 
-   let config = {
+    let config = {
         tableName: "Products",
         timesTamps: false
     };
 
     const Product = sequelize.define(alias, cols, config);
+
     Product.associate = function (models) {
 
         Product.hasMany(models.ProducCart, {
-                as: "produccart",
-                foreigntKey: "id_Products"
-            }),
-        Product.belongsTo(models.Type, {
+            as: "produccart",
+            foreigntKey: "id_Products"
+        }),
+            Product.belongsTo(models.Type, {
                 as: "type",
                 foreigntKey: "id_types"
             }),
 
-        Product.belongsTo(models.Time, {
+            Product.belongsTo(models.Time, {
                 as: "time",
                 foreigntKey: "id_time"
-            })  
+            })
 
     }
 
     return Product;
 };
+
+
+module.exports = func;

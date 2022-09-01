@@ -9,6 +9,8 @@ const models = {
     //products : require('../models/product.model.js') // revisar si hay que borrarla.
 }
 
+const db = require('../database/models');
+
 
 module.exports = {
     login: (req,res) => {

@@ -5,16 +5,21 @@ const models = {
     products : require('../models/product.model.js'),
 }
 
+const db = require('../database/models');
+
 
 module.exports = {
 
-    list: ( req, res) => {
+    list: async ( req, res) => {
 
-        let products = models.products.index();
+        // let products = models.products.index();
+
+        const products = await db.Product.findAll();
 
         if(req.query && req.query.name){
             products = products.filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1)
         }
+
         res.render(views('products/productList'), {
             title : 'Productos',
             style : 'productList',
@@ -23,12 +28,18 @@ module.exports = {
         })
     },
 
-    detail: ( req, res) => {
-        let product = models.products.getById(req.params.id);
+    detail: async ( req, res) => {
+        // let product = models.products.getById(req.params.id);
+        let product = await db.Product.findAll({
+            where : {
+                id : req.params.id
+            }
+        });
+
         res.render(views('products/productDetail'), {
             style : 'productDetail',
             title : `SOIE - ${product.name}`,
-            product : product,
+            product : await product,
             userLogged : req.session.userLogged
         })
     },

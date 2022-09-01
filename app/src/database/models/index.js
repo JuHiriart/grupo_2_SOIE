@@ -28,6 +28,8 @@ fs
     // console.log( typeof model )
     db[model.name] = model(sequelize, Sequelize.DataTypes);
 
+    // console.log(db)
+
   });
 
 Object.keys(db).forEach(modelName => {
@@ -38,5 +40,7 @@ Object.keys(db).forEach(modelName => {
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
+// console.log(Object.keys(db))
 
 module.exports = db;

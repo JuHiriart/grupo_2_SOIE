@@ -39,7 +39,7 @@
             <div class="user">
                     <img class="userImage" src=<%= userLogged.img %>  alt="Imagen de usuario">
                     <a href="/users/<%= userLogged.id %>/profile"> <!--esto debe redireccionar a la vista de usuario-->
-                        <%= userLogged.first_name %> <!--el nombre debe ser una variable dinamica-->
+                        <%= userLogged.firstName %> <!--el nombre debe ser una variable dinamica-->
                     </a>
                 </div>
             <% } %>

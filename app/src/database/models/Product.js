@@ -1,4 +1,4 @@
-const func = (sequelize, dataTypes) => {
+module.exports = Product = (sequelize, dataTypes) => {
     let alias = "Products";
     let cols = {
         id: {
@@ -55,8 +55,8 @@ const func = (sequelize, dataTypes) => {
 
     Product.associate = function (models) {
 
-        Product.hasMany(models.ProducCart, {
-            as: "produccart",
+        Product.hasMany(models.ProductCart, {
+            as: "productcart",
             foreignKey: "id_Products"
         });
         
@@ -74,6 +74,3 @@ const func = (sequelize, dataTypes) => {
 
     return Product;
 };
-
-
-module.exports = func;

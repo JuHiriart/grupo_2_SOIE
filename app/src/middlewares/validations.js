@@ -1,5 +1,6 @@
 const {check} = require('express-validator');
-const model = require('../models/user.model.js');
+// const model = require('../models/user.model.js');
+const db = require('../database/models');
 
 module.exports = {
 
@@ -20,8 +21,9 @@ module.exports = {
             .isEmail().withMessage("Debes ingresar un email válido")
             .bail()
         
-            .custom( value => { // chequeo que el email no exista en la base de datos
-                return model.getByEmail(value) ? false : true; // si el email ya existe, devuelve false
+            .custom( async value => { // chequeo que el email no exista en la base de datos
+                let count = await db.User.count({ where : { email : value } });
+                return count == 0;
             })
             .withMessage("El email ya existe en nuesra base de datos. Intenta ingresar con tu cuenta o registrate con otro email.")
             .bail(),

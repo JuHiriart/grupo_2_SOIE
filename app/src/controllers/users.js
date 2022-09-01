@@ -13,6 +13,7 @@ const db = require('../database/models');
 
 
 module.exports = {
+    
     login: (req,res) => {
         res.render( views('users/login') , {
             title : 'Login',
@@ -45,7 +46,7 @@ module.exports = {
     // este controlador lo divido en dos, uno que usa multer para subir el archivo, y otro que controla los datos del form
     signinPost: {
         // manejo de datos del formulario
-        data : (req,res) => {
+        data : async (req,res) => {
 
             // obtengo los posibles errores en la validacion
             let errors = validationResult(req);
@@ -80,16 +81,16 @@ module.exports = {
 
             // si no hay errores, creo el usuario y lo guardo en el archivo
             let user = req.body;
-            user.id = models.users.getNewId();
             user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10));
-            user.category = 'client';
+            user.category = 1 // por defecto, el usuario es un cliente;
             delete user.passCon;
+
             
             user.img = req.file ? 
                 `/images/users/avatars/${req.file.filename ?? ''}` :
                 '/images/users/avatars/default.jpg';
-
-            models.users.add(user)
+            
+            user = await db.User.create(user);
 
             // // debuggin --------
             // res.send({
@@ -104,29 +105,36 @@ module.exports = {
         upload: models.users.storeFile()
     },
     //proceso de inicio de sesión
-    processLogin: (req, res) =>  {
+    processLogin: async (req, res) =>  {
+
         let errors = validationResult(req);
 
         if (errors.isEmpty()){
 
-            let userList;
 
+            let userList;
             if(usersJSON = ''){
                 userList = [];
             } else {
-                userList = models.users.index();
+                userList = await db.User.findAll();
             }
+
+            let userLogging = null;
             
+            // busco el usuario en la lista de usuarios
+            for ( let user of userList ) {
 
-
-            for (let index = 0; index < userList.length; index++) {
-                if(userList[index].email == req.body.email && bcrypt.compareSync(req.body.password, userList[index].password)) {
-                    var userLogging = userList[index];
+                // let tableData = { email: user.email, password: user.password };
+                // console.table(tableData);
+                
+                if( user.email == req.body.email && bcrypt.compareSync(req.body.password, user.password) ) {
+                    userLogging = user;
                     break;
                 }
             }
 
-            if (userLogging == undefined) {
+            // si el usuario no existe, redirijo a la vista de login
+            if ( !userLogging ) {
                 return res.render('users/login', {
                     errors: [
                         {msg: "Credenciales inválidas"}
@@ -138,12 +146,12 @@ module.exports = {
                 })
             }
             
-            
-
             req.session.userLogged = userLogging;
-            if (req.body.rememberMe != undefined){
-                res.cookie('rememberMe', userLogging.email, { maxAge: 600000})   //cookie te recuerda 10 minutos
+
+            if (req.body.rememberMe){
+                res.cookie('rememberMe', userLogging.email, { maxAge: 1000 * 60 * 10 })   //cookie te recuerda 10 minutos
             }
+
             console.log(req.session.userLogged)
             res.redirect('/')
 
@@ -159,6 +167,7 @@ module.exports = {
     },
 
     userList: (req, res) => {
+        
         let users = models.users.index();
         
         res.render( views('users/list') , {

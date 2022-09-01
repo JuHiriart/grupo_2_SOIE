@@ -53,67 +53,64 @@ module.exports = {
         })
     },
 
+    // este controlador lo divido en dos, uno que usa multer para subir el archivo, y otro que controla los datos del form
     store : {
 
-        data: ( req, res) => {
-            // res.send(JSON.stringify(req.body));
-            
+        data: async (req, res) => {
+
             let product = req.body;
-            product.id = models.products.getNewId();
+            product.id = await db.Product.max('id') + 1;
             product.img = `/images/products/${req.file.filename ?? ''}`;
-            models.products.add(product)
+
+            await db.Product.create(product);
+
             res.redirect(`/products/${product.id}/detail`);
         },
 
-        upload: models.products.storeFile()
+        upload: models.products.storeFile() // TODO: revisar este controlador a lo ultimo
     },
 
-    // store: {
-    //     data: async ( req, res) => {
-            
-    //         let product = req.body;
-    //         product.id = await db.Product.max('id') + 1;
-    //         product.img = `/images/products/${req.file.filename ?? ''}`;
-    
-    //         await db.Product.create(product);
-    
-    //         res.redirect(`/products/${product.id}/detail`);
-    //     },
+    // este controlador muestra el formulario para editar un producto
+    edit: async ( req, res) => {
 
-    //     upload: async ( req, res) => {
-    //         upload: modules.storeFile();
-    //     }
-    // },
+        let product = await db.Product.findByPk(req.params.id);
 
-    edit: ( req, res) => {
-        let product = models.products.getById(req.params.id);
-        res.render(views('products/edit'), {
+        await res.render(views('products/edit'), {
             method : `/${product.id}?_method=PUT`,
             style : 'productNew',
             h1 : 'Editar Producto',
             title : `Editar: ${product.name}`,
-            product ,
+            product : product,
             userLogged : req.session.userLogged
         })
     },
 
+    // este controlador lo divido en dos, uno que usa multer para subir el archivo, y otro que controla los datos del form
     storeEdit: {
-        data: ( req, res) => {
-            // res.send(JSON.stringify(req.body));
+
+        // manejo de datos del formulario
+        data: async ( req, res) => {
             let id = parseInt(req.params.id);
             let product = req.body;
             product.id = id;
-            if ( req.file ){
-                product.img = `/images/products/${req.file.filename ?? ''}`;
-            } else {
-                product.img = models.products.getById(id).img;
-            }
 
-            models.products.put(product)
+            product.img = req.file ?
+                `/images/products/${req.file.filename ?? ''}` :
+                await db.Product.findByPk(id).img;
+
+            await db.Product.update(product, {
+                where: {
+                    id: id
+                }
+            });
 
             res.redirect(`/products/${product.id}/detail`);
+
         },
-        upload: models.products.storeFile()
+
+        // manejo de archivo
+        upload: models.products.storeFile(),
+
     },
 
     abm:  (req,res) => {
@@ -126,9 +123,13 @@ module.exports = {
         })
     },
     
-    delete: (req,res) => {
+    delete: async (req,res) => {
         let id = req.params.id;
-        models.products.delete(id);
+        await db.Product.destroy({
+            where: {
+                id: id
+            }
+        });
         res.redirect('/products');
     },
 

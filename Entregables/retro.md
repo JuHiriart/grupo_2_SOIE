@@ -1,5 +1,19 @@
 # Retrospectiva sobre del Quinto sprint
 
+* Comenzar a hacer: Los puntos obligatorios para terminar en tiempo
+
+* Hacer más: Que todos aportemos y coordinemos.
+
+* Continuar haciendo: Ayudandonos cuando alguien se le complica con el tiempo. Y que el esta con problema avise con el mayor tiempo de anticipacion.
+
+* Hacer menos: Fiaca!!!. 
+
+* Dejar de hacer: Los opcionales y terminar primero los puntos que son obligatorios. 
+
+
+
+# Retrospectiva sobre del Quinto sprint
+
 * Vamos a mantener la buena relacion que tenemos en el equipo, hay mucha predisposcion para ayudar y esperar si algun integrante no entiende un punto. Priorizamos el estar todos igualados que tener avanzaces diferenciados .
 
 * Vamos a dejar de esperar si alguno que tomo el trabajo no cumple en un plazo razonable. 

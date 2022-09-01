@@ -1,3 +1,29 @@
+weekly 6 Sprint
+
+10/08/2022
+
+realizo: Se entrego parcial el sprint 05.
+Impedimento: Tiempo y organización en las semanas anteriores.
+Hoy: organizar el sprint 06, asignar tareas, y quien termina lo pendiente del anterior
+
+16/08/2022
+realizo: se entrego Diagrama base de datos, aprobado para avanzar.
+Impedimento: la validación de los campos y que funcione, estamos consultando a los profesores.
+Hoy: avanzar con el punto Script estructura BD, y terminar los faltantes del Sprint anterior
+
+17/08/2022
+realizo: validación ingreso terminado.
+impedimento: En el controlador del perfil, no llega los valores del registro.
+Hoy: Avanzar con el punto del srpint anterior y finalizar el punto 5 del sprint actual
+
+24/08/2022
+realizado: scrip de las tablas BD.
+impedimento: da un error en la creacion de bd , ERROR: Unknown column 'firstName' in 'field list'
+Hoy: Avanzar con la migración de datos
+
+
+
+
 weekly 5 Sprint
 
 1 reunion: Nos juntamos para definir las observaciones sobre el spring 3. Armamos el tablero de trello para dividir tareas, cada uno pudo comentar los tiempos que teniamos, 

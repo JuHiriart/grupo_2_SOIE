@@ -17,31 +17,27 @@ module.exports = {
         const products = await db.Product.findAll();
 
         if(req.query && req.query.name){
-            products = products.filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1)
+            products = products.filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1 );
         }
 
         res.render(views('products/productList'), {
             title : 'Productos',
             style : 'productList',
             products : products,
-            userLogged : req.session.userLogged
-        })
+            userLogged : req.session.userLogged,
+        });
     },
 
     detail: async ( req, res) => {
-        // let product = models.products.getById(req.params.id);
-        let product = await db.Product.findAll({
-            where : {
-                id : req.params.id
-            }
-        });
+        let product = await db.Product.findByPk(req.params.id);
 
-        res.render(views('products/productDetail'), {
+        await res.render(views('products/productDetail'), {
             style : 'productDetail',
             title : `SOIE - ${product.name}`,
-            product : await product,
+            product : product,
             userLogged : req.session.userLogged
         })
+
     },
 
     new: ( req, res) => {
@@ -108,9 +104,20 @@ module.exports = {
             userLogged : req.session.userLogged
         })
     },
+    
     delete: (req,res) => {
         let id = req.params.id;
         models.products.delete(id);
         res.redirect('/products');
     },
+
+    // // this method deletes the file from the server
+    // deleteFile: (req,res) => {
+    //     let id = req.params.id;
+    //     let product = models.products.getById(id);
+    //     let path = resolve(__dirname, '../public', product.img);
+    //     fs.unlinkSync(path);
+    //     models.products.delete(id);
+    //     res.redirect('/products');
+    // }
 }

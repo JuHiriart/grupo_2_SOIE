@@ -22,7 +22,6 @@ module.exports = Product = (sequelize, dataTypes) => {
             type: dataTypes.DECIMAL(10, 2),
             allowNull: false
         },
-
         img: {
             type: dataTypes.STRING,
             allowNull: false
@@ -48,7 +47,7 @@ module.exports = Product = (sequelize, dataTypes) => {
 
     let config = {
         tableName: "Products",
-        timeStamps: false
+        timeStamps: false,
     };
 
     const Product = sequelize.define(alias, cols, config);
@@ -62,7 +61,7 @@ module.exports = Product = (sequelize, dataTypes) => {
         
         Product.belongsTo(models.Type, {
             as: "type",
-            foreignKey: "id_types"
+            foreignKey: "id_type"
         });
 
         Product.belongsTo(models.Time, {

@@ -25,7 +25,7 @@ module.exports = Type = (sequelize, dataTypes) => {
 
         Type.hasMany(models.Product, {
             as: "products",
-            foreignKey: "id_types"
+            foreignKey: "id_type"
         });
         
     }

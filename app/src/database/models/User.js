@@ -31,7 +31,7 @@ module.exports = User = (sequelize, dataTypes) => {
         password: {
             type: dataTypes.STRING,
         },
-        idCategory: {
+        id_category: {
             type: dataTypes.INTEGER
 
         },

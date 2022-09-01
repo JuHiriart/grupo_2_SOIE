@@ -32,7 +32,7 @@ module.exports = {
           allowNull: false,
         },
 
-        img: {
+        image: {
           type: Sequelize.TEXT,
           allowNull: false, //Comentado hasta que solucionemos las tablas intermedias
         },
@@ -48,7 +48,7 @@ module.exports = {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        category  : {
+        id_category  : {
           type: Sequelize.TEXT,
           
         },

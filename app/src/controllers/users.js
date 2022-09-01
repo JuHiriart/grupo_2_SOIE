@@ -166,9 +166,9 @@ module.exports = {
         }
     },
 
-    userList: (req, res) => {
-        
-        let users = models.users.index();
+    userList: async (req, res) => {
+
+        let users = await db.User.findAll();
         
         res.render( views('users/list') , {
             title : 'Lista de usuarios',

@@ -14,36 +14,46 @@
         </form>
     </div>
 
-    <nav class="header">
-        <ul class="site">
+    <% if(userLogged == undefined){ %>  
 
-            <li><a href="/products">Productos</a></li>
-            <li><a href="/views/contacto">Contacto</a></li>
-            <li><a href="/products/create">Crear producto</a></li>
-            <!--                 <li><a href="/views/sign-in">Crear usuario</a></li>
-        <li><a href="/views/log-in">Ingresar</a></li> -->
-        </ul>
-    </nav>
+        <nav class="header">
+            <ul class="site">
+    
+                <li><a href="/products">Productos</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="/products/create">Crear producto</a></li>
+                <!--                 <li><a href="/views/sign-in">Crear usuario</a></li>
+            <li><a href="/views/log-in">Ingresar</a></li> -->
+            </ul>
+        </nav>
 
-    <div>
-
-        <% if(userLogged == undefined){ %>  <!--cambiar de true a false para ver los headers-->
-        <div class="noUser">
-                <!-- falta condicion del if comprobando si el usuario esta logueado-->
-                <a href="/users/login">Log In</a>
-                <p>/</p>
-                <a href="/users/signin">Sign In</a>
-        </div>
-            
-            <% } else{ %>
-            <div class="user">
-                    <img class="userImage" src=<%= userLogged.img %>  alt="Imagen de usuario">
-                    <a href="/users/<%= userLogged.id %>/profile"> <!--esto debe redireccionar a la vista de usuario-->
-                        <%= userLogged.firstName %> <!--el nombre debe ser una variable dinamica-->
-                    </a>
-                </div>
-            <% } %>
+    <div class="noUser">
+            <a href="/users/login">Log In</a>
+            <p>/</p>
+            <a href="/users/signin">Sign In</a>
     </div>
+        
+        <% } else{ %>
+
+            <nav class="header">
+                <ul class="site">
+        
+                    <li><a href="/products">Productos</a></li>
+                    <li><a href="/users/list">Lista de usuarios</a></li>
+                    <li><a href="/products/create">Crear producto</a></li>
+                    <!--                 <li><a href="/views/sign-in">Crear usuario</a></li>
+                <li><a href="/views/log-in">Ingresar</a></li> -->
+                </ul>
+            </nav>
+
+        <div class="user">
+                <img class="userImage" src=<%= userLogged.img %>  alt="Imagen de usuario">
+                <a href="/users/<%= userLogged.id %>/profile"> <!--esto debe redireccionar a la vista de usuario-->
+                    <%= userLogged.firstName %> <!--el nombre debe ser una variable dinamica-->
+                </a>
+            </div>
+        <% } %>
+
             
     <div class="buttons">
 

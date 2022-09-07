@@ -8,7 +8,7 @@
 
     <div class="busqueda">
         <form action="/products/" method="get">
-            <input type="text" name="name" id="busqueda" class="busqueda" placeholder="Buscar tratamiento"
+            <input type="text" name="name" id="busqueda" class="busqueda" placeholder="Buscar"
                 autocapitalize="none">
             <i class="fa-solid fa-magnifying-glass"></i>
         </form>
@@ -47,7 +47,7 @@
             </nav>
 
         <div class="user">
-                <img class="userImage" src=<%= userLogged.img %>  alt="Imagen de usuario">
+                <img class="userImage" src=<%= userLogged.image %>  alt="Imagen de usuario">
                 <a href="/users/<%= userLogged.id %>/profile"> <!--esto debe redireccionar a la vista de usuario-->
                     <%= userLogged.firstName %> <!--el nombre debe ser una variable dinamica-->
                 </a>

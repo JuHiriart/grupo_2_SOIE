@@ -3,54 +3,41 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     try {
-      await queryInterface.createTable("products", {
+      await queryInterface.createTable("cart", {
         id: {
           type: Sequelize.INTEGER,
           allowNull: false,
           autoIncrement: true,
           primaryKey: true,
         },
-        name: {
-          type: Sequelize.TEXT,
-          allowNull: false,
-        },
-        description: { 
-          type: Sequelize.TEXT,
-          allowNull: false,
-        },
-        price: {
+        order: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        off: {
-          type: Sequelize.INTEGER,
-          allowNull: true,
-        },
-        img: {
-          type: Sequelize.TEXT,
-          allowNull: false,
-        },
-<<<<<<< HEAD
-        type: {
+        id_productCart: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        timeMinutes: {
-=======
-        id_type: {
+
+        idUser: {
           type: Sequelize.INTEGER,
           allowNull: false,
         },
-        id_time: {
->>>>>>> sprint-06
-          type: Sequelize.INTEGER,
+        id_status: {
+          type: Sequelize.BOOLEAN,
           allowNull: false,
         },
-        active: {
-          type: Sequelize.TINYINT,
+        totalOrder: {
+          type: Sequelize.DECIMAL,
           allowNull: false,
         },
-        
+        date: {
+          type: Sequelize.DATE,
+          allowNull: false,
+        },
+
+
+
       });
     } catch (error) {
       console.log(error);
@@ -58,6 +45,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable("products");
+    await queryInterface.dropTable("cart");
   },
 };

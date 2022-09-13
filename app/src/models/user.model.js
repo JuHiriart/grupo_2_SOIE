@@ -52,7 +52,7 @@ users.storeFile = (req, file) => {
 
             'img',
             new Date().getTime() ,
-            ...req.body.first_name.toLowerCase().split(" ")
+            ...req.body.firstName.toLowerCase().split(" ")
             
           ].join('-') + path.extname(file.originalname);
           cb(null, name)

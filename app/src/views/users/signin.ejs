@@ -19,24 +19,24 @@
 
                             <!-- NOMBRE -->
                             <div>
-                                <label for="first_name" class="first_name">
+                                <label for="firstName" class="firstName">
                                     Nombre
-                                    <input type="text" id="first_name" name="first_name" placeholder="Nombre del usuario"
-                                        value=<%= user.first_name ?? '' %> >
-                                        <% if (locals.errors && errors.first_name) { %>
-                                            <div class="error"><%= errors.first_name.msg %></div>
+                                    <input type="text" id="firstName" name="firstName" placeholder="Nombre del usuario"
+                                        value=<%= user.firstName ?? '' %> >
+                                        <% if (locals.errors && errors.firstName) { %>
+                                            <div class="error"><%= errors.firstName.msg %></div>
                                         <% } %>
                                 </label>
                             </div>
 
                             <!-- APELLIDO -->
                             <div>
-                                <label for="last_name" class="name">
+                                <label for="lastName" class="name">
                                     Apellido
-                                    <input type="text" id="last_name" name="last_name" placeholder="Apellido del usuario"
-                                        value=<%= user.last_name ?? '' %> >
-                                        <% if (locals.errors && errors.last_name) { %>
-                                            <div class="error"><%= errors.last_name.msg %></div>
+                                    <input type="text" id="lastName" name="lastName" placeholder="Apellido del usuario"
+                                        value=<%= user.lastName ?? '' %> >
+                                        <% if (locals.errors && errors.lastName) { %>
+                                            <div class="error"><%= errors.lastName.msg %></div>
                                         <% } %>
                                 </label>
                             </div>
@@ -104,22 +104,22 @@
 
                             <!-- DIRECCION -->
                             <div>
-                                <label for="direccion" class="direccion">
+                                <label for="address" class="address">
                                     Direccion
-                                    <input type="text" name="direccion" id="direccion" placeholder="Direccion" value=<%= user.direccion ?? '' %>>
-                                    <% if (locals.errors && errors.direccion) { %>
-                                        <div class="error"><%= errors.direccion.msg %></div>
+                                    <input type="text" name="address" id="address" placeholder="Direccion" value=<%= user.address ?? '' %>>
+                                    <% if (locals.errors && errors.address) { %>
+                                        <div class="error"><%= errors.address.msg %></div>
                                     <% } %>
                                 </label>
                             </div>
 
                             <!-- telefono -->
                             <div>
-                                <label for="telefono" class="telefono">
+                                <label for="numberPhone" class="numberPhone">
                                     Telefono
-                                    <input type="tel" name="telefono" id="telefono" placeholder="Telefono" value=<%= user.telefono ?? '' %>>
-                                    <% if (locals.errors && errors.telefono) { %>
-                                        <div class="error"><%= errors.telefono.msg %></div>
+                                    <input type="tel" name="numberPhone" id="numberPhone" placeholder="Telefono" value=<%= user.numberPhone ?? '' %>>
+                                    <% if (locals.errors && errors.numberPhone) { %>
+                                        <div class="error"><%= errors.numberPhone.msg %></div>
                                     <% } %>
                                 </label>
                             </div>

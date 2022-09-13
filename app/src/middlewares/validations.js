@@ -75,4 +75,35 @@ module.exports = {
             .isLength({min:4, max:16})
             .withMessage("la contraseña debe tener entre 4 y 16 caracteres")
     ],
+
+    products: [
+        check('name')
+
+            .notEmpty()
+            .withMessage("Debes ingresar un nombre para el producto")
+            .bail()
+
+            .isLength({min:5, max:20})
+            .withMessage("Debe tener entre 5 y 20 caracteres"),
+
+        check('description')
+
+            .isLength({min:20})
+            .withMessage("Debe tener al menos 20 caracteres"),
+
+        check('img') //ver
+
+            .custom((value, {req}) => {
+                if(req.files.mimetype === 'application/jpg'){
+                    return '.jpg'; 
+                } 
+                if(req.files.mimetype === 'application/png'){
+                    return '.png';
+                }else{
+                    return false;
+                }
+            })
+            .withMessage('Solo .png o .jpg'), 
+    
+    ]
 }

@@ -7,13 +7,16 @@ const con = require(`../controllers/${conName}.js`);
 const { Router } = require("express");
 const routes = Router();
 
+//validaciones
+const validations = require('../middlewares/validations.js');
+
 /* get all products */
 routes.get( '/'      , con.list       );
 routes.get( '/abm'   , con.abm        );
 
 /* create a new product */
 routes.get( '/create'   , con.new        );
-routes.post( '/'        , con.store.upload.single('img') , con.store.data );
+routes.post( '/'        ,validations.products , con.store.upload.single('img') , con.store.data );
 
 /* show details of a product */
 routes.get( '/:id/detail', con.detail );

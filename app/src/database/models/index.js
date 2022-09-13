@@ -15,21 +15,14 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
-<<<<<<< HEAD
-=======
 // console.log(sequelize)
 
->>>>>>> sprint-06
 fs
   .readdirSync(__dirname)
   .filter(file => {
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })
   .forEach(file => {
-<<<<<<< HEAD
-    const model = require(path.join(__dirname, file))(sequelize, Sequelize.DataTypes);
-    db[model.name] = model;
-=======
     // console.log(file)
     const model = require(path.join(__dirname, file));
     // console.log( typeof model )
@@ -37,7 +30,6 @@ fs
 
     // console.log(db)
 
->>>>>>> sprint-06
   });
 
 Object.keys(db).forEach(modelName => {
@@ -49,9 +41,6 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-<<<<<<< HEAD
-=======
 // console.log(Object.keys(db))
 
->>>>>>> sprint-06
 module.exports = db;

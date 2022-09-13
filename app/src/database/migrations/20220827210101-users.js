@@ -10,19 +10,11 @@ module.exports = {
           autoIncrement: true,
           primaryKey: true,
         },
-<<<<<<< HEAD
-        first_name: {
-          type: Sequelize.STRING,
-          allowNull: false,
-        },
-        last_name: {
-=======
         firstName: {
           type: Sequelize.STRING,
           allowNull: false,
         },
         lastName: {
->>>>>>> sprint-06
           type: Sequelize.STRING,
           allowNull: false,
         },
@@ -40,11 +32,7 @@ module.exports = {
           allowNull: false,
         },
 
-<<<<<<< HEAD
-        img: {
-=======
         image: {
->>>>>>> sprint-06
           type: Sequelize.TEXT,
           allowNull: false, //Comentado hasta que solucionemos las tablas intermedias
         },
@@ -52,19 +40,6 @@ module.exports = {
           type: Sequelize.TEXT,
           allowNull: false,
         },
-<<<<<<< HEAD
-        direccion: {
-          type: Sequelize.BOOLEAN,
-          allowNull: false,
-        },
-        telefono: {
-          type: Sequelize.INTEGER,
-          allowNull: false,
-        },
-        category  : {
-          type: Sequelize.TEXT,
-          allowNull: false,
-=======
         address: {
           type: Sequelize.TEXT,
           allowNull: false,
@@ -76,7 +51,6 @@ module.exports = {
         id_category  : {
           type: Sequelize.TEXT,
           
->>>>>>> sprint-06
         },
 
       });

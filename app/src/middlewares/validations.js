@@ -91,19 +91,19 @@ module.exports = {
             .isLength({min:20})
             .withMessage("Debe tener al menos 20 caracteres"),
 
-        check('img') //ver
+        // check('img') //ver
 
-            .custom((value, {req}) => {
-                if(req.files.mimetype === 'application/jpg'){
-                    return '.jpg'; 
-                } 
-                if(req.files.mimetype === 'application/png'){
-                    return '.png';
-                }else{
-                    return false;
-                }
-            })
-            .withMessage('Solo .png o .jpg'), 
+        //     .custom((value, {req}) => {
+        //         if(req.files.mimetype === 'application/jpg'){
+        //             return '.jpg'; 
+        //         } 
+        //         if(req.files.mimetype === 'application/png'){
+        //             return '.png';
+        //         }else{
+        //             return false;
+        //         }
+        //     })
+        //     .withMessage('Solo .png o .jpg'), 
     
     ]
 }

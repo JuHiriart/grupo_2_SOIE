@@ -32,7 +32,7 @@
                         <div>
                             <label for="name" class="name">
                                 Email
-                                <input type="text" id="name" name="email" placeholder="Nombre de usuario"
+                                <input type="text" id="name" name="email" placeholder="Nombre de usuario" required
                                 value=<%= user.email ?? '' %> >
                                         <% if (locals.errors && errors.email ) { %>
                                             <div class="error"><%= errors.email.msg %></div>
@@ -43,7 +43,7 @@
                         <div>
                             <label for="pass" class="pass">
                                 Contraseña
-                                <input type="password" id="pass" name="password" placeholder="Contraseña">
+                                <input type="password" id="pass" name="password" placeholder="Contraseña" required>
                             </label>
                         </div>
                         

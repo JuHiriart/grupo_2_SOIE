@@ -21,7 +21,7 @@
                             <div>
                                 <label for="firstName" class="firstName">
                                     Nombre
-                                    <input type="text" id="firstName" name="firstName" placeholder="Nombre del usuario"
+                                    <input type="text" id="firstName" name="firstName" placeholder="Nombre del usuario" required minlength="2"
                                         value=<%= user.firstName ?? '' %> >
                                         <% if (locals.errors && errors.firstName) { %>
                                             <div class="error"><%= errors.firstName.msg %></div>
@@ -33,7 +33,7 @@
                             <div>
                                 <label for="lastName" class="name">
                                     Apellido
-                                    <input type="text" id="lastName" name="lastName" placeholder="Apellido del usuario"
+                                    <input type="text" id="lastName" name="lastName" placeholder="Apellido del usuario" required minlength="2"
                                         value=<%= user.lastName ?? '' %> >
                                         <% if (locals.errors && errors.lastName) { %>
                                             <div class="error"><%= errors.lastName.msg %></div>
@@ -45,7 +45,7 @@
                             <div>
                                 <label for="email" class="email">
                                     Email
-                                    <input type="email" id="email" name="email" placeholder="Correo electrónico"
+                                    <input type="email" id="email" name="email" placeholder="Correo electrónico" required
                                         value=<%= user.email ?? '' %> >
                                         <% if (locals.errors && errors.email ) { %>
                                             <div class="error"><%= errors.email.msg %></div>
@@ -57,7 +57,7 @@
                             <div>
                                 <label for="password" class="pass">
                                     Contraseña
-                                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                                    <input type="password" name="password" id="password" placeholder="Contraseña" required minlength="8">
                                     <% if (locals.errors && errors.password) { %>
                                         <div class="error"><%= errors.password.msg %></div>
                                     <% } %>
@@ -68,7 +68,7 @@
                             <div>
                                 <label for="passCon" class="passCon">
                                     Confirmar Contraseña
-                                    <input type="password" id="passCon" name="passCon" placeholder="Confirmar contraseña">
+                                    <input type="password" id="passCon" name="passCon" placeholder="Confirmar contraseña" required minlength="8">
                                     <% if (locals.errors && errors.passCon) { %>
                                         <div class="error"><%= errors.passCon.msg %></div>
                                     <% } %>
@@ -79,7 +79,7 @@
                             <div>
                                 <label for="birth" class="birth">
                                     Fecha de nacimiento
-                                    <input type="date" name="birth" id="birth" value=<%= user.birth ?? '' %>>
+                                    <input type="date" name="birth" id="birth" required value=<%= user.birth ?? '' %>>
                                     <% if (locals.errors && errors.birth) { %>
                                         <div class="error"><%= errors.birth.msg %></div>
                                     <% } %>
@@ -106,7 +106,7 @@
                             <div>
                                 <label for="address" class="address">
                                     Direccion
-                                    <input type="text" name="address" id="address" placeholder="Direccion" value=<%= user.address ?? '' %>>
+                                    <input type="text" name="address" id="address" placeholder="Direccion" required value=<%= user.address ?? '' %>>
                                     <% if (locals.errors && errors.address) { %>
                                         <div class="error"><%= errors.address.msg %></div>
                                     <% } %>
@@ -117,7 +117,7 @@
                             <div>
                                 <label for="numberPhone" class="numberPhone">
                                     Telefono
-                                    <input type="tel" name="numberPhone" id="numberPhone" placeholder="Telefono" value=<%= user.numberPhone ?? '' %>>
+                                    <input type="tel" name="numberPhone" id="numberPhone" placeholder="Telefono" required value=<%= user.numberPhone ?? '' %>>
                                     <% if (locals.errors && errors.numberPhone) { %>
                                         <div class="error"><%= errors.numberPhone.msg %></div>
                                     <% } %>

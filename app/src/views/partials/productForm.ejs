@@ -6,16 +6,16 @@
 
     <div class="contenedor-input">
         <label for="titulo">Nombre del Producto : </label>
-        <input type="text" name="name" id="titulo" value="<%= product.name ?? '' %>">
+        <input type="text" name="name" id="titulo" required value="<%= product.name ?? '' %>">
     </div>
     <div class="contenedor-input">
         <label for="descripcion">Descripción : </label>
-        <textarea name="description" placeholder="Máximo 500 caracteres" maxlength="500" rows="5"
+        <textarea name="description" placeholder="Máximo 500 caracteres" maxlength="500" minlength="20" rows="5"
             cols="30"><%= product.description ?? '' %></textarea>
     </div>
     <div class="contenedor-input">
         <label for="titulo">Precio : </label>
-        <input type="number" value="<%= product.price ?? '' %>" name="price" id="precio" step="0.01"
+        <input type="number" value="<%= product.price ?? '' %>" required name="price" id="precio" step="0.01"
             min="0" autocomplete="off" />
     </div>
     <div class="contenedor-input">

@@ -63,7 +63,6 @@ module.exports = {
 
         ],
 
-
     logIn : [
         check('email')
         
@@ -74,5 +73,36 @@ module.exports = {
             
             .isLength({min:4, max:16})
             .withMessage("la contraseña debe tener entre 4 y 16 caracteres")
+    ],
+
+    newProduct : [
+        check('name')
+            .notEmpty().withMessage("Debes ingresar un nombre")
+            .bail(),
+
+        check('description')
+            .notEmpty().withMessage("Debes ingresar una descripción")
+            .bail(),
+
+        check('price')
+            .notEmpty().withMessage("Debes ingresar un precio")
+            .bail(),
+
+        check('discount')
+            .notEmpty().withMessage("Debes ingresar un descuento")
+            .bail(),
+
+        check('category')
+            .notEmpty().withMessage("Debes ingresar una categoría")
+            .bail(),
+
+        check('stock')
+            .notEmpty().withMessage("Debes ingresar un stock")
+            .bail(),
+
+        check('image')
+            .notEmpty().withMessage("Debes ingresar una imagen")
+            .bail(),
+
     ],
 }

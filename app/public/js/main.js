@@ -274,24 +274,55 @@ const validationRules = [ // reglas de validacion para cada formulario
         form: 'formProducto',
         rules: {
             name: [
-                { func: 'notEmpty', msg: 'El nombre no puede estar vacío' },
+                { 
+                    func: 'notEmpty',
+                    msg : 'El nombre no puede estar vacío'
+                },
             ],
             description: [
-                { func: 'isStringBetween', args: { min: 0, max: 100 }, msg: 'La descripción debe tener entre 10 y 100 caracteres' },
+                { 
+                    func: 'isStringBetween',
+                    args: { min: 0, max: 100 },
+                    msg : 'La descripción debe tener entre 10 y 100 caracteres'
+                },
             ],
             price: [
-                { func: 'notEmpty', msg: 'El precio no puede estar vacío' },
-                { func: 'isNumber', msg: 'El precio debe ser un número' },
-                { func: 'isNumberBetween', args: { min: 0 }, msg: 'El precio debe ser mayor que 0' },
+                { 
+                    func: 'notEmpty',
+                    msg : 'El precio no puede estar vacío'
+                },
+                { 
+                    func: 'isNumber',
+                    msg : 'El precio debe ser un número'
+                },
+                { 
+                    func: 'isNumberBetween',
+                    args: { min: 0 },
+                    msg : 'El precio debe ser mayor que 0'
+                },
             ],
             off: [
-                { func: 'isNumber', msg: 'El descuento debe ser un número' },
-                { func: 'isNumberBetween', args: { min: 0, max: 100 }, msg: 'El descuento debe estar entre 0 y 100' },
+                { 
+                    func: 'isNumber',
+                    msg : 'El descuento debe ser un número'
+                },
+                { 
+                    func: 'isNumberBetween',
+                    args: { min: 0, max: 100 },
+                    msg : 'El descuento debe estar entre 0 y 100'
+                },
             ],
             timeMinutes: [
-                { func: 'notEmpty', msg: 'El tiempo no puede estar vacío' },
-                { func: 'isNumber', msg: 'El tiempo debe ser un número' },
-                { func: 'isNumberBetween', args: { min: 0 }, msg: 'El tiempo debe ser mayor que 0' },
+                { 
+                    func: 'notEmpty', msg: 'El tiempo no puede estar vacío'
+                },
+                { 
+                    func: 'isNumber', msg: 'El tiempo debe ser un número'
+                },
+                { 
+                    func: 'isNumberBetween',
+                    args: { min: 0 }, msg: 'El tiempo debe ser mayor que 0'
+                },
             ],
         }
     },

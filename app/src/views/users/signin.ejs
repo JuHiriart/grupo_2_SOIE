@@ -18,7 +18,7 @@
                         <form action="/users/signin?_method=POST" id="userForm" method="POST" enctype="multipart/form-data" name="signin-form">
 
                             <!-- NOMBRE -->
-                            <div>
+                            <div class="contenedor-input">
                                 <label for="firstName" class="firstName">
                                     Nombre
                                     <input type="text" id="firstName" name="firstName" placeholder="Nombre del usuario"
@@ -30,7 +30,7 @@
                             </div>
 
                             <!-- APELLIDO -->
-                            <div>
+                            <div class="contenedor-input">
                                 <label for="lastName" class="name">
                                     Apellido
                                     <input type="text" id="lastName" name="lastName" placeholder="Apellido del usuario"
@@ -42,7 +42,7 @@
                             </div>
 
                             <!-- EMAIL -->
-                            <div>
+                            <div class="contenedor-input">
                                 <label for="email" class="email">
                                     Email
                                     <input type="email" id="email" name="email" placeholder="Correo electrónico"
@@ -54,7 +54,7 @@
                             </div>
 
                             <!-- PASSWORD -->
-                            <div>
+                            <div class="contenedor-input">
                                 <label for="password" class="pass">
                                     Contraseña
                                     <input type="password" name="password" id="password" placeholder="Contraseña">
@@ -65,7 +65,7 @@
                             </div>
 
                             <!-- PASSWORD CONFIRMATION -->
-                            <div>
+                            <div class="contenedor-input">
                                 <label for="passCon" class="passCon">
                                     Confirmar Contraseña
                                     <input type="password" id="passCon" name="passCon" placeholder="Confirmar contraseña">
@@ -76,7 +76,7 @@
                             </div>
 
                             <!-- BIRTH -->
-                            <div>
+                            <div class="contenedor-input">
                                 <label for="birth" class="birth">
                                     Fecha de nacimiento
                                     <input type="date" name="birth" id="birth" value=<%= user.birth ?? '' %>>
@@ -103,7 +103,7 @@
                             </select>
 
                             <!-- DIRECCION -->
-                            <div>
+                            <div class="contenedor-input">
                                 <label for="address" class="address">
                                     Direccion
                                     <input type="text" name="address" id="address" placeholder="Direccion" value=<%= user.address ?? '' %>>
@@ -114,7 +114,7 @@
                             </div>
 
                             <!-- telefono -->
-                            <div>
+                            <div class="contenedor-input">
                                 <label for="numberPhone" class="numberPhone">
                                     Telefono
                                     <input type="tel" name="numberPhone" id="numberPhone" placeholder="Telefono" value=<%= user.numberPhone ?? '' %>>
@@ -126,7 +126,7 @@
                             
                             
                             <!-- PROFILE PICTURE -->
-                            <div>
+                            <div class="contenedor-input">
                                 <label for="img" class="img">
                                     Foto de perfil
                                     <input type="file" id="img" name="img" accept="image/png, image/jpg">

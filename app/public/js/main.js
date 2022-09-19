@@ -20,7 +20,7 @@ console.log('DOM loaded with JavaScript');
  *            func: 'nombre de la regla',
  *              -> nombre de la función que valida el campo, debe estar definida en valFuncs (ver abajo) o marcar 'custom'
  * 
- *            params: [param1, param2, ...],
+ *            params: {param1, param2, ...},
  *              -> parámetros de la función de validación, si no hay parámetros, se puede omitir.
  *              -> Si se marco 'custom' en func, este parámetro es obligatorio y debe ser una función de validación.
  * 
@@ -65,7 +65,7 @@ class Validator {
             isString: (value, obj, params) => typeof value == 'string',
 
             isStringBetween: (value, obj, params) => {
-                let length = value.split().length;
+                let length = value.split("").length;
                 let min = params.min ?? 0;
                 let max = params.max ?? Infinity;
                 return length >= min && length <= max;
@@ -94,10 +94,10 @@ class Validator {
             isDate: (value, obj, params) => typeof value == 'date',
 
             isDateBetween: (value, obj, params) => {
-                let minDate = params.minDate?.getTime() ?? -Infinity;
-                let maxDate = params.maxDate?.getTime() ?? Infinity;
+                let min = params.min?.getTime() ?? -Infinity;
+                let max = params.max?.getTime() ?? Infinity;
                 let date = new Date(value).getTime();
-                return date >= minDate && date <= maxDate;
+                return date >= min && date <= max;
             },
 
             isObject: (value, obj, params) => typeof value == 'object',
@@ -123,8 +123,19 @@ class Validator {
             },
 
             isPhone: (value, obj, params) => { // es telefono ESPANOL
-                let re = /(\+34|0034|34)?[ -]*(6|7)[ -]*([0-9][ -]*){8}/;
+                //  regex to validate argentinian phone numbers
+                let re = /^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/;
                 return re.test(value);
+            },
+
+            isTelArgento: (value, obj, params) => { // es telefono ARGENTINO
+                //eliminamos todo lo que no es dígito
+                num = preg_replace( '/\D+/', '', value);
+                //devolver si coincidió con el regex
+                return preg_match(
+                    '/^(?:(?:00)?549?)?0?(?:11|[2368]\d)(?:(?=\d{0,2}15)\d{2})??\d{8}$/D',
+                    num
+                );
             },
 
             isDni: (value, obj, params) => {
@@ -182,7 +193,7 @@ class Validator {
 
             custom: (value, obj, params) => {
                 return params(value, obj);
-            }
+            },
 
         }
 
@@ -282,8 +293,8 @@ const validationRules = [ // reglas de validacion para cada formulario
             description: [
                 { 
                     func: 'isStringBetween',
-                    args: { min: 0, max: 100 },
-                    msg : 'La descripción debe tener entre 10 y 100 caracteres'
+                    args: { min: 20, max: 100 },
+                    msg : 'La descripción debe tener entre 20 y 100 caracteres'
                 },
             ],
             price: [
@@ -326,6 +337,109 @@ const validationRules = [ // reglas de validacion para cada formulario
             ],
         }
     },
+    {
+        form: 'userForm',
+        rules: {
+            firstName: [
+                {
+                    func: 'notEmpty',
+                    msg: 'El nombre no puede estar vacío'
+                },
+                {
+                    func: 'isStringBetween',
+                    args: { min: 2, max: 30 },
+                }
+            ],
+            lastName: [
+                {
+                    func: 'notEmpty',
+                    msg: 'El apellido no puede estar vacío'
+                },
+                {
+                    func: 'isStringBetween',
+                    args: { min: 2, max: 30 },
+                },
+            ],
+            email: [
+                {
+                    func: 'notEmpty',
+                    msg: 'El email no puede estar vacío'
+                },
+                {
+                    func: 'isEmail',
+                    msg: 'El email no es válido'
+                }
+            ],
+            password: [
+                {
+                    func: 'notEmpty',
+                    msg: 'La contraseña no puede estar vacía'
+                },
+                {
+                    func: 'matches',
+                    args: { regex : /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{0,}$/ },
+                    msg: 'La contraseña debe tener al menos 8 caracteres, una mayúscula, una minúscula y un número'
+                },
+            ],
+            passCon: [
+                {
+                    func: 'notEmpty',
+                    msg: 'Debes confirmar la contraseña'
+                },
+                {
+                    func: 'custom',
+                    args: (value, obj) => value == obj.password ,
+                    msg: 'Las contraseñas no coinciden'
+                },
+            ],
+            birth: [
+                {
+                    func: 'notEmpty',
+                    msg: 'Debes ingresar tu fecha de nacimiento'
+                },
+                // {
+                //     func: 'isDate',
+                //     msg: 'La fecha de nacimiento no es válida'
+                // },
+                {
+                    func: 'isDateBetween',
+                    args: {
+                        min: new Date(1900, 0, 1),
+                        // maximal date update to get 18 years old
+                        max: new Date(new Date().setFullYear(new Date().getFullYear() - 18))
+                    },
+                    msg: 'Debes ser mayor de 18 años'
+                }
+            ],
+            address: [
+                {
+                    func: 'notEmpty',
+                    msg: 'Debes ingresar tu dirección'
+                },
+                {
+                    func: 'isStringBetween',
+                    args: { min: 5, max: 100 },
+                    msg: 'La dirección debe tener entre 5 y 100 caracteres'
+                },
+            ],
+            numberPhone: [
+                {
+                    func: 'notEmpty',
+                    msg: 'Debes ingresar tu número de teléfono'  
+                },
+                {
+                    func: 'isNumber',
+                    msg: 'El número de teléfono debe ser un número'
+                },
+                // {
+                //     func: 'isNumberBetween',
+                //     args: { min: 1000000000, max: 9999999999 },
+                //     msg: 'El número de teléfono debe tener 10 dígitos',
+                // }
+            ],
+            
+        },
+    }
     
 
 ]
@@ -426,11 +540,3 @@ const setFormValidation = (form) => { // funcion para validar un formulario
 }
 
 document.querySelectorAll('form').forEach(setFormValidation);
-
-
-
-
-
-
-
-

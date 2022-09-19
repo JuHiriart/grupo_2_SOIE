@@ -531,10 +531,10 @@ const setFormValidation = (form) => { // funcion para validar un formulario
 
     }
 
-    function getFormValidation(form) {
+    function getFormValidation(form, verbose = false) {
         let validator = validators[form.id];
         let formObj = dom2obj(form);
-        return validator.validate(formObj);
+        return validator.validate(formObj, verbose);
     }
 
 }

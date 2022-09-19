@@ -81,6 +81,10 @@ module.exports = {
                     product.img = `/images/products/${req?.file?.filename ?? ''}`;
                 }
 
+                product.active = true;
+                product.id_type = product.type;
+                product.id_time = product.timeMinutes;
+
                 // product.id = await db.Product.max('id') + 1;
 
                 let newProduct = await db.Product.create(product)

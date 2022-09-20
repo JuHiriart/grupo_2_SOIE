@@ -63,7 +63,6 @@ module.exports = {
 
         ],
 
-
     logIn : [
         check('email')
         

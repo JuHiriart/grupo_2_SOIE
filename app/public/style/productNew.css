@@ -57,7 +57,6 @@ main form{
 }
 
 .contenedor-input {
-
     width: 100%;
     color: #CAE7E2;
     display:flex;
@@ -67,11 +66,81 @@ main form{
     font-weight: 600;
     background-color: rgba(4, 104, 111, 0.7); 
     box-shadow: rgba(13, 70, 109, 0.24) 0px 3px 8px;
+    padding: 0.5rem;
+
 }
 
-.contenedor-input div{
+.contenedor-input.is-invalid {
+    animation-fill-mode: forwards;
+    background-color: rgb(208, 168, 168);
+    box-shadow: rgba(109, 13, 13, 0.66) 0px 3px 8px;
+    border: 1px solid red;
+}
+
+.contenedor-input.is-invalid :not(input,textarea) {
+    color: rgb(90, 0, 0);
+}
+
+.contenedor-input.is-valid {
+    /* animation: shake 0.5s linear 0s 1 ; */
+    animation-fill-mode: forwards;
+    background-color: rgba(4, 104, 111, 0.852);
+    /* box-shadow: rgba(13, 109, 13, 0.66) 0px 3px 8px; */
+}
+
+.contenedor-input.is-valid :not(input,textarea) {
+    font-weight: 600;
+}
+
+.contenedor-input.shake {
+    animation: shake 0.5s linear 0s 1 ;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shake {
+
+    0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(5px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    75% {
+        transform: translateX(-5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+    
+}
+
+/* .contenedor-input:{
+
+} */
+
+.contenedor-input div {
     background-color: rgba(4, 104, 111, 0.0);
     text-align: left;
+}
+
+.contenedor-input input, .contenedor-input textarea {
+    border: none;
+    outline: none;
+    font-weight: 600;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.contenedor-input .invalid-feedback {
+    padding: 0.5rem 1rem 0;
+    text-align: center;
+}
+
+.contenedor-input .invalid-feedback i {
+    margin-right: 0.5rem;
 }
 
 .bt2{ 

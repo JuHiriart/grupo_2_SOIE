@@ -1,3 +1,15 @@
+# Retrospectiva sobre del Septimo sprint
+
+* Comenzar a hacer: Los puntos de los sprint anteriores, mencionados en las devoluciones. Ejemplo Crud del sprint 06.
+
+* Hacer más: Que todos aportemos y coordinemos.
+
+* Continuar haciendo: Trabajando en equipo, .
+
+* Hacer menos: Cambios esteticos si faltan puntos obligatorios. 
+
+* Dejar de hacer: Los opcionales y terminar primero los puntos que son obligatorios.
+
 # Retrospectiva sobre del Sexto sprint
 
 * Comenzar a hacer: Los puntos obligatorios para terminar en tiempo

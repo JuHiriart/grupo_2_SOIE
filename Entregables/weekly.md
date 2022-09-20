@@ -1,3 +1,16 @@
+weekly 7 Sprint
+
+19/09/2022
+realizado: se termino con las validaciones en Front. 
+Impedimento: No tuvimos, se resolvio todo lo que necesitamos.
+Hoy: repasamos todo lo que estaba pendiente en el tablero, lo que faltaba o no funcionaba.
+
+
+08/09/2022
+realizo: Organizacion del tablero, asignar tareas.
+Impedimento: faltaba que repasemos algunos temas para terminar despues de las devoluciones sobre el sprint 06. Crud no funciona, se rompe.
+Hoy: reunion  con edu por las devoluciones del sprint 06.
+
 weekly 6 Sprint
 
 10/08/2022

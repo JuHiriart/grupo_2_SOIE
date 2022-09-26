@@ -440,8 +440,6 @@ const validationRules = [ // reglas de validacion para cada formulario
             
         },
     }
-    
-
 ]
 
 // inicializo el objeto de validadores
@@ -451,6 +449,8 @@ validationRules // creo un validador para cada formulario y lo guardo en el obje
     .forEach(x => validators[x.form] = new Validator(x.rules))
 
 const setFormValidation = (form) => { // funcion para validar un formulario
+
+    if(!validators[form.id]) return; // si no hay validador para el formulario, no hago nada 
 
     form.querySelectorAll('input,textarea').forEach(input => {
         input.addEventListener('keyup', function (e) {
@@ -465,6 +465,7 @@ const setFormValidation = (form) => { // funcion para validar un formulario
 
     form.addEventListener('submit', handleFormSubmit);
 
+    // funcion para manejar el submit del formulario
     function handleFormSubmit(e) {
         e.preventDefault();
 
@@ -480,6 +481,7 @@ const setFormValidation = (form) => { // funcion para validar un formulario
 
     }
 
+    // funcion para limpiar los estados de los inputs
     function removeState(input) {
         let container = input.closest('.contenedor-input');
         let classes = ['is-valid', 'is-invalid', 'shake'];
@@ -487,6 +489,7 @@ const setFormValidation = (form) => { // funcion para validar un formulario
         container.querySelector('.invalid-feedback')?.remove();
     }
 
+    // funcion para setear los estados de los inputs
     function setState(input, data) {
 
         let { error, shake } = data;
@@ -518,6 +521,7 @@ const setFormValidation = (form) => { // funcion para validar un formulario
 
     }
 
+    // funcion para actualizar los estados de los inputs
     function updateFormStates(params) {
 
         let { form, errors, shake = false } = params;
@@ -531,6 +535,7 @@ const setFormValidation = (form) => { // funcion para validar un formulario
 
     }
 
+    // funcion para obtener el resultado de la validacion del formulario
     function getFormValidation(form, verbose = false) {
         let validator = validators[form.id];
         let formObj = dom2obj(form);

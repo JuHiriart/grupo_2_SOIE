@@ -19,7 +19,11 @@ app.use(method('_method')); // En la url poner ?m= un metodo no común
 app.use(  require( './modules/public.js') );
 
 //session
-app.use( session({secret: 'Proyecto SOIE'}));
+app.use( session({
+    secret: 'Proyecto SOIE',
+    resave: true,
+    saveUninitialized: true
+}));
 
 //cookies
 app.use(cookieParser());

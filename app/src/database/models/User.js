@@ -47,6 +47,9 @@ module.exports = User = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
 
         },
+        gender: {
+            type: dataTypes.STRING,
+        },
 
     };
 

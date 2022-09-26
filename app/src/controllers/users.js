@@ -82,11 +82,11 @@ module.exports = {
             // si no hay errores, creo el usuario y lo guardo en el archivo
             let user = req.body;
             user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10));
-            user.category = 1 // por defecto, el usuario es un cliente;
+            user.id_category = 1 // por defecto, el usuario es un cliente;
             delete user.passCon;
 
             
-            user.img = req.file ? 
+            user.image = req.file ? 
                 `/images/users/avatars/${req.file.filename ?? ''}` :
                 '/images/users/avatars/default.jpg';
             

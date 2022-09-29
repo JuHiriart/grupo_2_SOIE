@@ -10,10 +10,10 @@
             <!------------------------------------------------------->
             <main>
                 <div class="mainBox">
-                    <img id="userImg" src="<%= user.image %> " alt="Imagen del usuario"> <!--corregir la direccion de la imagen-->
+                    <img id="userImg" src="<%= user.image %> " alt="Imagen del usuario">
                     <div class="infoBox">
                         <h1 id="userName"><span class="class">Nombre:</span> <%= user.firstName %> <%= user.lastName %></h1>
-                        <h2 id="userCategory"><span class="class">Categoría:</span> <%= user.category %></h2>
+                        <h2 id="userCategory"><span class="class">Categoría:</span> <%= user.id_category %></h2>
                         <h2 id="userEmail"><span class="class">Email:</span> <%= user.email %></h2>
                         <h3 id="userBirth"><span class="class">Fecha de nacimiento:</span> <%= user.birth %></h3>
                     </div>

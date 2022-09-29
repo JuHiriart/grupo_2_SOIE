@@ -1,10 +1,11 @@
 function authAdminMiddleware(req, res, next) {
 
     if(req.session.userLogged != undefined){
-        next();
+        if(req.session.userLogged.id_category == 3 ||req.session.userLogged.id_category == 4){
+            next();
+        }
     } else {
-        // res.send('Esta pagina es solo para administradores');
-        res.redirect('/users/login');
+        res.send('solo administradores');
     }
 
 }

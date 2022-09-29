@@ -10,6 +10,7 @@ const routes = Router();
 //validaciones
 const validations = require('../middlewares/validations.js');
 const guestMiddleware = require('../middlewares/guestMiddleware.js');
+const authClientMiddleware = require('../middlewares/authClientMiddleware.js');
 const authAdminMiddleware = require('../middlewares/authAdminMiddleware.js');
 
 
@@ -18,7 +19,7 @@ routes.get('/login', guestMiddleware, con.login);
 routes.get('/signin', guestMiddleware, con.signin);
 
 // muestra el perfil de usuario
-routes.get('/:id/profile', authAdminMiddleware, con.profile);
+routes.get('/:id/profile', authClientMiddleware, con.profile);
 
 // metodo POST de signin. Recibe los datos de la vista signin y los envia al controlador.
 routes.post('/signin', con.signinPost.upload.single('img'), validations.signIn, con.signinPost.data);

@@ -16,7 +16,21 @@
 <!--                 <img src="images\products\radiofrecuencia.PNG" alt="banner"> -->
             </div>
             
-            
+            <section class="slider-wrapper">
+                <button class="slide-arrow" id="slide-arrow-prev">
+                    &#8249; 
+                </button>
+                <button class="slide-arrow" id="slide-arrow-next">
+                    &#8250; 
+                </button>
+                <ul class="slides-container" id="slides-container">
+                    <% products.forEach( ( product,i)=>{ %>
+                        <li class="slide">
+                            <img src=<%= product.img %> alt="foto" class="bannerImg">
+                        </li>
+                    <% }) %> 
+                </ul>
+            </section>
 
             <div class="about-us">
                 <div class="card">
@@ -42,6 +56,7 @@
         <%- include('./partials/footer')  %> 
     </div>
 
+    <script src="js/index.js"></script>
 
 </body>
 

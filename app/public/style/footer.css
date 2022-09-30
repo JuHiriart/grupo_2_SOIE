@@ -1,7 +1,9 @@
 /* MOBILE */
 
 footer {
-    padding: 1rem 2% 0.5rem
+    padding: 1rem 2% 0.5rem;
+    background-color: #0d23359c;
+    color: white;
 }
 
 footer div.img-container {
@@ -45,7 +47,7 @@ footer ul li {
 
 footer a {
     text-decoration: none;
-    color: var(--texto-1);
+    color: white;
     margin-bottom: 0.1em;
 }
 

@@ -10,6 +10,7 @@ const models = {
 }
 
 const db = require('../database/models');
+const session = require('express-session');
 
 
 module.exports = {
@@ -33,7 +34,9 @@ module.exports = {
 
     profile: async (req,res) => {
         // let user = models.users.getById(req.params.id);
-        let user = await db.User.findByPk(req.params.id);
+        //let user = await db.User.findByPk(req.params.id);
+
+        let user = req.session.userLogged;
         // res.send(user);
         res.render( views('users/profile') , {
             title : 'Profile',

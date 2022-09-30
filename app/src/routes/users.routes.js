@@ -19,7 +19,7 @@ routes.get('/login', guestMiddleware, con.login);
 routes.get('/signin', guestMiddleware, con.signin);
 
 // muestra el perfil de usuario
-routes.get('/:id/profile', authClientMiddleware, con.profile);
+routes.get('/profile', authClientMiddleware, con.profile);
 
 // metodo POST de signin. Recibe los datos de la vista signin y los envia al controlador.
 routes.post('/signin', con.signinPost.upload.single('img'), validations.signIn, con.signinPost.data);

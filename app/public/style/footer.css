@@ -4,6 +4,7 @@ footer {
     padding: 1rem 2% 0.5rem;
     background-color: #0d23359c;
     color: white;
+    width: 100%;
 }
 
 footer div.img-container {

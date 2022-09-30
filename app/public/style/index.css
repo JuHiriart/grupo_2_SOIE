@@ -1,3 +1,4 @@
+
 body {
 /*     background-image: rgba(0, 0, 0, 0.1) url('..\\images\\banner\\banner-1.png'); */
     background: linear-gradient( rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) ), url('..\\images\\banner\\banner-1.png');
@@ -14,8 +15,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+
     
   }
+
+
 
 header {
   background-color: #FAF7F3;
@@ -57,7 +62,10 @@ div.card p {
 div.card img {
   width: 100%;
   opacity: 0.8;
-  border-radius: 1.2rem;
+}
+
+#img{
+  width: 33%;
 }
 
 div.card button {

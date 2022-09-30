@@ -1,6 +1,8 @@
 main{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .mainBox{
@@ -16,10 +18,53 @@ main{
 .infoBox{
     display: flex;
     flex-direction: column;
-    margin: 3em 0;
+    margin: 1em;
     padding: 1em;
     background-color: white;
     border-radius: 5%;
+}
+
+.button-58 {
+    align-items: center;
+    background-color: var(--azul-suave);
+    border: 2px solid var(--azul-suave);
+    box-sizing: border-box;
+    color: black;
+    cursor: pointer;
+    display: inline-flex;
+    fill: #000;
+    font-family: Inter,sans-serif;
+    font-size: 1.3vw;
+    font-weight: 600;
+    height: 3.6vw;
+    justify-content: center;
+    letter-spacing: -.8px;
+    line-height: 1.6vw;
+    min-width: 5vw;
+    outline: 0;
+    padding: 0 17px;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 3vw;
+}
+
+.button-58:focus {
+    color: #171e29;
+}
+
+.button-58:hover {
+    border-color: black;
+    fill: #FAF7F3;
+}
+
+.button-58:active {
+    background-color: var(--celeste-suave);
+    border-color: var(--celeste-suave);
+    fill: var(--celeste-suave);
 }
 
 #userImg{
@@ -28,7 +73,7 @@ main{
     object-fit: contain;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: white;
-    
+    margin: 1em;
 }
 
 h1, h2, h3 {

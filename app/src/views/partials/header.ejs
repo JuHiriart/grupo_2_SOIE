@@ -21,7 +21,7 @@
     
                 <li><a href="/products">Productos</a></li>
                 <li><a href="/contacto">Contacto</a></li>
-                <li><a href="/products/create">Crear producto</a></li>
+                
                 <!--                 <li><a href="/views/sign-in">Crear usuario</a></li>
             <li><a href="/views/log-in">Ingresar</a></li> -->
             </ul>
@@ -39,7 +39,9 @@
                 <ul class="site">
         
                     <li><a href="/products">Productos</a></li>
-                    <li><a href="/users/list">Lista de usuarios</a></li>
+                    <% if (userLogged.id_category == 2 || userLogged.id_category == 3) { %>
+                        <li><a href="/users/list">Lista de usuarios</a></li>
+                    <% } %> 
                     <li><a href="/products/create">Crear producto</a></li>
                     <!--                 <li><a href="/views/sign-in">Crear usuario</a></li>
                 <li><a href="/views/log-in">Ingresar</a></li> -->
@@ -48,7 +50,7 @@
 
         <div class="user">
                 <img class="userImage" src=<%= userLogged.image %>  alt="Imagen de usuario">
-                <a href="/users/<%= userLogged.id %>/profile"> <!--esto debe redireccionar a la vista de usuario-->
+                <a href="/users/profile"> <!--esto debe redireccionar a la vista de usuario-->
                     <%= userLogged.firstName %> <!--el nombre debe ser una variable dinamica-->
                 </a>
             </div>

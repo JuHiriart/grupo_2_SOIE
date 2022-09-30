@@ -35,7 +35,7 @@ div.about-us {
   flex-direction: column;
   justify-content: center;
   justify-items: center;
-  align-items: center;
+  align-items: flex-start;
   
 }
 
@@ -51,12 +51,12 @@ div.card {
 }
 
 div.card h2 {
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 
 div.card p {
-  font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  text-align: left;
 }
 
 div.card img {
@@ -86,7 +86,7 @@ div.card button {
 }
 
 .slides-container{
-  height: calc(50vh - 2rem);
+  height: calc(40vh - 2rem);
   width: 100%;
   display: flex;
   list-style: none;
@@ -96,6 +96,7 @@ div.card button {
   scroll-behavior: smooth;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .slides-container::-webkit-scrollbar {
@@ -116,13 +117,13 @@ div.card button {
   bottom: 0;
   margin: auto;
   height: 4rem;
-  background-color: white;
+  background-color: grey;
   border: none;
   width: 2rem;
   font-size: 3rem;
   padding: 0;
   cursor: pointer;
-  opacity: 0.5;
+  opacity: 0.2;
   transition: opacity 100ms;
 }
  
@@ -144,7 +145,8 @@ div.card button {
 }
 
 .bannerImg{
-  object-fit: cover;
+  object-fit: contain;
+  background-color: white;
   height: 100%;
   width: 100%;
 }

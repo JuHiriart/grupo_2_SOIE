@@ -42,6 +42,5 @@ app.use( '/checkout' , require( './routes/checkout.routes.js'  ) );
 app.use( '/users'    , require( './routes/users.routes.js'     ) );
 
 //api
-
-app.use("/api/users", require("./routes/api/users.api.routes"))
+app.use("/api/users", require("./routes/api/users.api.routes.js"))
 

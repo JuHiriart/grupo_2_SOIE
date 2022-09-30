@@ -1,15 +1,15 @@
-const {user} = require('../../database/models/index');
+const {User} = require('../../database/models');
 const {Op} = require('sequelize');
 
 
 const userApi = {
     all: async(req,res) => {
         try {
-            let usersDb = await user.findAll({
+            let usersDb = await User.findAll({
                 include: {all: true},
                 limit: 10,
-                offset: page,
-                order: [['id', 'ASC']]
+                //offset: page,
+                //order: [['id', 'ASC']]
             });
             let users = usersDb.map((users) => {
                 let usuario = {
@@ -24,6 +24,7 @@ const userApi = {
             return res.status(200).json(users);
 
         } catch (error) {
+            console.log(error)
             return res.status(500).json(error);
         }
     },
@@ -43,6 +44,7 @@ const userApi = {
           data.address = usersOne.address; 
           return res.send(data).status(200);
         } catch (error) {
+          console.log(error)
           return res.status(500).json(error);
         }
       },

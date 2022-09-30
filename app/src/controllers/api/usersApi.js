@@ -1,78 +1,51 @@
-const {user, image} = require('../../database/models');
+const {user} = require('../../database/models/index');
 const {Op} = require('sequelize');
-const {hashSync} = require('bcryptjs')
+
 
 const userApi = {
     all: async(req,res) => {
         try {
-            let users = await user.findAll({
-                include: {
-                    all: true
-                }
+            let usersDb = await user.findAll({
+                include: {all: true},
+                limit: 10,
+                offset: page,
+                order: [['id', 'ASC']]
             });
+            let users = usersDb.map((users) => {
+                let usuario = {
+                  id: users.id,
+                  firstName: users.firstName,
+                  email: users.email,
+                
+                };
+                return usuario;
+              });
+              let count = users.length;
             return res.status(200).json(users);
 
         } catch (error) {
             return res.status(500).json(error);
         }
     },
-    oneUser: async (req, res) =>{
+    userId: async (req, res) => {
         try {
-            let userDB = await user.findByPk(
-                req.params.id, {
-                    include: {
-                        all: true
-                    }
-                }
-            )
-            if(userDB){
-
-                return res.status(200).json(userDB);
-            }else{
-                return res.status(404).json('No se encontró este usuario.');
-            }
+          let usersOne = await user.findByPk(req.params.id, {
+            include: {
+              all: true,
+            },
+          });
+          let data = {};
+          data.id = usersOne.id;
+          data.firstName = usersOne.firstName;
+          data.lastName = usersOne.lastName;
+          data.email = usersOne.email;
+          data.numberPhone = usersOne.numberPhone;
+          data.address = usersOne.address; 
+          return res.send(data).status(200);
         } catch (error) {
-            return res.status(500).json(error);
+          return res.status(500).json(error);
         }
+      },
+    };
 
-    },
-    process: async (req, res) =>{
-
-        try {
-            req.body.password = hashSync(req.body.password,10)
-            req.body.isAdmin = req.body.username.includes('@dh.com') ? true: false
-
-            let newUser = await user.create(req.body);
-
-            if(newUser){
-                return res.status(200).json(newUser);
-            }else{
-                return res.status(404).json('No se creó el usuario');
-            }
-        } catch (error) {
-            return res.status(500).json(error);
-        }
-    },
-    userDestroy: async (req, res) =>{     
-   
-    try {
-        let userDB = await user.findByPk(req.params.id)
-
-        if(!userDB){
-            return res.status(404).json('No se encontro el usuario');
-        }
-
-        let deleted = await userDB.destroy()
-
-        if(deleted){
-            return res.status(200).json(true);
-        }else{
-            return res.status(500).json(false);
-        }
-    } catch (error) {
-        return res.status(500).json(error);
-    } 
-}
-};
-
-module.exports = userApi;
+    module.exports = userApi;

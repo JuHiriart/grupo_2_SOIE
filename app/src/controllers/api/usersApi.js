@@ -30,7 +30,7 @@ const userApi = {
     },
     userId: async (req, res) => {
         try {
-          let usersOne = await user.findByPk(req.params.id, {
+          let usersOne = await User.findByPk(req.params.id, {
             include: {
               all: true,
             },

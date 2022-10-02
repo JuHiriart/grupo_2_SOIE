@@ -7,7 +7,7 @@ const userApi = {
         try {
             let usersDb = await User.findAll({
                 include: {all: true},
-                limit: 10,
+                //limit: 10,
                 //offset: page,
                 //order: [['id', 'ASC']]
             });
@@ -21,6 +21,9 @@ const userApi = {
                 return usuario;
               });
               let count = users.length;
+              console.log("------------------------")
+              console.log(count)
+
             return res.status(200).json(users);
 
         } catch (error) {
@@ -30,7 +33,7 @@ const userApi = {
     },
     userId: async (req, res) => {
         try {
-          let usersOne = await user.findByPk(req.params.id, {
+          let usersOne = await User.findByPk(req.params.id, {
             include: {
               all: true,
             },

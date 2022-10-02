@@ -43,4 +43,5 @@ app.use( '/users'    , require( './routes/users.routes.js'     ) );
 
 //api
 app.use("/api/users", require("./routes/api/users.api.routes.js"))
+app.use("/api/products", require("./routes/api/products.api.routes.js"))
 

@@ -16,9 +16,9 @@ module.exports = {
 
         // let products = models.products.index();
 
-        const products = await db.Product.findAll();
+        let products = await db.Product.findAll();
 
-        if (req.query && req.query.name) {
+        if (req.query?.name) {
             products = products.filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
         }
 

@@ -28,13 +28,13 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cart` (
-  `id` int(11) NOT NULL,
-  `order` int(11) NOT NULL,
-  `id_productCart` int(11) NOT NULL,
-  `idUser` int(11) NOT NULL,
-  `id_status` tinyint(1) NOT NULL,
-  `totalOrder` decimal(10,0) NOT NULL,
-  `date` datetime NOT NULL
+  `id` int(11),
+  `order` int(11),
+  `id_productCart` int(11),
+  `idUser` int(11),
+  `id_status` tinyint(1),
+  `totalOrder` decimal(10,0),
+  `date` datetime
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -64,10 +64,10 @@ INSERT INTO `category` (`id`, `description`) VALUES
 --
 
 CREATE TABLE `productcart` (
-  `id` int(11) NOT NULL,
-  `idProducts` int(11) NOT NULL,
-  `totalItems` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL
+  `id` int(11) ,
+  `idProducts` int(11) ,
+  `totalItems` int(11) ,
+  `quantity` int(11) 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -313,7 +313,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11)  AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `category`
@@ -325,7 +325,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT de la tabla `productcart`
 --
 ALTER TABLE `productcart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11)  AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `products`

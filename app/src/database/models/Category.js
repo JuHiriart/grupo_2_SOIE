@@ -7,7 +7,7 @@ module.exports = Category = (sequelize, dataTypes) => {
             autoIncrement: true
 
         },
-        descripcion: {
+        description: {
             type: dataTypes.STRING,
             allowNull: false
         }
@@ -24,7 +24,7 @@ module.exports = Category = (sequelize, dataTypes) => {
     Category.associate = function (models) {
 
         Category.hasMany(models.User, {
-            as: "users",
+            as: "usuarios",
             foreignKey: "id_category"
         })
         

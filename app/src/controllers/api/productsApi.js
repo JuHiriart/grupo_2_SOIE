@@ -6,7 +6,7 @@ const productsApi = {
     all: async(req,res) => {
         try {
             let usersDb = await Product.findAll({
-                include: {all: true},
+                include: [{association: "type"},{association: "time"}],
                 //limit: 10,
                 //offset: page,
                 //order: [['id', 'ASC']]
@@ -18,6 +18,8 @@ const productsApi = {
                   name: Product.name,
                   price: Product.price,
                   off: Product.off,
+                  type: Product.type.description,
+                  time: Product.time.description,
                 
                 };
                 return products;
@@ -33,15 +35,15 @@ const productsApi = {
     productId: async (req, res) => {
         try {
           let productOne = await Product.findByPk(req.params.id, {
-            include: {
-              all: true,
-            },
+            include: [{association: "type"},{association: "time"}],
           });
           let data = {};
-          data.id = Product.id;
-          data.name= Product.name;
-          data.description= Product.description;
-          data.off= Product.off;
+          data.id = productOne.id;
+          data.name= productOne.name;
+          data.description= productOne.description;
+          data.off= productOne.off;
+          data.type= productOne.type.description;
+          data.time= productOne.time.description;
           
           return res.send(data).status(200);
         } catch (error) {

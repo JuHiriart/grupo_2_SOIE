@@ -6,7 +6,7 @@ const userApi = {
     all: async(req,res) => {
         try {
             let usersDb = await User.findAll({
-                include: {all: true},
+                include: [{association: "categoria"}],
                 //limit: 10,
                 //offset: page,
                 //order: [['id', 'ASC']]
@@ -16,13 +16,12 @@ const userApi = {
                   id: users.id,
                   firstName: users.firstName,
                   email: users.email,
-                
+                  category: users.categoria.description,
+                  url: "localhost:2000/api/users/" + users.id,
                 };
                 return usuario;
               });
               let count = users.length;
-              console.log("------------------------")
-              console.log(count)
 
             return res.status(200).json(users);
 
@@ -34,17 +33,20 @@ const userApi = {
     userId: async (req, res) => {
         try {
           let usersOne = await User.findByPk(req.params.id, {
-            include: {
-              all: true,
-            },
+
+            include: [{association: "categoria"}],
+              //all: true,
+
           });
           let data = {};
           data.id = usersOne.id;
+          data.category = usersOne.categoria.description;
           data.firstName = usersOne.firstName;
           data.lastName = usersOne.lastName;
           data.email = usersOne.email;
           data.numberPhone = usersOne.numberPhone;
           data.address = usersOne.address; 
+          data.image = usersOne.image;
           return res.send(data).status(200);
         } catch (error) {
           console.log(error)

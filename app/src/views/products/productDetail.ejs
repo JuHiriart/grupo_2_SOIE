@@ -38,10 +38,9 @@
                                     <h2 id="price">$<%= product.price %>
                                     </h2>
 
-                                <% } %>
+                                    <% } %>
 
                                         <% if (product.type==='product' ) { %>
-
 
                                             <form action="" id="pData">
                                                 <label for="qty">
@@ -49,7 +48,9 @@
                                                     <input type="number" id="qty" name="qty" min="1" max="10">
                                                 </label>
                                             </form>
+
                                             <% }else{ %>
+
                                                 <form action="" id="pData">
                                                     <label for="duration">
                                                         Duración
@@ -63,18 +64,38 @@
 
                                                 <% } %>
 
-                                                    <button type="submit" form="pData" value="" id="pNow">Comprar
-                                                        ahora</button>
-                                                    <button type="submit" form="pData" value="" id="pCart">Agregar al
-                                                        carrito</button>
-                                                    <a href="/products/<%= product.id %>/edit">
-                                                        <button>Modificar</button>
+                                                <button type="submit" form="pData" value="" id="pNow">Comprar
+                                                    ahora</button>
+                                                <button type="submit" form="pData" value="" id="pCart">Agregar al
+                                                    carrito</button>
+
+                                                <!-- ADMIN buttons -->
+                                                <% if (userLogged.admin) { %>
+
+                                                    <a href="/products/edit/<%= product.id %>">
+                                                        <button type="submit" form="pData" value=""
+                                                            id="pEdit">Editar
+                                                            producto</button>
                                                     </a>
-                                                    <form action="/products/<%= product.id  %>?_method=DELETE" method="POST"
-                                                        style="display: inline-flex">
-                                                        <button type="submit" class="action-button delete">ELIMINAR</button>
-                                                    </form>
+
+                                                    <a href="/products/delete/<%= product.id %>">
+                                                        <button type="submit" form="pData" value=""
+                                                            id="pDelete">Eliminar
+                                                            producto</button>
+                                                    </a>
+
+                                                <% } %>
+
+
                         </div>
+                        <!-- <a href="/products/<%= product.id %>/edit">
+                            <button>Modificar</button>
+                        </a>
+                        <form action="/products/<%= product.id  %>?_method=DELETE" method="POST"
+                            style="display: inline-flex">
+                            <button type="submit" class="action-button delete">ELIMINAR</button>
+                        </form> -->
+                    </div>
 
                     </div>
                 </section>

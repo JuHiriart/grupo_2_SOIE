@@ -30,6 +30,15 @@ routes.post('/login', validations.logIn, con.processLogin);
 //lista de usuarios de admins
 routes.get('/list', authAdminMiddleware, con.userList);
 
+// muestra el formulario de edicion de usuario
+routes.get('/edit/:id', authAdminMiddleware, con.edit);
+
+// metodo POST de edicion de usuario
+routes.put('/edit/:id', con.editPut);
+
+// metodo DELETE de eliminacion de usuario
+routes.get('/delete/:id', con.delete);
+
 routes.get('/logout', con.logout);
 
 module.exports = routes;

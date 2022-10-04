@@ -21,8 +21,9 @@
                 <th>Acción</th>
             </tr>
             <% users.forEach((user) => { %>
+
                 <tr>
-                    <td><h3> id:<%= user.id %> </h3></td>       
+                    <td><h3><%= user.id %> </h3></td>       
                     <td><img class="userImg" src="<%= user.image %> " alt="Imagen del usuario"></td>
                     <td><h3><%= user.email %></h3></td> 
                     <td><p><%= user.firstName %></p></td>
@@ -30,14 +31,14 @@
                     <td><%= user.direccion %> </td>
                     <td><%= user.telefono %> </td>
                     <td>
-                        <input class="btn" type="button" value="edit">
-                        <input class="btn" type="button" value="delete">
+                        <input class="btn" type="button" value="edit" onclick="location.href='/users/edit/<%= user.id %>'">
+                        <input class="btn" type="button" value="delete" onclick="location.href='/users/delete/<%= user.id %>'">
                     </td>
                 </tr>
-                <% }) %>
+
+            <% }) %>
         </table>
        
     </main>
 
-    
 </body>

@@ -4,6 +4,9 @@ const bcrypt = require('bcrypt');
 const {validationResult} = require('express-validator'); // requiero esto para la verificacion del Sign In
 const users = require('../models/user.model.js');
 
+const fs = require('fs');
+const path = require('path');
+
 const models = {
     users : require('../models/user.model.js'),
     //products : require('../models/product.model.js') // revisar si hay que borrarla.
@@ -185,5 +188,55 @@ module.exports = {
         res.clearCookie('rememberMe');
         req.session.destroy();
         res.redirect('/');
+    },
+
+    edit: async (req, res) => {
+            
+            let user = await db.User.findByPk(req.params.id);
+    
+            res.render( views('users/edit') , {
+                title : 'Edit',
+                style : 'edit',
+                user : user,
+                userLogged : req.session.userLogged
+            })
+
+        
+    },
+
+    editPut: async (req, res) => {
+        let errors = validationResult(req);
+
+        if (errors.isEmpty()){
+
+            let user = await db.User.findByPk(req.params.id);
+            user.name = req.body.name;
+            user.lastname = req.body.lastname;
+            user.email = req.body.email;
+            user.image = req.file ? 
+                `/images/users/avatars/${req.file.filename ?? ''}` :
+                user.image;
+            user = await user.save();
+
+            res.redirect('/users/profile/' + user.id);
+
+        } else {
+            res.render('users/edit', {
+                errors: errors.mapped(),
+                user : req.body,
+                title : 'Edit',
+                style : 'edit',
+                userLogged : req.session.userLogged
+            });
+        }
+    },
+
+    delete: async (req, res) => {
+        let user = await db.User.findByPk(req.params.id);
+        // if(user.image != '/images/users/avatars/default.jpg'){
+        //     fs.unlinkSync(path.join(__dirname, '../../public', user.image));
+        // }
+        await user.destroy();
+        res.redirect('/users/list');
     }
 }

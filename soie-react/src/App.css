@@ -1,0 +1,40 @@
+header{
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    padding : 1rem 2.5vw 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header img{
+    width: 40%;
+    margin: 0;
+    flex-direction: row;
+}
+
+body{
+    background-color: rgba(4, 104, 111, 0.7);
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+h2{
+    text-align: center;
+    background-color: white;
+}
+
+section{
+    margin-bottom: 5vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

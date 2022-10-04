@@ -82,7 +82,14 @@ module.exports = {
                 }
 
                 product.active = true;
-                product.id_type = product.type;
+
+                if(product.type == "service"){
+                    product.id_type = 1;
+                }
+                else{
+                    product.id_type = 2;
+                }
+                
                 product.id_time = product.timeMinutes;
 
                 // product.id = await db.Product.max('id') + 1;

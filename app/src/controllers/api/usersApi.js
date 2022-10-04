@@ -15,6 +15,8 @@ const userApi = {
                 let usuario = {
                   id: users.id,
                   firstName: users.firstName,
+                  lastName: users.lastName,
+                  gender: users.gender,
                   email: users.email,
                   category: users.categoria.description,
                   url: "localhost:2000/api/users/" + users.id,

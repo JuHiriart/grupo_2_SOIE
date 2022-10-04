@@ -1,0 +1,41 @@
+.panel{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 25vw;
+    margin: 2%;
+    position: relative;
+}
+
+h3{
+    position: absolute;
+    top: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h4{
+    text-align: left;
+    justify-self: center;
+    font-size: x-large;
+    font-weight: 300;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ol{
+    text-decoration: none;
+    line-height: 2em;
+    font-weight: 300;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (max-width:1000px) {
+    .panel{
+        width: 60%;
+        height: auto;
+    }
+}

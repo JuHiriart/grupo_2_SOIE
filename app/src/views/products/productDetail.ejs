@@ -70,7 +70,7 @@
                                                     carrito</button>
 
                                                 <!-- ADMIN buttons -->
-                                                <% if (userLogged.admin) { %>
+                                                <% if ([3,4].includes(parseInt(userLogged.id_category))) { %>
 
                                                     <a href="/products/edit/<%= product.id %>">
                                                         <button type="submit" form="pData" value=""

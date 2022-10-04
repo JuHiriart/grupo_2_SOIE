@@ -153,6 +153,7 @@ module.exports = {
             }
             
             req.session.userLogged = userLogging;
+            req.session.userLogged.admin = [3,4].includes(parseInt(req.session.userLogged.id_category));
 
             if (req.body.rememberMe){
                 res.cookie('rememberMe', userLogging.email, { maxAge: 1000 * 60 * 10 })   //cookie te recuerda 10 minutos

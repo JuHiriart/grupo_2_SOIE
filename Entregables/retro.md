@@ -1,3 +1,20 @@
+
+# Retrospectiva sobre del Octavo sprint
+
+* Comenzar a hacer: Terminar detalles comentados en las devoluciones. Agregados en el tablero 
+
+* Hacer más: Terminar los detalles y finalizar los puntos.
+
+* Continuar haciendo: Trabajando en equipo, 
+
+* Hacer menos: Cambios esteticos si faltan puntos obligatorios. No tomar en cuenta el carrito de compras. 
+
+* Dejar de hacer: Los opcionales y terminar primero los puntos que son obligatorios.
+
+
+
+
+
 # Retrospectiva sobre del Septimo sprint
 
 * Comenzar a hacer: Los puntos de los sprint anteriores, mencionados en las devoluciones. Ejemplo Crud del sprint 06.

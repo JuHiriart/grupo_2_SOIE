@@ -1,6 +1,7 @@
 
 import React, { Component } from "react";
 import {Chart} from "react-google-charts";
+import './Panel.css'
 class Panel extends Component {
 
     constructor(props) {
@@ -37,7 +38,6 @@ class Panel extends Component {
         let p = data.filter(product => product.type === "Producto").length;
         let s = data.filter(product => product.type === "Servicio").length;
         this.setState({dato: [["Tipo","Cantidad"],["Productos", p],["Servicios", s]]})
-        console.log(this.state.dato)
     }
 
     componentDidMount(){
@@ -86,7 +86,7 @@ class Panel extends Component {
         switch (key) {
             case "numeroUsuarios":
                 return(
-                    <div>
+                    <div className="panel">
                         <h3>{this.state.titulo}</h3>
                         <h4>{this.state.dato} usuarios</h4>
                     </div>
@@ -94,7 +94,7 @@ class Panel extends Component {
 
             case "ultimoUsuario":
                 return(
-                    <div>
+                    <div className="panel">
                         <h3>{this.state.titulo}</h3>
                         <ul>
                             {this.state.dato.map(item => <li key={item}> {item.email} </li>)}
@@ -104,20 +104,18 @@ class Panel extends Component {
 
             case "relacionHyM":
                 return(
-                    <div>
+                    <div className="panel">
                         <h3>{this.state.titulo}</h3>
                         <Chart
                             chartType="PieChart"
                             data={this.state.dato}
-                            width={"80%"}
-                            height={"200px"}
                         />
                     </div>
                 )
 
             case "numeroProductos":
                 return(
-                    <div>
+                    <div className="panel">
                         <h3>{this.state.titulo}</h3>
                         <h4>{this.state.dato} productos</h4>
                     </div>
@@ -125,20 +123,18 @@ class Panel extends Component {
 
             case "relacionPyS":
                 return(
-                    <div>
+                    <div className="panel">
                         <h3>{this.state.titulo}</h3>   
                         <Chart
                             chartType="PieChart"
                             data={this.state.dato}
-                            width={"80%"}
-                            height={"200px"}
                         />
                     </div>
                 )
 
             case "ultimoProducto":
                 return(
-                    <div>
+                    <div className="panel">
                         <h3>{this.state.titulo}</h3>
                         <ul>
                             {this.state.dato.map(item => <li key={item}> {item.name} </li>)}

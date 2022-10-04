@@ -11,8 +11,13 @@ function App()  {
       </header>
 
       <main>
-        <Panel titulo={"Número de usuarios"} dato={56} tipo={"numeroUsuarios"} />
-        <ContenedorPrueba inicial={0}/>
+        <Panel titulo={"Número de usuarios"}              tipo={"numeroUsuarios"} />
+        <Panel titulo={"Últimos usuarios"}                tipo={"ultimoUsuario"} />
+        <Panel titulo={"Relación hombres y mujeres"}      tipo={"relacionHyM"} />
+        <Panel titulo={"Número de productos"}             tipo={"numeroProductos"} />
+        <Panel titulo={"Últimos productos"}               tipo={"ultimoProducto"} />
+        <Panel titulo={"Relación productos y servicios"}  tipo={"relacionPyS"} />
+        
       </main>
 
     </div>

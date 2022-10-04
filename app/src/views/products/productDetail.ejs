@@ -23,19 +23,19 @@
                             <% if (product.off !=0) { %>
                                 <div>
                                     <div class="off">
-                                        <h3 id="priceOld">$<%= product.price %>
+                                        <h3 id="priceOld" class="price">$<%= product.price %>
                                         </h3>
                                         <h5 id="offPer">
                                             <%= product.off %>% OFF
                                         </h5>
                                     </div>
-                                    <h2 id="priceNew">$<%= product.price - (product.price*product.off/100) %>
+                                    <h2 id="priceNew" class="price">$<%= product.price - (product.price*product.off/100) %>
                                     </h2>
                                 </div>
 
                                 <% } else { %>
 
-                                    <h2 id="price">$<%= product.price %>
+                                    <h2 id="price" class="price">$<%= product.price %>
                                     </h2>
 
                                     <% } %>
@@ -72,17 +72,15 @@
                                                 <!-- ADMIN buttons -->
                                                 <% if ([3,4].includes(parseInt(userLogged.id_category))) { %>
 
-                                                    <a href="/products/edit/<%= product.id %>">
-                                                        <button type="submit" form="pData" value=""
-                                                            id="pEdit">Editar
-                                                            producto</button>
-                                                    </a>
+                                                    <form action="/products/<%= product.id  %>/edit" method="GET"
+                                                        style="display: inline-flex">
+                                                        <button type="submit" class="action-button delete">EDITAR</button>
+                                                    </form>
 
-                                                    <a href="/products/delete/<%= product.id %>">
-                                                        <button type="submit" form="pData" value=""
-                                                            id="pDelete">Eliminar
-                                                            producto</button>
-                                                    </a>
+                                                    <form action="/products/<%= product.id  %>?_method=DELETE" method="POST"
+                                                        style="display: inline-flex">
+                                                        <button type="submit" class="action-button delete">ELIMINAR</button>
+                                                    </form>
 
                                                 <% } %>
 

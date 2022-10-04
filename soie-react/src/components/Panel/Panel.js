@@ -96,9 +96,9 @@ class Panel extends Component {
                 return(
                     <div className="panel">
                         <h3>{this.state.titulo}</h3>
-                        <ul>
+                        <ol>
                             {this.state.dato.map(item => <li key={item}> {item.email} </li>)}
-                        </ul>
+                        </ol>
                     </div>
                 )
 
@@ -136,9 +136,9 @@ class Panel extends Component {
                 return(
                     <div className="panel">
                         <h3>{this.state.titulo}</h3>
-                        <ul>
+                        <ol>
                             {this.state.dato.map(item => <li key={item}> {item.name} </li>)}
-                        </ul>
+                        </ol>
                     </div>
                 )
 

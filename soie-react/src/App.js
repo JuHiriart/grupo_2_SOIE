@@ -10,7 +10,7 @@ function App()  {
       <header className="App-header">
 
         <img src="images/logo/logo-SOIE.png"></img>
-        <h1>Dasboard</h1>
+        <h1>Dashboard</h1>
       </header>
 
       <main>
@@ -24,6 +24,7 @@ function App()  {
         </section>
 
         <section>
+          <h2>Lista de productos</h2>
           <Lista/>
         </section>
         

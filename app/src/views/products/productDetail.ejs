@@ -70,7 +70,7 @@
                                                     carrito</button>
 
                                                 <!-- ADMIN buttons -->
-                                                <% if ([3,4].includes(parseInt(userLogged.id_category))) { %>
+                                                <% if ([3,4].includes(parseInt(userLogged?.id_category))) { %>
 
                                                     <form action="/products/<%= product.id  %>/edit" method="GET"
                                                         style="display: inline-flex">

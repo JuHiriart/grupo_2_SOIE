@@ -30,4 +30,6 @@ routes.post('/login', validations.logIn, con.processLogin);
 //lista de usuarios de admins
 routes.get('/list', authAdminMiddleware, con.userList);
 
+routes.get('/logout', con.logout);
+
 module.exports = routes;

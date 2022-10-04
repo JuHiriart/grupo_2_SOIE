@@ -179,5 +179,11 @@ module.exports = {
             users : users,
             userLogged : req.session.userLogged
         })
+    },
+
+    logout: (req, res) => {
+        res.clearCookie('rememberMe');
+        req.session.destroy();
+        res.redirect('/');
     }
 }

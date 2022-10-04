@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-10-2022 a las 23:18:10
+-- Tiempo de generación: 04-10-2022 a las 23:38:55
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -20,22 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `soie_db`
 --
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `cart`
---
-
-CREATE TABLE `cart` (
-  `id` int(11),
-  `order` int(11),
-  `id_productCart` int(11),
-  `idUser` int(11),
-  `id_status` tinyint(1),
-  `totalOrder` decimal(10,0),
-  `date` datetime
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -64,10 +48,10 @@ INSERT INTO `category` (`id`, `description`) VALUES
 --
 
 CREATE TABLE `productcart` (
-  `id` int(11) ,
-  `idProducts` int(11) ,
-  `totalItems` int(11) ,
-  `quantity` int(11) 
+  `id` int(11) NOT NULL,
+  `idProducts` int(11) NOT NULL,
+  `totalItems` int(11) NOT NULL,
+  `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -97,8 +81,10 @@ INSERT INTO `products` (`id`, `name`, `description`, `price`, `off`, `img`, `id_
 (2, 'Protector solar facial', 'EMULSIÓN FPS 50+ Protección solar facial diaria contra rayos UVA/ UVB sin color para todo tipo de pie. Previene el envejecimiento prematuro de la piel y aparición de manchas provocadas por el sol. Textura ligera y de rápida absorción.', 1600, 13, '/images/products/IMG_3235.jpg', 2, 0, 1),
 (3, 'Peeling', 'Se aplica un peeling bio enzimático. Se deja actuar 15 minutos. Este peeling es apto para todo tipo de piel, incluso las sensibles.', 1800, 4, '/images/products/peeling.PNG', 1, 1, 1),
 (4, 'Radiofrecuencia fraccionada', 'consiste en aumentar la temperatura de los tejidos sub-cutáneos por aporte energético de una onda electromagnética, la que por vibración molecular incrementa la temperatura del tejido, estimulando así la fabricación de colágeno y elastina.', 2500, 12, '/images/products/productos-031.jpg', 1, 4, 1),
-(6, 'Pantalon Cuero', 'asojdunasljcnaslc', 800, 14, '/images/products/img-1658874464937-pantalon-cuero.jpg', 2, 1, 0),
-(7, 'heladera', 'asdasdfdfsdfgdrfghddfasdd', 12312344, 65, '/images/products/img-1664490492258-heladera.png', 1, 1, 1);
+(7, 'heladera', 'asdasdfdfsdfgdrfghddfasdd', 12312344, 99, '/images/products/img-1664490492258-heladera.png', 1, 1, 1),
+(8, 'Esencia de unicornio', 'Esencia de unicornio en botella de 200ml, fabricada en la tierra de adas.', 5300, 0, '/images/products/img-1664910332256-esencia-de-unicornio.jpg', 2, 1, 1),
+(9, 'Limado de uñas', 'manicure completo de uñas de ambas manos.', 2500, 20, '/images/products/img-1664912995505-limado-de-uñas.jpg', 1, 1, 1),
+(10, 'Lapiz labial', 'retro matte lipstick rubi woo', 8000, 0, '/images/products/img-1664913845921-lapiz-labial.webp', 2, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -182,8 +168,8 @@ CREATE TABLE `type` (
 --
 
 INSERT INTO `type` (`id`, `description`) VALUES
-(1, 'Producto'),
-(2, 'Servicio');
+(1, 'Servicio'),
+(2, 'Producto');
 
 -- --------------------------------------------------------
 
@@ -236,24 +222,19 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `birth`, `gender`, 
 (24, 'Felipe', 'Mataviejas', 'feliEl6@gmail.com', '1159-09-16 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$GsjDkdGgSdsHXJTk2Ay61eCVqrBS9MkSl89emHaabR8bq.pMziWue', 'French', 2147483647, '1'),
 (25, 'Anakin', 'Skywalker', 'imYourFather@jedi.com', '2990-07-13 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$aO7uRkf0259eBBEus1t//OE9r0XgJip1DC2uU3hxBClZQf35/PXV6', 'Tatooine', 2147483647, '1'),
 (26, 'admin', 'admin', 'admin@admin.com', '1212-12-12 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$0LcXLzNZvjvM/Qd6MzpKbe8IF3hj4MmGXjHSK3IFFye.135mQgZhm', 'admin123', 1123456789, '3'),
-(27, 'PEPITO', 'JOSE', 'jose@jose.com', '1995-03-12 00:00:00', '', '', '$2b$10$2xVCc7FikpkNZCqhL0zVmuD71YO4QvT76JpZNgovcaq0i8qXgA7Ja', 'asdasdas', 1169628997, '1'),
-(28, 'PEPE', 'PEPE', 'PEPE@PEPE.com', '1990-11-11 00:00:00', '', '', '$2b$10$.0AuahJKMu5ce4S8.uRAYeHKFLnXns2BdD9r4SWC6cHmZxEABmYWG', 'pepepepepe', 1169628997, '1'),
-(29, 'PEPE2', 'PEPE2', 'PEPE2@PEPE.com', '1990-11-11 00:00:00', '', '', '$2b$10$mM8m73EnLkjpS.Plp4Yaxuwf1wjLmtuhGRjtM2bE7hSZSQYYJ2I9O', 'pepepepepe', 1169628997, '1'),
+(27, 'PEPITO', 'JOSE', 'jose@jose.com', '1995-03-12 00:00:00', 'Mujer', '', '$2b$10$2xVCc7FikpkNZCqhL0zVmuD71YO4QvT76JpZNgovcaq0i8qXgA7Ja', 'asdasdas', 1169628997, '1'),
+(28, 'PEPE', 'PEPE', 'PEPE@PEPE.com', '1990-11-11 00:00:00', 'Mujer', '', '$2b$10$.0AuahJKMu5ce4S8.uRAYeHKFLnXns2BdD9r4SWC6cHmZxEABmYWG', 'pepepepepe', 1169628997, '1'),
+(29, 'PEPE2', 'PEPE2', 'PEPE2@PEPE.com', '1990-11-11 00:00:00', 'Mujer', '', '$2b$10$mM8m73EnLkjpS.Plp4Yaxuwf1wjLmtuhGRjtM2bE7hSZSQYYJ2I9O', 'pepepepepe', 1169628997, '1'),
 (35, 'PEPE3', 'PEPE3', 'PEPE3@PEPE.com', '1990-11-11 00:00:00', 'Hombre', '', '$2b$10$hpnzHIqA3DsIu114QEFyAOHRvCxnnAfHLJ.JMXzvkWTZdOS9k1MIC', 'pepepepepe', 1169628997, '1'),
 (36, 'PEPE3', 'PEPE3', 'PEPE4@PEPE.com', '1990-11-11 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$4Odd/2DUugo7D3/KgtSnPe4AVeKkkp013muERPrYhaqS0srrHCQQa', 'pepepepepe', 1169628997, '1'),
 (38, 'PEPE3', 'PEPE4', 'PEPE6@PEPE.com', '1990-11-11 00:00:00', 'Hombre', '/images/users/avatars/img-1664233108059-pepe3.png', '$2b$10$nnQzfwUVW3Xi0WtG/LdR1uCetoTTKpINbuCeHC6.CZWP4QnXm425S', 'pepepepepe', 1169628997, '1'),
 (39, 'admin2', 'admin2', 'admin2@admin.com', '2000-11-11 00:00:00', 'Hombre', '/images/users/avatars/img-1664495452025-admin2.png', '$2b$10$9T63WbIuDMMvub6YAyM9Fez.kkmp6k44IcUj79HnDoAIBRYSzrGqO', 'pepepepepe', 1169628997, '1'),
-(40, 'Lulu', 'Lululu', 'luciabocelli@gmail.com', '1995-09-06 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$iHcRJz2tPEAwJi4oAWZdvOzYDWrhi7Pi5S/qGKZ3hbZIHrPgUIBJO', 'Lalala', 1169628997, '1');
+(40, 'Lulu', 'Lululu', 'luciabocelli@gmail.com', '1995-09-06 00:00:00', 'Mujer', '/images/users/avatars/default.jpg', '$2b$10$iHcRJz2tPEAwJi4oAWZdvOzYDWrhi7Pi5S/qGKZ3hbZIHrPgUIBJO', 'Lalala', 1169628997, '1'),
+(41, 'Juan Pablo', 'Chirolita', 'juanpablochirolita@gmail.com.br', '2001-01-01 00:00:00', 'Hombre', '/images/users/avatars/img-1664913387783-juan-pablo.jpg', '$2b$10$89470.8/JfKyEFeNwnBNuOljWjtuNNb9U55irLlLdVeK1CYJNdg5G', 'calle falsa 123', 1198765432, '1');
 
 --
 -- Índices para tablas volcadas
 --
-
---
--- Indices de la tabla `cart`
---
-ALTER TABLE `cart`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `category`
@@ -310,12 +291,6 @@ ALTER TABLE `users`
 --
 
 --
--- AUTO_INCREMENT de la tabla `cart`
---
-ALTER TABLE `cart`
-  MODIFY `id` int(11)  AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT de la tabla `category`
 --
 ALTER TABLE `category`
@@ -325,13 +300,13 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT de la tabla `productcart`
 --
 ALTER TABLE `productcart`
-  MODIFY `id` int(11)  AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `status`
@@ -355,7 +330,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

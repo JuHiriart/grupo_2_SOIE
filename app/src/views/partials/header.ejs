@@ -41,8 +41,8 @@
                     <li><a href="/products">Productos</a></li>
                     <% if (userLogged.id_category == 2 || userLogged.id_category == 3) { %>
                         <li><a href="/users/list">Lista de usuarios</a></li>
+                        <li><a href="/products/create">Crear producto</a></li>
                     <% } %> 
-                    <li><a href="/products/create">Crear producto</a></li>
                     <!--                 <li><a href="/views/sign-in">Crear usuario</a></li>
                 <li><a href="/views/log-in">Ingresar</a></li> -->
                 </ul>
@@ -50,9 +50,15 @@
 
         <div class="user">
                 <img class="userImage" src=<%= userLogged.image %>  alt="Imagen de usuario">
-                <a href="/users/profile"> <!--esto debe redireccionar a la vista de usuario-->
-                    <%= userLogged.firstName %> <!--el nombre debe ser una variable dinamica-->
-                </a>
+                <% if (userLogged.id_category == 2 || userLogged.id_category == 3) { %>
+                    <a href="/users/profile" style="color: red;"> 
+                        <%= userLogged.firstName %> 
+                    </a>
+                <% } else { %>
+                    <a href="/users/profile"> 
+                        <%= userLogged.firstName %> 
+                    </a>
+                <% } %> 
             </div>
         <% } %>
 
@@ -67,9 +73,14 @@
 
         <a href="/checkout">
             <button class="cart" style="position: relative;">
-                <i class="fa-solid fa-bag-shopping">
-                </i>
-                <div>2</div>
+                <i class="fa-solid fa-bag-shopping"></i>
+
+                <% if (userLogged != undefined && userLogged.cartItems != '0') { %>
+                    
+                        <div><%= userLogged.cartItems %> </div>
+                    
+                <% } %>
+
             </button>
         </a>
 

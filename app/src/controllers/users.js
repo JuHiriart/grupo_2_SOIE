@@ -154,6 +154,10 @@ module.exports = {
             
             req.session.userLogged = userLogging;
             req.session.userLogged.admin = [3,4].includes(parseInt(req.session.userLogged.id_category));
+            let cart = await db.productcart.findAll({where: {
+                id_user: req.session.userLogged.id
+            }})
+            req.session.userLogged.cartItems = cart.length; 
 
             if (req.body.rememberMe){
                 res.cookie('rememberMe', userLogging.email, { maxAge: 1000 * 60 * 10 })   //cookie te recuerda 10 minutos

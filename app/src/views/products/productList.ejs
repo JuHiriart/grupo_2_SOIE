@@ -45,10 +45,11 @@
                                             </div>
 
                                                 <div class="produtButtons">
-                                                    <label for="buttonBuy" class="custom-checkbox">                                                  
-                                                        <button class="button-58" role="button"><p>Agregar al carrito</p><i class="fa-solid fa-bag-shopping buy button"></i></button>
-                                                    </label>
-                                                  
+                                                    <form action="products/<%= product.id %>/detail" method="POST">
+                                                        <label for="buttonBuy" class="custom-checkbox">                                                  
+                                                            <button class="button-58" role="button"><p>Agregar al carrito</p><i class="fa-solid fa-bag-shopping buy button"></i></button>
+                                                        </label>
+                                                    </form>
                                                     
                                                 </div>
                                         </div>

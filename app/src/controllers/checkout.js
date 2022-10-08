@@ -29,5 +29,12 @@ module.exports = {
             quantity: quantity,
             
         })
+    },
+
+    delete: async (req, res) => {
+        let cartItem = await db.productcart.findByPk(req.params.id);
+
+        await cartItem.destroy();
+        res.redirect('/checkout');
     }
 }

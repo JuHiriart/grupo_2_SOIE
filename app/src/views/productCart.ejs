@@ -8,22 +8,14 @@
     <%- include('./partials/header') %>
 
 
-    <div class="subtotal">
-        <p>
-            Subtotal: <span class="precio"> $<%= price %>.- </span>
-        </p>
-        <a href="#" class="pagar">
-            <button class="pagar">
-                Proceder a pagar <%= quantity %> producto/s
-            </button>
-        </a>
-    </div>
+
 
     <main>
         
         
 
         <section class="table">
+
 
             <table id="userTable">
                 <thead>
@@ -40,29 +32,34 @@
                     <td><%=element.quantity%></td>
                     <td><%=element.producto.name%></td>
                     <% if (element.producto.off != 0) { %>
-                        <td>$<%= (element.producto.price - (element.producto.price*element.producto.off/100))%></td>
+                        <td>$<%= (element.producto.price - (element.producto.price*element.producto.off/100)) * element.quantity%></td>
                     <% } else { %>
-                        <td>$<%= element.producto.price %> </td>  
+                        <td>$<%= element.producto.price * element.quantity %> </td>  
                     <% } %> 
-                    <td> <input type="button" value="x"> </td>
+                    <td> <form action="/checkout/delete/<%= element.id %> "><button><i class="fa-sharp fa-solid fa-xmark"></i></button></form></td>
                   </tr>
                     <% }) %>
                   <tr>
                     <td colspan="4">Subtotal $<%= price %> </td>
                   </tr>
                 </tbody>
-                </table>
+            </table>
+
+            <div class="subtotal">
+                <p>
+                    Subtotal: <span class="precio"> $<%= price %>.- </span>
+                </p>
+                <a href="#" class="pagar">
+                    <button class="pagar">
+                        Proceder a pagar <%= quantity %> producto/s
+                    </button>
+                </a>
+            </div>
 
         </section>
 
         <section class="main-container">
-            
-            
-
-
-
-            
-            
+                
             <div class="productos">
                 <% cartProducts.forEach((element) => { %> 
                 
@@ -79,8 +76,17 @@
                             <a href="#"> <!-- Luego linkear a detalle del producto -->
                                 <p class="titulo"><%=element.producto.name%></p>
                             </a>
-                            <p class="descripcion"><%=element.producto.description%></p>
-                            <p class="precio">$<%=element.producto.price%><span class="descuento"><%=element.producto.off%>% off</span> </p>
+                            <% if (element.producto.off != 0) { %>
+                                
+                                <p class="precio" > <span style="text-decoration: line-through ;">$<%=element.producto.price%></span><span class="descuento"> <%=element.producto.off%>% off</span> </p>
+                                <p class="precio"> $<%=element.producto.price - (element.producto.price*element.producto.off/100)%> </p>
+
+                            <% } else { %>
+
+                                <p class="precio">$<%=element.producto.price%>
+
+                            <% } %>
+
                         </div>
     
                     </div>

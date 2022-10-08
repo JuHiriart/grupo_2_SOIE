@@ -2,11 +2,11 @@ main {
   display: flex;
   justify-content: space-evenly;
   min-height: 100vh;
-
+  margin-top: 10vh;
 }
 
 section.table{
-
+  min-width: 50vw
 }
 
 section.main-container{
@@ -17,16 +17,23 @@ section.main-container{
   position: relative;
   height: 60vh;
   overflow-y:auto;
-  border: 2px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.5);
 
 
 }
 
 
+table{
+  width: 100%;
+}
+
 th, td {
-  border:2px solid #4c7878;
+  border:1px solid #7575758f;
   background-color: whitesmoke;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+td{
 }
 
 th{
@@ -35,12 +42,10 @@ th{
 }
 
 #userTable{
-  display: table-row-group;
   vertical-align: middle;
   border-color: inherit;
   border-collapse: collapse;   
   text-align: center;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
 main h2.title {
@@ -62,13 +67,11 @@ main div.main-container {
 /* SUBTOTAL */
 
 .subtotal {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 2% 7%;
-  border-bottom: solid 1px var(--azul);
 
   background-color: #96b6cbff;
 
@@ -76,9 +79,16 @@ main div.main-container {
   top: 0;
   z-index: 8;
 
-  margin-bottom: 10vh;
+  margin: 5px;
+}
 
-  box-shadow: 0 0.4rem 15px rgb(0 0 0 / 30%);
+p{
+  font-family: 'Montserrat', sans-serif;
+}
+
+p.titulo{
+  font-family: 'Roboto Serif', serif;
+
 }
 
 .subtotal p {
@@ -126,7 +136,7 @@ main div.producto {
 /*   background-color: rgba(233, 233, 233, 0.215);
   backdrop-filter: blur(5px);
  */
-  background: rgba(255, 255, 255, 0.01);
+  background: rgb(255, 255, 255);
   box-shadow: 0 4px 30px rgb(0 0 0 / 30%);
   backdrop-filter: blur(13px);
   border: 1px solid rgba(255, 255, 255, 0.54);
@@ -260,6 +270,25 @@ main .producto .actions .eliminar button {
   border-radius: 0.4rem;
 }
 
+button{
+  background-color: var(--azul);
+  border: none;
+  border-radius: 5%;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+}
+
+button:hover{
+  background-color: blue;
+
+}
+
+button:focus{
+  background-color: red ;
+
+}
+
 
 
 
@@ -321,3 +350,7 @@ div.producto {
 
 
 }
+
+
+
+

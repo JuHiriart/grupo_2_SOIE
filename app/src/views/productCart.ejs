@@ -8,186 +8,97 @@
     <%- include('./partials/header') %>
 
 
-
+    <div class="subtotal">
+        <p>
+            Subtotal: <span class="precio"> $<%= price %>.- </span>
+        </p>
+        <a href="#" class="pagar">
+            <button class="pagar">
+                Proceder a pagar <%= quantity %> producto/s
+            </button>
+        </a>
+    </div>
 
     <main>
         
-        <h2 class="title">Carrito</h2>
+        
 
-        <div class="main-container">
+        <section class="table">
+
+            <table id="userTable">
+                <thead>
+                  <tr>
+                    <th>Cantidad</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% cartProducts.forEach((element) => { %>
+                  <tr>
+                    <td><%=element.quantity%></td>
+                    <td><%=element.producto.name%></td>
+                    <% if (element.producto.off != 0) { %>
+                        <td>$<%= (element.producto.price - (element.producto.price*element.producto.off/100))%></td>
+                    <% } else { %>
+                        <td>$<%= element.producto.price %> </td>  
+                    <% } %> 
+                    <td> <input type="button" value="x"> </td>
+                  </tr>
+                    <% }) %>
+                  <tr>
+                    <td colspan="4">Subtotal $<%= price %> </td>
+                  </tr>
+                </tbody>
+                </table>
+
+        </section>
+
+        <section class="main-container">
             
-            <div class="subtotal">
-                <p>
-                    Subtotal: <span class="precio">$12.300</span>
-                </p>
-                <a href="#" class="pagar">
-                    <button class="pagar">
-                        Proceder a pagar (n productos)
-                    </button>
-                </a>
-            </div>
+            
 
+
+
+            
+            
             <div class="productos">
-
+                <% cartProducts.forEach((element) => { %> 
+                
+                
                 <div class="producto">
 
                     <div class="upper">
                         
-                        <a href="#" class="img"> <!-- Luego linkear a detalle del producto -->
-                            <img src="images/products/higiene_facial.PNG" alt="higiene_facial">
+                        <a href="#"  class="img"> <!-- Luego linkear a detalle del producto -->
+                            <img src="<%=element.producto.img%>" alt="<%=element.producto.name%>">
                         </a>
                         
                         <div class="detalles">
                             <a href="#"> <!-- Luego linkear a detalle del producto -->
-                                <p class="titulo">Higiene Facial</p>
+                                <p class="titulo"><%=element.producto.name%></p>
                             </a>
-                            <p class="descripcion">Tratamiento capilar de Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p class="precio">$1500 <span class="descuento">2% off</span> </p>
+                            <p class="descripcion"><%=element.producto.description%></p>
+                            <p class="precio">$<%=element.producto.price%><span class="descuento"><%=element.producto.off%>% off</span> </p>
                         </div>
     
                     </div>
-                    
-                    <div class="actions">
-                        <div class="counter">
-                            <div class="menos btn">-</div>
-                            <div class="count">1</div>
-                            <div class="mas btn">+</div>
-                        </div>
-                        <a href="#" class="eliminar">
-                            <button>
-                                Quitar del carrito
-                            </button>
-                        </a>
-                    </div>                    
+                                      
 
                 </div>
 
-                <div class="producto">
 
-                    <div class="upper">
-                        
-                        <a href="#" class="img"> <!-- Luego linkear a detalle del producto -->
-                            <img src="images/products/radiofrecuencia.png" alt="higiene_facial">
-                        </a>
-                        
-                        <div class="detalles">
-                            <a href="#"> <!-- Luego linkear a detalle del producto -->
-                                <p class="titulo">Tratamiento #2 lorem lorem ipsum lorem blah blah</p>
-                            </a>
-                            <p class="descripcion">Tratamiento capilar de Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p class="precio">$1500 <span class="descuento">2% off</span> </p>
-                        </div>
-    
-                    </div>
-
-                    <div class="actions">
-                        <div class="counter">
-                            <div class="menos btn">-</div>
-                            <div class="count">1</div>
-                            <div class="mas btn">+</div>
-                        </div>
-                        <a href="#" class="eliminar">
-                            <button>
-                                Quitar del carrito
-                            </button>
-                        </a>
-                    </div>                    
-
-                </div>
-
-                <div class="producto">
-
-                    <div class="upper">
-                        
-                        <a href="#" class="img"> <!-- Luego linkear a detalle del producto -->
-                            <img src="images/products/peeling.PNG" alt="higiene_facial">
-                        </a>
-                        
-                        <div class="detalles">
-                            <a href="#"> <!-- Luego linkear a detalle del producto -->
-                                <p class="titulo">Peeling</p>
-                            </a>
-                            <p class="descripcion">Tratamiento capilar de Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p class="precio">$1500 <span class="descuento">2% off</span> </p>
-                        </div>
-    
-                    </div>
-
-                    <div class="actions">
-                        <div class="counter">
-                            <div class="menos btn">-</div>
-                            <div class="count">1</div>
-                            <div class="mas btn">+</div>
-                        </div>
-                        <a href="#" class="eliminar">
-                            <button>
-                                Quitar del carrito
-                            </button>
-                        </a>
-                    </div>                    
-
-                </div>
-
-                <div class="producto">
-
-                    <div class="upper">
-                        
-                        <a href="#" class="img"> <!-- Luego linkear a detalle del producto -->
-                            <img src="images/products/higiene_facial.PNG" alt="higiene_facial">
-                        </a>
-                        
-                        <div class="detalles">
-                            <a href="#"> <!-- Luego linkear a detalle del producto -->
-                                <p class="titulo">Higiene Facial</p>
-                            </a>
-                            <p class="descripcion">Tratamiento capilar de Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <p class="precio">$1500 <span class="descuento">2% off</span> </p>
-                        </div>
-    
-                    </div>
-
-                    <div class="actions">
-                        <div class="counter">
-                            <div class="menos btn">-</div>
-                            <div class="count">1</div>
-                            <div class="mas btn">+</div>
-                        </div>
-                        <a href="#" class="eliminar">
-                            <button>
-                                Quitar del carrito
-                            </button>
-                        </a>
-                    </div>                    
-
-                </div>
+                <% }) %> 
 
             </div>
 
-        </div>
+        </section>
 
     </main>
 
-    <footer>
-        <ul>
-            <li>
-                <div class="img-container">
-                    <img class="logo" src="images/logo/logo-mariposa.png" alt="mariposa">
-                </div>
-            </li>
-            <li>
-                <h2>SOIE</h2>
-                <a href="#">Preguntas</a>
-                <a href="#">Ayuda</a>
-            </li>
-            <li>
-                <h2>PRODUCTOS</h2>
-                <a href="#">Consultas</a>
-                <a href="#">Pedidos especiales</a>
-                <a href="#">Empresarial</a>
-            </li>
-        </ul>
-        <div id="copyright">Copyright: ----------</div>
-    </footer>
+    <!-- FOOTER -->
+    <%- include('./partials/footer') %>
 
 </body>
 

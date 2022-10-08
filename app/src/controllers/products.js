@@ -179,4 +179,22 @@ module.exports = {
     //     models.products.delete(id);
     //     res.redirect('/products');
     // }
+
+    addCart: async (req,res) => {
+        //let product = await db.Product.findByPk(req.params.id);
+
+        let cartItem = {}
+        console.log(req.body.qty);
+        if (req.body.qty != undefined) {
+            cartItem.quantity = req.body.qty;
+        } else {
+            cartItem.quantity = 1
+        }
+        cartItem.id_user = req.session.userLogged.id;
+        cartItem.id_product = req.params.id;
+        
+        await db.productcart.create(cartItem)
+
+        res.redirect('/products');
+    }
 }

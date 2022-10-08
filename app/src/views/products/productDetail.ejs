@@ -40,35 +40,20 @@
 
                                     <% } %>
 
-                                        <% if (product.type==='product' ) { %>
+                                    <form action="" id="pData" method="POST">
 
-                                            <form action="" id="pData">
-                                                <label for="qty">
-                                                    Cantidad
-                                                    <input type="number" id="qty" name="qty" min="1" max="10">
-                                                </label>
-                                            </form>
+                                        <% if (product.id_type === 2 ) { %>
 
-                                            <% }else{ %>
+                                            <label for="qty">
+                                                Cantidad
+                                                <input type="number" id="qty" form="pData" name="qty" min="1" max="10" value="1">
+                                            </label>
 
-                                                <form action="" id="pData">
-                                                    <label for="duration">
-                                                        Duración
-                                                        <select name="duration" id="duration">
-                                                            <option value="1">1 hora</option>
-                                                            <option value="1.5">1 hora y media</option>
-                                                            <option value="2">2 horas</option>
-                                                        </select>
-                                                    </label>
-                                                </form>
+                                        <% } %>
 
-                                                <% } %>
+                                        <button type="submit" form="pData" value="" id="pCart">Agregar al carrito</button>
 
-                                                <button type="submit" form="pData" value="" id="pNow">Comprar
-                                                    ahora</button>
-                                                <button type="submit" form="pData" value="" id="pCart">Agregar al
-                                                    carrito</button>
-
+                                    </form>
                                                 <!-- ADMIN buttons -->
                                                 <% if ([3,4].includes(parseInt(userLogged?.id_category))) { %>
 

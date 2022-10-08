@@ -1,5 +1,46 @@
 main {
+  display: flex;
+  justify-content: space-evenly;
+  min-height: 100vh;
 
+}
+
+section.table{
+
+}
+
+section.main-container{
+  width: 40vw;
+}
+
+.productos{
+  position: relative;
+  height: 60vh;
+  overflow-y:auto;
+  border: 2px solid black;
+
+
+}
+
+
+th, td {
+  border:2px solid #4c7878;
+  background-color: whitesmoke;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+th{
+  color: white;
+  background-color: var(--texto-1);
+}
+
+#userTable{
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+  border-collapse: collapse;   
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
 main h2.title {
@@ -20,7 +61,7 @@ main div.main-container {
 
 /* SUBTOTAL */
 
-main div.subtotal {
+.subtotal {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -35,22 +76,24 @@ main div.subtotal {
   top: 0;
   z-index: 8;
 
+  margin-bottom: 10vh;
+
   box-shadow: 0 0.4rem 15px rgb(0 0 0 / 30%);
 }
 
-main div.subtotal p {
+.subtotal p {
   font-size: larger;
 }
 
-main div.subtotal p span {
+.subtotal p span {
   font-weight: bold;
 }
 
-main div.subtotal a {
+.subtotal a {
   width: 100%;
 }
 
-main div.subtotal a button {
+.subtotal a button {
   width: 100%;
   background-color: var(--azul);
   color: aliceblue;

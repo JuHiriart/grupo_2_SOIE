@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-10-2022 a las 23:38:55
+-- Tiempo de generación: 08-10-2022 a las 05:28:31
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -49,10 +49,20 @@ INSERT INTO `category` (`id`, `description`) VALUES
 
 CREATE TABLE `productcart` (
   `id` int(11) NOT NULL,
-  `idProducts` int(11) NOT NULL,
-  `totalItems` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
+  `id_product` int(11) NOT NULL,
   `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `productcart`
+--
+
+INSERT INTO `productcart` (`id`, `id_user`, `id_product`, `quantity`) VALUES
+(1, 26, 2, 1),
+(2, 26, 2, 5),
+(3, 26, 7, 1),
+(4, 26, 8, 10);
 
 -- --------------------------------------------------------
 
@@ -227,7 +237,6 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `birth`, `gender`, 
 (29, 'PEPE2', 'PEPE2', 'PEPE2@PEPE.com', '1990-11-11 00:00:00', 'Mujer', '', '$2b$10$mM8m73EnLkjpS.Plp4Yaxuwf1wjLmtuhGRjtM2bE7hSZSQYYJ2I9O', 'pepepepepe', 1169628997, '1'),
 (35, 'PEPE3', 'PEPE3', 'PEPE3@PEPE.com', '1990-11-11 00:00:00', 'Hombre', '', '$2b$10$hpnzHIqA3DsIu114QEFyAOHRvCxnnAfHLJ.JMXzvkWTZdOS9k1MIC', 'pepepepepe', 1169628997, '1'),
 (36, 'PEPE3', 'PEPE3', 'PEPE4@PEPE.com', '1990-11-11 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$4Odd/2DUugo7D3/KgtSnPe4AVeKkkp013muERPrYhaqS0srrHCQQa', 'pepepepepe', 1169628997, '1'),
-(38, 'PEPE3', 'PEPE4', 'PEPE6@PEPE.com', '1990-11-11 00:00:00', 'Hombre', '/images/users/avatars/img-1664233108059-pepe3.png', '$2b$10$nnQzfwUVW3Xi0WtG/LdR1uCetoTTKpINbuCeHC6.CZWP4QnXm425S', 'pepepepepe', 1169628997, '1'),
 (39, 'admin2', 'admin2', 'admin2@admin.com', '2000-11-11 00:00:00', 'Hombre', '/images/users/avatars/img-1664495452025-admin2.png', '$2b$10$9T63WbIuDMMvub6YAyM9Fez.kkmp6k44IcUj79HnDoAIBRYSzrGqO', 'pepepepepe', 1169628997, '1'),
 (40, 'Lulu', 'Lululu', 'luciabocelli@gmail.com', '1995-09-06 00:00:00', 'Mujer', '/images/users/avatars/default.jpg', '$2b$10$iHcRJz2tPEAwJi4oAWZdvOzYDWrhi7Pi5S/qGKZ3hbZIHrPgUIBJO', 'Lalala', 1169628997, '1'),
 (41, 'Juan Pablo', 'Chirolita', 'juanpablochirolita@gmail.com.br', '2001-01-01 00:00:00', 'Hombre', '/images/users/avatars/img-1664913387783-juan-pablo.jpg', '$2b$10$89470.8/JfKyEFeNwnBNuOljWjtuNNb9U55irLlLdVeK1CYJNdg5G', 'calle falsa 123', 1198765432, '1');
@@ -300,7 +309,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT de la tabla `productcart`
 --
 ALTER TABLE `productcart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `products`

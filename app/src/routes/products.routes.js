@@ -5,6 +5,7 @@ const con = require(`../controllers/${conName}.js`);
 
 // importo el router
 const { Router } = require("express");
+const authClientMiddleware = require("../middlewares/authClientMiddleware.js");
 const routes = Router();
 
 //validaciones
@@ -27,6 +28,10 @@ routes.put( '/:id', con.storeEdit.upload.single('img') , con.storeEdit.data );
 
 /* delete a product */
 routes.delete( '/:id' , con.delete );
+
+/*adds a product to the cart*/
+routes.post('/:id/detail', authClientMiddleware, con.addCart);
+
 
 
 module.exports = routes;

@@ -31,7 +31,8 @@ class Panel extends Component {
     relacionHyM = (data) => {
         let h = data.filter(user => user.gender === "Hombre").length;
         let m = data.filter(user => user.gender === "Mujer").length;
-        this.setState({dato: [["Genero","Cantidad"],["Hombres", h],["Mujeres", m]]})
+        let o = data.filter(user => user.gender === "Mujer").length;
+        this.setState({dato: [["Genero","Cantidad"],["Hombres", h],["Mujeres", m],["Otros", o]]})
     }
 
     relacionPyS = (data) => {

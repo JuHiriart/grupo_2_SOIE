@@ -293,8 +293,8 @@ const validationRules = [ // reglas de validacion para cada formulario
             description: [
                 { 
                     func: 'isStringBetween',
-                    args: { min: 20, max: 100 },
-                    msg : 'La descripción debe tener entre 20 y 100 caracteres'
+                    args: { min: 20, max: 500 },
+                    msg : 'La descripción debe tener entre 20 y 500 caracteres'
                 },
             ],
             price: [

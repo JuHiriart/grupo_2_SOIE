@@ -29,9 +29,19 @@ header {
     font-weight: 600;
 }
 
-.noUser a:hover{
-    color: white;
+a:hover{
+    color: rgb(0, 0, 0);
 }
+
+.cart:hover{
+    cursor: pointer;
+    border: solid black 1px;
+    background-color: var(--azul-suave);
+    color: black;
+    transform: scale(1.2);
+    transition-duration: 0.1s;
+}
+
 
 .user{
     display: flex;
@@ -49,7 +59,7 @@ header {
 }
 
 .user a:hover{
-    color: white;
+    color: black;
 }
 
 .userImage{
@@ -210,11 +220,6 @@ header > div.buttons button.cart > div{
         padding-inline-start: 0;
     }
 
-    nav.header ul a {
-        text-decoration: none;
-        font-weight: bold;
-        color: var(--texto-1);
-    }
 }
 
 /* Nacho, te comente este cambio porque rompe el estilo de varias vistas. Despues lo vemos mejor.

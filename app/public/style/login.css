@@ -84,10 +84,11 @@ main input[type="submit"]:hover {
     background-color: white;
     transform: scale(1.1);
     transition-duration: 0.1s;
+    padding: 0 1rem;
 }
 
 main input[type="submit"]:active {
-    background-color: darkblue;
+    background-color: rgba(21, 95, 152, 0.548);
     transform: scale(0.9);
     transition-duration: 0.1s;
 }

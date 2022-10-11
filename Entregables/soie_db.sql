@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-10-2022 a las 23:36:50
+-- Tiempo de generación: 12-10-2022 a las 00:40:23
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -227,30 +227,30 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `birth`, `gender`, 
 (1, 'Byrann', 'Giron', 'bgiron0@friendfeed.com', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/nonconsequunturitaque.png?size=50x50&set=set1', 'iLVWV2F', '', 0, '1'),
 (2, 'Gwennie', 'Rubinivitz', 'grubinivitz1@cyberchimps.com', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/quasimagnisequi.png?size=50x50&set=set1', 'LEbPmVmJhe', '', 0, '1'),
 (3, 'Darren', 'Keford', 'dkeford2@e-recht24.de', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/autemsuntpossimus.png?size=50x50&set=set1', 'RqkNbnx5aKC', '', 0, '1'),
-(4, 'Audie', 'Shellard', 'ashellard3@bbb.org', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/atmolestiaeillo.png?size=50x50&set=set1', '6OaXwsWNOK', '', 0, '1'),
-(5, 'Hammad', 'Bancroft', 'hbancroft4@mlb.com', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/autemvoluptasmodi.png?size=50x50&set=set1', '1e9ccA2Zp', '', 0, '1'),
-(6, 'Gabey', 'MacAnellye', 'gmacanellye5@yandex.ru', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/corporispariaturrem.png?size=50x50&set=set1', 'nfSHp7n', '', 0, '1'),
-(7, 'Anabal', 'Shillingford', 'ashillingford6@cocolog-nifty.com', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/iustoautomnis.png?size=50x50&set=set1', '4lK0aZDxO', '', 0, '1'),
-(8, 'Otis', 'Clother', 'oclother7@stumbleupon.com', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/repellendusdolortempora.png?size=50x50&set=set1', 'uwFXJogD', '', 0, '1'),
-(9, 'Averil', 'Boyen', 'aboyen8@myspace.com', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/idharumqui.png?size=50x50&set=set1', '5vAEOSisizR', '', 0, '1'),
-(10, 'Danya', 'Bly', 'dbly9@creativecommons.org', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/sithicaspernatur.png?size=50x50&set=set1', '0UPuaNTWMlVY', '', 0, '1'),
-(11, 'Angie', 'Glazzard', 'aglazzarda@ca.gov', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/etadipisciveritatis.png?size=50x50&set=set1', 'Nowu9ANQ', '', 0, '1'),
-(12, 'Ellwood', 'Iacovino', 'eiacovinob@rakuten.co.jp', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/minusnullaplaceat.png?size=50x50&set=set1', 'etB5Ut1seyZ', '', 0, '1'),
-(13, 'Zara', 'Marzello', 'zmarzelloc@yandex.ru', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/vitaeaperiamrepellendus.png?size=50x50&set=set1', 'bB9tUaeQCkf3', '', 0, '1'),
+(4, 'Audie', 'Shellard', 'ashellard3@bbb.org', '0000-00-00 00:00:00', 'Mujer', 'https://robohash.org/atmolestiaeillo.png?size=50x50&set=set1', '6OaXwsWNOK', '', 0, '1'),
+(5, 'Hammad', 'Bancroft', 'hbancroft4@mlb.com', '0000-00-00 00:00:00', 'Mujer', 'https://robohash.org/autemvoluptasmodi.png?size=50x50&set=set1', '1e9ccA2Zp', '', 0, '1'),
+(6, 'Gabey', 'MacAnellye', 'gmacanellye5@yandex.ru', '0000-00-00 00:00:00', 'Mujer', 'https://robohash.org/corporispariaturrem.png?size=50x50&set=set1', 'nfSHp7n', '', 0, '1'),
+(7, 'Anabal', 'Shillingford', 'ashillingford6@cocolog-nifty.com', '0000-00-00 00:00:00', 'Mujer', 'https://robohash.org/iustoautomnis.png?size=50x50&set=set1', '4lK0aZDxO', '', 0, '1'),
+(8, 'Otis', 'Clother', 'oclother7@stumbleupon.com', '0000-00-00 00:00:00', 'Mujer', 'https://robohash.org/repellendusdolortempora.png?size=50x50&set=set1', 'uwFXJogD', '', 0, '1'),
+(9, 'Averil', 'Boyen', 'aboyen8@myspace.com', '0000-00-00 00:00:00', 'Mujer', 'https://robohash.org/idharumqui.png?size=50x50&set=set1', '5vAEOSisizR', '', 0, '1'),
+(10, 'Danya', 'Bly', 'dbly9@creativecommons.org', '0000-00-00 00:00:00', 'Mujer', 'https://robohash.org/sithicaspernatur.png?size=50x50&set=set1', '0UPuaNTWMlVY', '', 0, '1'),
+(11, 'Angie', 'Glazzard', 'aglazzarda@ca.gov', '0000-00-00 00:00:00', 'Mujer', 'https://robohash.org/etadipisciveritatis.png?size=50x50&set=set1', 'Nowu9ANQ', '', 0, '1'),
+(12, 'Ellwood', 'Iacovino', 'eiacovinob@rakuten.co.jp', '0000-00-00 00:00:00', 'Mujer', 'https://robohash.org/minusnullaplaceat.png?size=50x50&set=set1', 'etB5Ut1seyZ', '', 0, '1'),
+(13, 'Zara', 'Marzello', 'zmarzelloc@yandex.ru', '0000-00-00 00:00:00', 'Mujer', 'https://robohash.org/vitaeaperiamrepellendus.png?size=50x50&set=set1', 'bB9tUaeQCkf3', '', 0, '1'),
 (14, 'Goldina', 'Sanday', 'gsandayd@theatlantic.com', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/utoccaecaticumque.png?size=50x50&set=set1', 'iZgosywnRy', '', 0, '1'),
-(15, 'Philippa', 'Spedding', 'pspeddinge@unblog.fr', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/etenimdolores.png?size=50x50&set=set1', 'IHkHyWKAs', '', 0, '1'),
+(15, 'Philippa', 'Spedding', 'pspeddinge@unblog.fr', '0000-00-00 00:00:00', 'Mujer', 'https://robohash.org/etenimdolores.png?size=50x50&set=set1', 'IHkHyWKAs', '', 0, '1'),
 (16, 'Ado', 'Starsmeare', 'astarsmearef@engadget.com', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/quisquasvoluptatem.png?size=50x50&set=set1', 'YgEjmXvR', '', 0, '1'),
 (17, 'Howie', 'Abson', 'habsong@dion.ne.jp', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/adipiscivoluptasnisi.png?size=50x50&set=set1', 'Gco0tTEv', '', 0, '1'),
 (18, 'Niki', 'Maidens', 'nmaidensh@theguardian.com', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/facereutfacilis.png?size=50x50&set=set1', 's97JpS6VY', '', 0, '1'),
-(19, 'Kaitlyn', 'Ettritch', 'kettritchi@typepad.com', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/autdolorenostrum.png?size=50x50&set=set1', 'WnQRDp85', '', 0, '1'),
+(19, 'Kaitlyn', 'Ettritch', 'kettritchi@typepad.com', '0000-00-00 00:00:00', 'Mujer', 'https://robohash.org/autdolorenostrum.png?size=50x50&set=set1', 'WnQRDp85', '', 0, '1'),
 (20, 'Peter', 'Natwick', 'pnatwickj@sciencedirect.com', '0000-00-00 00:00:00', 'Hombre', 'https://robohash.org/sitfugased.png?size=50x50&set=set1', 'iilQovZ4bH8', '', 0, '2'),
 (21, 'Manuel', 'Belgrano', 'manuArg@gmail.com', '2022-08-02 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$o/YsPVFJjHFSFDiDSa6.wexwA4bZoZr9qfRIw64XLtR4cU4rXH7cS', '', 0, '1'),
 (22, 'Manuel', 'Belgrano', 'manuArgento@gmail.com', '2022-08-02 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$4c1rMQBtiNrGXx6c.HC3iuReLM9IrMabCIgQkoFN5KBwc9CVsuafS', '', 0, '1'),
 (23, 'Manuel', 'Belgrano', 'manuCabj@gmail.com', '2022-09-06 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$YancRMtXU1Qwaq74V/Iz3eEy6vGdvMDQ0aQh5QXb60DGCAHVnI5UO', '', 0, '1'),
-(24, 'Felipe', 'Mataviejas', 'feliEl6@gmail.com', '1159-09-16 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$GsjDkdGgSdsHXJTk2Ay61eCVqrBS9MkSl89emHaabR8bq.pMziWue', 'French', 2147483647, '1'),
+(24, 'Felipe', 'Mataviejas', 'feliEl6@gmail.com', '1159-09-16 00:00:00', 'Mujer', '/images/users/avatars/default.jpg', '$2b$10$GsjDkdGgSdsHXJTk2Ay61eCVqrBS9MkSl89emHaabR8bq.pMziWue', 'French', 2147483647, '1'),
 (25, 'Anakin', 'Skywalker', 'imYourFather@jedi.com', '2990-07-13 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$aO7uRkf0259eBBEus1t//OE9r0XgJip1DC2uU3hxBClZQf35/PXV6', 'Tatooine', 2147483647, '1'),
-(36, 'PEPE3', 'PEPE3', 'PEPE4@PEPE.com', '1990-11-11 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$4Odd/2DUugo7D3/KgtSnPe4AVeKkkp013muERPrYhaqS0srrHCQQa', 'pepepepepe', 1169628997, '1'),
-(39, 'admin2', 'admin2', 'admin2@admin.com', '2000-11-11 00:00:00', 'Hombre', '/images/users/avatars/img-1664495452025-admin2.png', '$2b$10$9T63WbIuDMMvub6YAyM9Fez.kkmp6k44IcUj79HnDoAIBRYSzrGqO', 'pepepepepe', 1169628997, '1'),
+(36, 'PEPE3', 'PEPE3', 'PEPE4@PEPE.com', '1990-11-11 00:00:00', 'Otro', '/images/users/avatars/default.jpg', '$2b$10$4Odd/2DUugo7D3/KgtSnPe4AVeKkkp013muERPrYhaqS0srrHCQQa', 'pepepepepe', 1169628997, '1'),
+(39, 'admin2', 'admin2', 'admin2@admin.com', '2000-11-11 00:00:00', 'Otro', '/images/users/avatars/img-1664495452025-admin2.png', '$2b$10$9T63WbIuDMMvub6YAyM9Fez.kkmp6k44IcUj79HnDoAIBRYSzrGqO', 'pepepepepe', 1169628997, '1'),
 (41, 'Juan Pablo', 'Chirolita', 'juanpablochirolita@gmail.com.br', '2001-01-01 00:00:00', 'Hombre', '/images/users/avatars/img-1664913387783-juan-pablo.jpg', '$2b$10$89470.8/JfKyEFeNwnBNuOljWjtuNNb9U55irLlLdVeK1CYJNdg5G', 'calle falsa 123', 1198765432, '1'),
 (42, 'admin', 'admin', 'admin@admin.com', '2000-10-10 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$0MQrMmpYZe/7MqBj8GrCZOqMLDgExrYznp8NNuGLGT7VlW4V.jSsO', 'calle', 1100000000, '3');
 
@@ -322,7 +322,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT de la tabla `productcart`
 --
 ALTER TABLE `productcart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `products`

@@ -179,7 +179,9 @@ module.exports = {
 
     userList: async (req, res) => {
 
-        let users = await db.User.findAll();
+        let users = await db.User.findAll({
+            include: [{association: "categoria"}]
+        });
         
         res.render( views('users/list') , {
             title : 'Lista de usuarios',

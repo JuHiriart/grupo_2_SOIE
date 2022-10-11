@@ -60,6 +60,13 @@
     border: 1px solid lightgray;
 }
 
+#pData{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 label{
     font-family: 'Montserrat', sans-serif;
 }

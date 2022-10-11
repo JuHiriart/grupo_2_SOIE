@@ -16,6 +16,7 @@
                 <th>Email</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
+                <th>Categoría</th>
                 <th>Dirección</th>
                 <th>telefono</th>
                 <th>Acción</th>
@@ -27,12 +28,20 @@
                     <td><img class="userImg" src="<%= user.image %> " alt="Imagen del usuario"></td>
                     <td><h3><%= user.email %></h3></td> 
                     <td><p><%= user.firstName %></p></td>
-                    <td><p><%= user.lastName %></p></td>   
-                    <td><%= user.direccion %> </td>
-                    <td><%= user.telefono %> </td>
+                    <td><p><%= user.lastName %></p></td>
+                    <td><p><%= user.categoria.description %></p></td>   
+                    <td><%= user.adress %> </td>
+                    <td><%= user.numberPhone %> </td>
                     <td>
-                        <input class="btn" type="button" value="edit" onclick="location.href='/users/edit/<%= user.id %>'">
-                        <input class="btn" type="button" value="delete" onclick="location.href='/users/delete/<%= user.id %>'">
+                        <% if (user.categoria.description != 'Super administrador') { %>
+                            <input class="btn" type="button" value="edit" onclick="location.href='/users/edit/<%= user.id %>'">
+                            <input class="btn dlt" type="button" value="delete" onclick="location.href='/users/delete/<%= user.id %>'">
+                        <% } %> 
+                        <% if (user.categoria.description === 'Usuario común') { %>
+                            <input class="btn" type="button" value="make Admin" onclick="location.href='/users/mkAdm/<%= user.id %>'">
+                        <% } else if (user.categoria.description === 'Administrador') { %>
+                            <input class="btn dlt" type="button" value="delete Admin" onclick="location.href='/users/delAdm/<%= user.id %>'">
+                        <% } %> 
                     </td>
                 </tr>
 

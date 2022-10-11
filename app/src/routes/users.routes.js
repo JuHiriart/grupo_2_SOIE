@@ -40,6 +40,9 @@ routes.put('/edit/:id', con.editPut);
 // metodo DELETE de eliminacion de usuario
 routes.get('/delete/:id', con.delete);
 
+routes.get('/mkAdm/:id', con.mkAdm);
+routes.get('/delAdm/:id', con.delAdm);
+
 routes.get('/logout', con.logout);
 
 module.exports = routes;

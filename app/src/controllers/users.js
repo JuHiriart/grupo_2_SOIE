@@ -254,5 +254,19 @@ module.exports = {
         // }
         await user.destroy();
         res.redirect('/users/list');
+    },
+
+    mkAdm: async (req, res) => {
+        let user = await db.User.findByPk(req.params.id);
+        user.id_category = 2;
+        user = await user.save();
+        res.redirect('/users/list');
+    },
+
+    delAdm: async (req, res) => {
+        let user = await db.User.findByPk(req.params.id);
+        user.id_category = 1;
+        user = await user.save();
+        res.redirect('/users/list');
     }
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-10-2022 a las 03:05:59
+-- Tiempo de generación: 11-10-2022 a las 23:11:16
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -37,7 +37,7 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `description`) VALUES
-(1, 'Usuario comun'),
+(1, 'Usuario común'),
 (2, 'Administrador'),
 (3, 'Super administrador');
 
@@ -53,17 +53,6 @@ CREATE TABLE `productcart` (
   `id_product` int(11) NOT NULL,
   `quantity` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `productcart`
---
-
-INSERT INTO `productcart` (`id`, `id_user`, `id_product`, `quantity`) VALUES
-(2, 26, 2, 5),
-(3, 26, 7, 1),
-(4, 26, 8, 10),
-(5, 26, 4, 1),
-(6, 26, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -238,15 +227,10 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `birth`, `gender`, 
 (23, 'Manuel', 'Belgrano', 'manuCabj@gmail.com', '2022-09-06 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$YancRMtXU1Qwaq74V/Iz3eEy6vGdvMDQ0aQh5QXb60DGCAHVnI5UO', '', 0, '1'),
 (24, 'Felipe', 'Mataviejas', 'feliEl6@gmail.com', '1159-09-16 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$GsjDkdGgSdsHXJTk2Ay61eCVqrBS9MkSl89emHaabR8bq.pMziWue', 'French', 2147483647, '1'),
 (25, 'Anakin', 'Skywalker', 'imYourFather@jedi.com', '2990-07-13 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$aO7uRkf0259eBBEus1t//OE9r0XgJip1DC2uU3hxBClZQf35/PXV6', 'Tatooine', 2147483647, '1'),
-(26, 'admin', 'admin', 'admin@admin.com', '1212-12-12 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$0LcXLzNZvjvM/Qd6MzpKbe8IF3hj4MmGXjHSK3IFFye.135mQgZhm', 'admin123', 1123456789, '3'),
-(27, 'PEPITO', 'JOSE', 'jose@jose.com', '1995-03-12 00:00:00', 'Mujer', '', '$2b$10$2xVCc7FikpkNZCqhL0zVmuD71YO4QvT76JpZNgovcaq0i8qXgA7Ja', 'asdasdas', 1169628997, '1'),
-(28, 'PEPE', 'PEPE', 'PEPE@PEPE.com', '1990-11-11 00:00:00', 'Mujer', '', '$2b$10$.0AuahJKMu5ce4S8.uRAYeHKFLnXns2BdD9r4SWC6cHmZxEABmYWG', 'pepepepepe', 1169628997, '1'),
-(29, 'PEPE2', 'PEPE2', 'PEPE2@PEPE.com', '1990-11-11 00:00:00', 'Mujer', '', '$2b$10$mM8m73EnLkjpS.Plp4Yaxuwf1wjLmtuhGRjtM2bE7hSZSQYYJ2I9O', 'pepepepepe', 1169628997, '1'),
-(35, 'PEPE3', 'PEPE3', 'PEPE3@PEPE.com', '1990-11-11 00:00:00', 'Hombre', '', '$2b$10$hpnzHIqA3DsIu114QEFyAOHRvCxnnAfHLJ.JMXzvkWTZdOS9k1MIC', 'pepepepepe', 1169628997, '1'),
 (36, 'PEPE3', 'PEPE3', 'PEPE4@PEPE.com', '1990-11-11 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$4Odd/2DUugo7D3/KgtSnPe4AVeKkkp013muERPrYhaqS0srrHCQQa', 'pepepepepe', 1169628997, '1'),
 (39, 'admin2', 'admin2', 'admin2@admin.com', '2000-11-11 00:00:00', 'Hombre', '/images/users/avatars/img-1664495452025-admin2.png', '$2b$10$9T63WbIuDMMvub6YAyM9Fez.kkmp6k44IcUj79HnDoAIBRYSzrGqO', 'pepepepepe', 1169628997, '1'),
-(40, 'Lulu', 'Lululu', 'luciabocelli@gmail.com', '1995-09-06 00:00:00', 'Mujer', '/images/users/avatars/default.jpg', '$2b$10$iHcRJz2tPEAwJi4oAWZdvOzYDWrhi7Pi5S/qGKZ3hbZIHrPgUIBJO', 'Lalala', 1169628997, '1'),
-(41, 'Juan Pablo', 'Chirolita', 'juanpablochirolita@gmail.com.br', '2001-01-01 00:00:00', 'Hombre', '/images/users/avatars/img-1664913387783-juan-pablo.jpg', '$2b$10$89470.8/JfKyEFeNwnBNuOljWjtuNNb9U55irLlLdVeK1CYJNdg5G', 'calle falsa 123', 1198765432, '1');
+(41, 'Juan Pablo', 'Chirolita', 'juanpablochirolita@gmail.com.br', '2001-01-01 00:00:00', 'Hombre', '/images/users/avatars/img-1664913387783-juan-pablo.jpg', '$2b$10$89470.8/JfKyEFeNwnBNuOljWjtuNNb9U55irLlLdVeK1CYJNdg5G', 'calle falsa 123', 1198765432, '1'),
+(42, 'admin', 'admin', 'admin@admin.com', '2000-10-10 00:00:00', 'Hombre', '/images/users/avatars/default.jpg', '$2b$10$0MQrMmpYZe/7MqBj8GrCZOqMLDgExrYznp8NNuGLGT7VlW4V.jSsO', 'calle', 1100000000, '3');
 
 --
 -- Índices para tablas volcadas
@@ -316,7 +300,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT de la tabla `productcart`
 --
 ALTER TABLE `productcart`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
@@ -346,7 +330,7 @@ ALTER TABLE `type`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

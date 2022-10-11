@@ -39,12 +39,21 @@ module.exports = {
         // let user = models.users.getById(req.params.id);
         //let user = await db.User.findByPk(req.params.id);
 
-        let user = req.session.userLogged;
+        let userID = req.session.userLogged.id;
+
+        let user = await db.User.findByPk(userID,{
+            include: [{association: "categoria"}]
+        });
+
+
+        if (user == null){
+            user = req.session.userLogged;
+        }
         // res.send(user);
         res.render( views('users/profile') , {
             title : 'Profile',
             style : 'profile',
-            user : user ?? {},
+            user : user,
             userLogged : req.session.userLogged
         });
     },

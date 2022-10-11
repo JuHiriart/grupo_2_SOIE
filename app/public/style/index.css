@@ -145,10 +145,18 @@ div.card button {
 }
 
 .bannerImg{
-  object-fit: contain;
+  object-fit: cover;
   background-color: white;
   height: 100%;
   width: 100%;
+}
+
+p{
+  font-family: 'Montserrat', sans-serif;
+}
+
+h2{
+  font-family: 'Roboto Serif', serif;
 }
 
 @media screen and (min-width: 1080px) {

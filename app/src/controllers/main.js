@@ -5,6 +5,7 @@ module.exports = {
     home: async (req, res) => {
 
         const products = await db.Product.findAll();
+        const banner = await db.banner.findAll();
 
         if (req.query && req.query.name) {
             products = products.filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
@@ -14,7 +15,8 @@ module.exports = {
             title : 'Home',
             style : 'index',
             userLogged : req.session.userLogged,
-            products : products
+            products : products,
+            banner : banner,
         } );
     }
 }

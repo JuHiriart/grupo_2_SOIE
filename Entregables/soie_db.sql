@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-10-2022 a las 23:11:16
+-- Tiempo de generación: 11-10-2022 a las 23:36:50
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -20,6 +20,28 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `soie_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `banner`
+--
+
+CREATE TABLE `banner` (
+  `id` int(11) NOT NULL,
+  `img` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `banner`
+--
+
+INSERT INTO `banner` (`id`, `img`) VALUES
+(1, '/images/banner/Banner_1.PNG'),
+(2, '/images/banner/Banner_2.PNG'),
+(3, '/images/banner/Banner_3.JPG'),
+(4, '/images/banner/Banner_4.jpg'),
+(5, '/images/banner/Banner_5.jpg');
 
 -- --------------------------------------------------------
 

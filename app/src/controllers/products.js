@@ -16,9 +16,9 @@ module.exports = {
 
         // let products = models.products.index();
 
-        const products = await db.Product.findAll();
+        let products = await db.Product.findAll();
 
-        if (req.query && req.query.name) {
+        if (req.query?.name) {
             products = products.filter(product => product.name.toLowerCase().indexOf(req.query.name.toLowerCase()) > -1);
         }
 
@@ -82,7 +82,14 @@ module.exports = {
                 }
 
                 product.active = true;
-                product.id_type = product.type;
+
+                if(product.type == "service"){
+                    product.id_type = 1;
+                }
+                else{
+                    product.id_type = 2;
+                }
+                
                 product.id_time = product.timeMinutes;
 
                 // product.id = await db.Product.max('id') + 1;
@@ -172,4 +179,22 @@ module.exports = {
     //     models.products.delete(id);
     //     res.redirect('/products');
     // }
+
+    addCart: async (req,res) => {
+        //let product = await db.Product.findByPk(req.params.id);
+
+        let cartItem = {}
+        console.log(req.body.qty);
+        if (req.body.qty != undefined) {
+            cartItem.quantity = req.body.qty;
+        } else {
+            cartItem.quantity = 1
+        }
+        cartItem.id_user = req.session.userLogged.id;
+        cartItem.id_product = req.params.id;
+        
+        await db.productcart.create(cartItem)
+
+        res.redirect('/products');
+    }
 }

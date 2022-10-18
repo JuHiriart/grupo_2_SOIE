@@ -21,6 +21,7 @@ function cookieAuthMiddleware (req, res, next) {
         }
 
         req.session.userLogged = userLogging;
+        req.session.userLogged.admin = [3,4].includes(parseInt(req.session.userLogged.id_category));
     }
     
     next();

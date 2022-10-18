@@ -23,58 +23,62 @@
                             <% if (product.off !=0) { %>
                                 <div>
                                     <div class="off">
-                                        <h3 id="priceOld">$<%= product.price %>
+                                        <h3 id="priceOld" class="price">$<%= product.price %>
                                         </h3>
                                         <h5 id="offPer">
                                             <%= product.off %>% OFF
                                         </h5>
                                     </div>
-                                    <h2 id="priceNew">$<%= product.price - (product.price*product.off/100) %>
+                                    <h2 id="priceNew" class="price">$<%= product.price - (product.price*product.off/100) %>
                                     </h2>
                                 </div>
 
                                 <% } else { %>
 
-                                    <h2 id="price">$<%= product.price %>
+                                    <h2 id="price" class="price">$<%= product.price %>
                                     </h2>
 
                                     <% } %>
 
-                                        <% if (product.type==='product' ) { %>
+                                    <form action="" id="pData" method="POST">
 
+                                        <% if (product.id_type === 2 ) { %>
 
-                                            <form action="" id="pData">
-                                                <label for="qty">
-                                                    Cantidad
-                                                    <input type="number" id="qty" name="qty" min="1" max="10">
-                                                </label>
-                                            </form>
-                                            <% }else{ %>
-                                                <form action="" id="pData">
-                                                    <label for="duration">
-                                                        Duración
-                                                        <select name="duration" id="duration">
-                                                            <option value="1">1 hora</option>
-                                                            <option value="1.5">1 hora y media</option>
-                                                            <option value="2">2 horas</option>
-                                                        </select>
-                                                    </label>
-                                                </form>
+                                            <label for="qty">
+                                                Cantidad
+                                                <input type="number" id="qty" form="pData" name="qty" min="1" max="10" value="1">
+                                            </label>
 
-                                                <% } %>
+                                        <% } %>
 
-                                                    <button type="submit" form="pData" value="" id="pNow">Comprar
-                                                        ahora</button>
-                                                    <button type="submit" form="pData" value="" id="pCart">Agregar al
-                                                        carrito</button>
-                                                    <a href="/products/<%= product.id %>/edit">
-                                                        <button>Modificar</button>
-                                                    </a>
+                                        <button type="submit" form="pData" value="" id="pCart">Agregar al carrito</button>
+
+                                    </form>
+                                                <!-- ADMIN buttons -->
+                                                <% if ([3,4].includes(parseInt(userLogged?.id_category))) { %>
+
+                                                    <form action="/products/<%= product.id  %>/edit" method="GET"
+                                                        style="display: inline-flex">
+                                                        <button type="submit" class="action-button delete">EDITAR</button>
+                                                    </form>
+
                                                     <form action="/products/<%= product.id  %>?_method=DELETE" method="POST"
                                                         style="display: inline-flex">
                                                         <button type="submit" class="action-button delete">ELIMINAR</button>
                                                     </form>
+
+                                                <% } %>
+
+
                         </div>
+                        <!-- <a href="/products/<%= product.id %>/edit">
+                            <button>Modificar</button>
+                        </a>
+                        <form action="/products/<%= product.id  %>?_method=DELETE" method="POST"
+                            style="display: inline-flex">
+                            <button type="submit" class="action-button delete">ELIMINAR</button>
+                        </form> -->
+                    </div>
 
                     </div>
                 </section>

@@ -47,6 +47,9 @@ module.exports = User = (sequelize, dataTypes) => {
             type: dataTypes.STRING,
 
         },
+        gender: {
+            type: dataTypes.STRING,
+        },
 
     };
 
@@ -59,17 +62,11 @@ module.exports = User = (sequelize, dataTypes) => {
 
     User.associate = function (models) {
 
-        // User.hasMany(models.Cart, {
-        //     as: "cart",
-        //     foreignKey: "id_user"
-        // });
-        
-        // User.belongsTo(models.Category, {
-        //     as: "category",
-        //     foreignKey: "id_category"
-        // });
+        User.belongsTo(models.Category, {
+            as: "categoria",
+            foreignKey: "id_category"
+        });
 
     }
-
     return User;
 };

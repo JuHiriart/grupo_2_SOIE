@@ -49,10 +49,6 @@ module.exports = Cart = (sequelize, dataTypes) => {
 
     Cart.associate = function (models) {
 
-        Cart.hasMany(models.ProductCart, {
-            as: "productcart",
-            foreignKey: "id_ProductCart"
-        });
 
         Cart.belongsTo(models.Status, {
             as: "status",

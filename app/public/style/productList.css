@@ -15,12 +15,24 @@ main{
 }
 
 
-.productImg{
+.productImgRight{
     width: 70%;
     height: 25vw;
-    object-fit: cover;
-    object-position: 0px -150px;
+    object-fit: contain;
+    object-position: 15% 50%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
+    display: felx;
+
+}
+
+.productImgLeft{
+    width: 70%;
+    height: 25vw;
+    object-fit: contain;
+    object-position: 85% 50%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: white;
 }
 
 
@@ -34,7 +46,7 @@ main{
     height: 20vw;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 
 }
@@ -49,14 +61,14 @@ main{
     height: 20vw;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 }
 
 #productName{
     font-family: 'Roboto Serif', serif;
-    font-weight: 400;
-    font-size: xx-large;
+    font-weight: 500;
+    font-size: 2.5vw;
     margin: 20px 0 10px 0;
     text-decoration: none;
     color: black;
@@ -71,90 +83,141 @@ main{
 #productDescription{
     font-family: 'Montserrat', sans-serif;
     text-align: justify;
-    margin: 20px 40px 40px 40px;
     font-weight: 400;
     line-height: 1.4em;
     color: black;
 }
 
 .button{
-    font-size: xx-large;
-    bottom: 20%;
+    font-size: x-large;
 }
 
 .produtButtons{
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    width: 15vw;
     margin: 10px;
-    position: absolute;
-    bottom: 5px;
 }
 
-.fav{
-    color:crimson;
-    position: relative;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+.buy,p{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 1.3vw;
+    line-height: 1.4em;
+    color: black;
+    margin: 5px;
 }
 
-.custom-checkbox {
-    cursor: pointer;
-}
-
-.custom-checkbox:hover .fav{
-    opacity: 0.5;
-}
-
-.custom-checkbox input[type="checkbox"]:checked ~ .fav{
-    opacity: 1;
-}
-
-/*.custom-checkbox input[type="checkbox"]:checked ~ .fav{
-    opacity: 1;
-}*/
-
-.noFav{
-    color: #CAE7E2;
-    position: absolute;
-}
-
-label input[type="checkbox"] {
-    display: none;
-}
-
-label input[type="button"] {
-    display: none;
-}
 
 
 .buy{
-    position: absolute;
-    color: #CAE7E2;
+
+    color: rgba(0, 0, 0, 0.90);
 }
 
-.share{
-    position: absolute;
-    color: #CAE7E2;
-    
-}
 
 .buttomBuy{
     cursor: pointer;
 }
 
-.buttomShare{
-    cursor: pointer;
+.custom-checkbox{
+    object-position: bottom;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.custom-checkbox:hover .share, .custom-checkbox:hover .buy{
-    transition: color 0.05s ease-in-out;
-    color: darkblue;
+.titlePrice{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+/*BOTON*/
+
+/* CSS */
+.button-58 {
+  align-items: center;
+  background-color: var(--celeste);
+  border: 2px solid var(--azul-suave);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter,sans-serif;
+  font-size: 1.3vw;
+  font-weight: 600;
+  height: 3.6vw;
+  justify-content: center;
+  letter-spacing: -.8px;
+  line-height: 1.6vw;
+  min-width: 5vw;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-.custom-checkbox:active .buy, .custom-checkbox:active .share {
-    color: white;
+.button-58:focus {
+  color: #171e29;
 }
+
+.button-58:hover {
+  border-color: black;
+  fill: #FAF7F3;
+}
+
+.button-58:active {
+  background-color: var(--azul-suave);
+  border-color: var(--azul-suave);
+  fill: var(--azul-suave);
+}
+
+@media (min-width: 768px) {
+  .button-58 {
+    min-width: 170px;
+  }
+}
+
+
+/*OFF*/
+
+.off{
+    display: flex;
+    align-items: baseline;
+}
+
+#offPer{
+    margin: 0.3vw;
+    color: var(--azul);
+}
+
+#priceOld{
+    text-decoration: line-through;
+    color: rgba(128, 128, 128, 0.8);
+    margin: 0.3vw;
+}
+
+#priceNew{
+    margin: 0.3vw;
+    color: black;
+}
+
+#price{
+    margin: 0.3vw;
+    color: black;
+}
+
+
+/*BOTON*/
+
 
 @media (max-width:1000px) {
     .productImg{

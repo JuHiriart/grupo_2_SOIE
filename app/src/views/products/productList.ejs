@@ -14,36 +14,43 @@
                     <% products.forEach( ( product,i)=>{ %>
 
                         <div class="product">
-                            <img src=<%= product.img %> alt="foto" class="productImg">
                             <% if (i%2==0) { %>
+                                <img src=<%= product.img %> alt="foto" class="productImgRight">
                                 <div class="detailRight">
                                     <% } else { %>
+                                        <img src=<%= product.img %> alt="foto" class="productImgLeft">
                                         <div class="detailLeft">
                                             <% } %>
+
+                                            <div class="titlePrice">
+
                                                 <a id="productName" href=<%= `products/${ product.id }/detail` %>>
                                                     <%=  product.name %>
                                                 </a>
-                                                <p id="productDescription">
-                                                    <%=  product.description %>
-                                                </p>
+                                                <% if (product.off !=0) { %>
+                                                    <div>
+                                                        <div class="off">
+                                                            <h3 id="priceOld">$<%= product.price %></h3>
+                                                            <h3 id="offPer"><%= product.off %>% OFF</h3>
+                                                        </div>
+                                                        <h2 id="priceNew">$<%= product.price - (product.price*product.off/100) %></h2>
+                                                    </div>
+                    
+                                                <% } else { %>
+                    
+                                                    <h2 id="price">$<%= product.price %></h2>
+                    
+                                                <% } %>
+
+                                            </div>
+
                                                 <div class="produtButtons">
-
-                                                    <label for="buttonShare" class="custom-checkbox">
-                                                        <input type="button" id="buttonShare">
-                                                        <i class="fa-solid fa-share-nodes share button"></i>
-                                                    </label>
-
-                                                    <label for="buttonBuy" class="custom-checkbox">
-                                                        <input type="button" id="buttonBuy">
-                                                        <i class="fa-solid fa-bag-shopping buy button"></i>
-                                                    </label>
-
-                                                    <label for="buttonFav2" class="custom-checkbox">
-                                                        <input type="checkbox" id="buttonFav2">
-                                                        <i class="fa-solid fa-heart noFav button"></i>
-                                                        <i class="fa-solid fa-heart fav button"></i>
-                                                    </label>
-
+                                                    <form action="products/<%= product.id %>/detail" method="POST">
+                                                        <label for="buttonBuy" class="custom-checkbox">                                                  
+                                                            <button class="button-58" role="button"><p>Agregar al carrito</p><i class="fa-solid fa-bag-shopping buy button"></i></button>
+                                                        </label>
+                                                    </form>
+                                                    
                                                 </div>
                                         </div>
                                 </div>

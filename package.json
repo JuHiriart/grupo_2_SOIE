@@ -4,9 +4,9 @@
   "description": "Proyecto integrador del curso Full Stack en Digital House. Grupo #2.",
   "main": "app.js",
   "scripts": {
-    "server": "nodemon app/src/app.js",
-    "start": "node app/src/app.js",
-    "test": "nodemon app/src/app.js -e json,js,ejs,mjs",
+    "server": "nodemon app/src/index.js",
+    "start": "node app/src/index.js",
+    "test": "nodemon app/src/index.js -e json,js,ejs,mjs",
     "sq-i": "sequelize init",
     "sq-ms": "sequelize init:migrations && init:seeders",
     "sq-mg": "sequelize migration:generate --name time",
